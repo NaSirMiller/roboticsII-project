@@ -37,8 +37,8 @@ class SafeExitDetectionNode(Node):
         self.br = CvBridge() # Used to convert between ROS and OpenCV images
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
-        self.pub_detected_obj = self.create_publisher(Image, '/detected_safe_exit', 10)
-        self.pub_detected_obj_pose = self.create_publisher(PoseStamped, '/detected_safe_exit_pose', 10)
+        self.pub_safe_exit = self.create_publisher(Image, '/detected_safe_exit', 10)
+        self.pub_detected_safe_exit = self.create_publisher(PoseStamped, '/detected_safe_exit_pose', 10)
         self.sub_rgb = Subscriber(self, Image, '/camera/color/image_raw')
         self.sub_depth = Subscriber(self, PointCloud2, '/camera/depth/points')
         self.ts = ApproximateTimeSynchronizer([self.sub_rgb, self.sub_depth], 10, 0.1)
@@ -85,7 +85,7 @@ class SafeExitDetectionNode(Node):
         detect_img_msg = self.br.cv2_to_imgmsg(rgb_image, encoding='bgr8')
         detect_img_msg.header = rgb_msg.header
         self.get_logger().info('image message published') # Can comment out once know is working
-        self.pub_detected_obj.publish(detect_img_msg)
+        self.pub_safe_exit.publish(detect_img_msg)
 
     def main(args=None):
         rclpy.init(args=args)
@@ -96,8 +96,3 @@ class SafeExitDetectionNode(Node):
 
     if __name__ == '__main__':
         main()
-
-
-
-        
-        
