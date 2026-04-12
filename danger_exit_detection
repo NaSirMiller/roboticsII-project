@@ -31,7 +31,7 @@ class DangerExitDetectionNode(Node):
     def __init__(self):
         super().__init__('danger_exit_detection_node')
         self.get_logger().info('Danger Exit Detection Node Started')
-        self.declare_parameter('color_low', [145, 110, 25]) # Silver
+        self.declare_parameter('color_low', [145, 110, 25]) # Yellow
         self.declare_parameter('color_high', [235, 215, 130])
         self.declare_parameter('object_size_min', 1000)
         self.br = CvBridge() # Used to convert between ROS and OpenCV images
