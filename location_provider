@@ -53,7 +53,7 @@ class LocationProviderNode(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.sub_detected_safe_exit_pose = self.create_subscription(PoseStamped, 'detected_safe_exit_pose', self.detected_safe_exit_pose_callback, 10)
-        self.sub_detected_danger_exit_pose = self.create_subscription(PoseStamped, 'detected_danger_exit_pose', self.detected_danger_exit_callback, 10)
+        self.sub_detected_danger_exit_pose = self.create_subscription(PoseStamped, 'detected_danger_exit_pose', self.detected_danger_exit_pose_callback, 10)
         self.create_timer(0.5, self.initialize_home_pose, once=True)
 
     def initialize_home_pose(self):
@@ -73,7 +73,7 @@ class LocationProviderNode(Node):
             return
         self.danger_exit_pose = center_points
 
-    def get_home_pose(self)
+    def get_home_pose(self):
         try:
             world_frame = self.get_parameter('world_frame_id').get_parameter_value().string_value
             transform = self.tf_buffer.lookup_transform(world_frame, 'base_footprint', rclpy.time.Time(), rclpy.duration.Duration(seconds=0.5))
