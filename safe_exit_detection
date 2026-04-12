@@ -87,12 +87,12 @@ class SafeExitDetectionNode(Node):
         self.get_logger().info('image message published') # Can comment out once know is working
         self.pub_safe_exit.publish(detect_img_msg)
 
-    def main(args=None):
-        rclpy.init(args=args)
-        safe_exit_detection_node = SafeExitDetectionNode()
-        rclpy.spin(safe_exit_detection_node)
-        safe_exit_detection_node.destroy_node()
-        rclpy.shutdown()
+def main(args=None):
+    rclpy.init(args=args)
+    safe_exit_detection_node = SafeExitDetectionNode()
+    rclpy.spin(safe_exit_detection_node)
+    safe_exit_detection_node.destroy_node()
+    rclpy.shutdown()
 
-    if __name__ == '__main__':
-        main()
+if __name__ == '__main__':
+    main()
