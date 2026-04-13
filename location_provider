@@ -49,7 +49,7 @@ class LocationProviderNode(Node):
         self.home_pose = None
         self.safe_exit_pose = None
         self.danger_exit_pose = None
-        self.declare_parameter('world_frame_id', 'odom')
+        self.declare_parameter('world_frame_id', 'map')
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.sub_detected_safe_exit_pose = self.create_subscription(PoseStamped, 'detected_safe_exit_pose', self.detected_safe_exit_pose_callback, 10)
@@ -85,9 +85,9 @@ class LocationProviderNode(Node):
             return False
 
     def get_current_poses(self):
-        odom_id = self.get_parameter('world_frame_id').get_parameter_value().string_value
+        map_id = self.get_parameter('world_frame_id').get_parameter_value().string_value
         try:
-            transform = self.tf_buffer.lookup_transform(odom_id, 'base_footprint', rclpy.time.Time())
+            transform = self.tf_buffer.lookup_transform(map_id, 'base_footprint', rclpy.time.Time())
             robot_world_x = transform.transform.translation.x
             robot_world_y = transform.transform.translation.y
             robot_world_z = transform.transform.translation.z
