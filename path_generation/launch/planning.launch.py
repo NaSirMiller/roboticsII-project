@@ -20,7 +20,7 @@ def generate_launch_description():
             package='nav2_planner',
             executable='planner_server',
             name='planner_server',
-            parameters=[os.path.join(config_dir, 'planner.yaml')],
+            parameters=[os.path.join(config_dir, 'path_planner.yaml')],
             output='screen'
         ),
         Node(
