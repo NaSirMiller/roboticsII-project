@@ -4,6 +4,8 @@
 
 ### Overview
 
+The Path Generation node interacts with Nav2's SmacPlanner, which implements a hybrid A* algorithm.
+
 ### Commands
 
 Run the following from the repo's root:
