@@ -24,8 +24,8 @@ source install/setup.bash # sync terminal to new package changes
 ros2 launch map_generation slam_launch.py
 ros2 launch map_generation nav2_launch.py
 ros2 launch map_generation explore_lite_launch.py
-ros2 run map_generation map_generation_node
 ros2 launch exit_detection exit_detection.launch.py # launch all three nodes
+ros2 run map_generation map_generation_node
 ```
 
 ## Robotics Utils
