@@ -4,7 +4,7 @@ global_costmap:
     publish_frequency: 1.0
     global_frame: map
     robot_base_frame: base_footprint
-    resolution: 0.05         # TODO: match your SLAM map resolution
+    resolution: 0.03 # NOTE: Configure based on SLAM map
     track_unknown_space: true
     plugins: ["static_layer", "inflation_layer"]
 
