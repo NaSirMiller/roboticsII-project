@@ -32,7 +32,7 @@ class LocationProviderNode(Node):
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.sub_detected_safe_exit_pose = self.create_subscription(PoseStamped, 'detected_safe_exit_pose', self.detected_safe_exit_pose_callback, 10)
         self.sub_detected_danger_exit_pose = self.create_subscription(PoseStamped, 'detected_danger_exit_pose', self.detected_danger_exit_pose_callback, 10)
-        self.create_timer(0.5, self.initialize_home_pose, once=True)
+        self.create_timer(0.5, self.initialize_home_pose)
 
     def initialize_home_pose(self):
         self.get_home_pose()
