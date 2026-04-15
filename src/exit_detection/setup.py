@@ -20,6 +20,8 @@ setup(
             'danger_exit_detection_node = exit_detection.danger_exit_detection:main',
             'safe_exit_detection_node = exit_detection.safe_exit_detection:main',
             'location_provider_node = exit_detection.location_provider:main',
+            'joy_safety_ctrl = exit_detection.joy_safety_ctrl:main',
+            'wheelodom_tf = exit_detection.wheelodom_tf:main',
         ],
     },
 )
