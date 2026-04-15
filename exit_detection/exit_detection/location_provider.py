@@ -1,34 +1,12 @@
-import rclpy
-from rclpy.node import Node
-from rclpy.qos import qos_profile_sensor_data
-from message_filters import ApproximateTimeSynchronizer, Subscriber
-from sensor_msgs.msg import Image, PointCloud2
-from geometry_msgs.msg import PoseStamped
-from geometry_msgs.msg import Twist, PoseStamped
-from tf2_ros import TransformException, Buffer, TransformListener
-from cv_bridge import CvBridge
-import cv2
-import numpy as np
-import struct
-import sys
 import math
-import time
 
-def hat(k): # Returns 3 x 3 cross product matrix for 3 x 1 vector
-    khat=np.zeros((3,3))
-    khat[0,1]=-k[2]
-    khat[0,2]=k[1]
-    khat[1,0]=k[2]
-    khat[1,2]=-k[0]
-    khat[2,0]=-k[1]
-    khat[2,1]=k[0]
-    return khat
+import numpy as np
+import rclpy
+from geometry_msgs.msg import PoseStamped
+from rclpy.node import Node
+from tf2_ros import Buffer, TransformException, TransformListener
 
-def q2R(q): # Converts quaternion into a 3 x 3 rotation matrix according to the Euler-Rodrigues formula  
-    I = np.identity(3)
-    qhat = hat(q[1:4])
-    qhat2 = qhat.dot(qhat)
-    return I + 2*q[0]*qhat + 2*qhat2
+from robotics_utils.math import q2R
 
 def euler_from_quaternion(q):
     w=q[0]

@@ -1,44 +1,29 @@
-import rclpy
-from rclpy.node import Node
-from rclpy.qos import qos_profile_sensor_data
-from message_filters import ApproximateTimeSynchronizer, Subscriber
-from sensor_msgs.msg import Image, PointCloud2
-from geometry_msgs.msg import PoseStamped
-from tf2_ros import TransformException, Buffer, TransformListener
-from cv_bridge import CvBridge
+import struct
+
 import cv2
 import numpy as np
-import struct
-import sys
+import rclpy
+from cv_bridge import CvBridge
+from geometry_msgs.msg import PoseStamped
+from message_filters import ApproximateTimeSynchronizer, Subscriber
+from rclpy.node import Node
+from sensor_msgs.msg import Image, PointCloud2
+from tf2_ros import Buffer, TransformException, TransformListener
 
-def hat(k): # Returns 3 x 3 cross product matrix for 3 x 1 vector
-    khat=np.zeros((3,3))
-    khat[0,1]=-k[2]
-    khat[0,2]=k[1]
-    khat[1,0]=k[2]
-    khat[1,2]=-k[0]
-    khat[2,0]=-k[1]
-    khat[2,1]=k[0]
-    return khat
+from robotics_utils.math import q2R
 
-def q2R(q): # Converts quaternion into a 3 x 3 rotation matrix according to the Euler-Rodrigues formula  
-    I = np.identity(3)
-    qhat = hat(q[1:4])
-    qhat2 = qhat.dot(qhat)
-    return I + 2*q[0]*qhat + 2*qhat2
-
-class DangerExitDetectionNode(Node):
+class SafeExitDetectionNode(Node):
     def __init__(self):
-        super().__init__('danger_exit_detection_node')
-        self.get_logger().info('Danger Exit Detection Node Started')
-        self.declare_parameter('color_low', [145, 110, 25]) # Yellow
-        self.declare_parameter('color_high', [235, 215, 130])
+        super().__init__('safe_exit_detection_node')
+        self.get_logger().info('Safe Exit Detection Node Started')
+        self.declare_parameter('color_low', [60, 55, 50]) # Silver
+        self.declare_parameter('color_high', [215, 205, 185])
         self.declare_parameter('object_size_min', 1000)
         self.br = CvBridge() # Used to convert between ROS and OpenCV images
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
-        self.pub_danger_exit = self.create_publisher(Image, '/detected_unsafe_exit', 10)
-        self.pub_danger_exit_pose = self.create_publisher(PoseStamped, '/detected_danger_exit_pose', 10)
+        self.pub_safe_exit = self.create_publisher(Image, '/detected_safe_exit', 10)
+        self.pub_detected_safe_exit = self.create_publisher(PoseStamped, '/detected_safe_exit_pose', 10)
         self.sub_rgb = Subscriber(self, Image, '/camera/color/image_raw')
         self.sub_depth = Subscriber(self, PointCloud2, '/camera/depth/points')
         self.ts = ApproximateTimeSynchronizer([self.sub_rgb, self.sub_depth], 10, 0.1)
@@ -72,26 +57,26 @@ class DangerExitDetectionNode(Node):
             transform = self.tf_buffer.lookup_transform('map', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
             t_R = q2R(np.array([transform.transform.rotation.w, transform.transform.rotation.x, transform.transform.rotation.y, transform.transform.rotation.z]))
             cp_robot = t_R@center_points+np.array([transform.transform.translation.x, transform.transform.translation.y, transform.transform.translation.z])
-            detected_danger_exit_pose = PoseStamped()
-            detected_danger_exit_pose.header.frame_id = 'map'
-            detected_danger_exit_pose.header.stamp = rgb_msg.header.stamp
-            detected_danger_exit_pose.pose.position.x = cp_robot[0]
-            detected_danger_exit_pose.pose.position.y = cp_robot[1]
-            detected_danger_exit_pose.pose.position.z = cp_robot[2]
+            detected_safe_exit_pose = PoseStamped()
+            detected_safe_exit_pose.header.frame_id = 'map'
+            detected_safe_exit_pose.header.stamp = rgb_msg.header.stamp
+            detected_safe_exit_pose.pose.position.x = cp_robot[0]
+            detected_safe_exit_pose.pose.position.y = cp_robot[1]
+            detected_safe_exit_pose.pose.position.z = cp_robot[2]
         except TransformException as e:
             self.get_logger().error('Transform Error: {}'.format(e))
             return
-        self.pub_detected_danger_exit_pose.publish(detected_danger_exit_pose)
+        self.pub_detected_safe_exit_pose.publish(detected_safe_exit_pose)
         detect_img_msg = self.br.cv2_to_imgmsg(rgb_image, encoding='bgr8')
         detect_img_msg.header = rgb_msg.header
-        self.get_logger().info('image message published') # Can comment out once know is working
-        self.pub_danger_exit.publish(detect_img_msg)
+        self.get_logger().info('image message published') # NOTE: Can comment out once know is working
+        self.pub_safe_exit.publish(detect_img_msg)
 
 def main(args=None):
     rclpy.init(args=args)
-    danger_exit_detection_node = DangerExitDetectionNode()
-    rclpy.spin(danger_exit_detection_node)
-    danger_exit_detection_node.destroy_node()
+    safe_exit_detection_node = SafeExitDetectionNode()
+    rclpy.spin(safe_exit_detection_node)
+    safe_exit_detection_node.destroy_node()
     rclpy.shutdown()
 
 if __name__ == '__main__':
