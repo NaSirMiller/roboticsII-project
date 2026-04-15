@@ -107,7 +107,21 @@ def generate_launch_description():
             'global_frame':       'map',
             'robot_base_frame':   'base_footprint',  # Yahboom ROSMASTER X3
             'odom_topic':         '/odom',
-            'default_nav_to_pose_bt_xml': '/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml',        # uses built-in default BT
+            'default_nav_to_pose_bt_xml': '/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml',
+            # Only load plugins actually used by the BT XML above.
+            # The default list includes nav2_change_goal_node_bt_node which
+            # is not installed on this system and causes a fatal startup crash.
+            'plugin_lib_names': [
+                'nav2_compute_path_to_pose_action_bt_node',   # ComputePathToPose
+                'nav2_follow_path_action_bt_node',            # FollowPath
+                'nav2_clear_costmap_service_bt_node',         # ClearEntireCostmap
+                'nav2_goal_updated_condition_bt_node',        # GoalUpdated
+                'nav2_spin_action_bt_node',                   # Spin
+                'nav2_wait_action_bt_node',                   # Wait
+                'nav2_rate_controller_bt_node',               # RateController
+                'nav2_recovery_node_bt_node',                 # RecoveryNode
+                'nav2_pipeline_sequence_bt_node',             # PipelineSequence
+            ],
         }],
         output='screen',
     )
