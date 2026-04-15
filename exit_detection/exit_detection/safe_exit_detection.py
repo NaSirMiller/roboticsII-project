@@ -10,7 +10,7 @@ from rclpy.node import Node
 from sensor_msgs.msg import Image, PointCloud2
 from tf2_ros import Buffer, TransformException, TransformListener
 
-from utils.math import q2R
+from robotics_utils.math import q2R
 
 class SafeExitDetectionNode(Node):
     def __init__(self):
