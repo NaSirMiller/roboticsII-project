@@ -107,7 +107,7 @@ def generate_launch_description():
             'global_frame':       'map',
             'robot_base_frame':   'base_footprint',  # Yahboom ROSMASTER X3
             'odom_topic':         '/odom',
-            'default_nav_to_pose_bt_xml': '',        # uses built-in default BT
+            'default_nav_to_pose_bt_xml': '/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml',        # uses built-in default BT
         }],
         output='screen',
     )
