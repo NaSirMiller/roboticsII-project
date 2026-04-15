@@ -9,7 +9,7 @@ planner_server:
       allow_unknown: true
       max_iterations: 1000000
       max_planning_time: 5.0
-      minimum_turning_radius: 0.4   # TODO: set to your robot's actual min turning radius (meters)
+      minimum_turning_radius: 0   # robot min turning radius (originally 0.4)
       reverse_penalty: 2.1
       change_penalty: 0.0
       non_straight_penalty: 1.20
