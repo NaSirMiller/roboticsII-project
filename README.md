@@ -38,3 +38,5 @@ Run the following from the repo's root:
 colcon build --packages-select robotics_utils # rebuild package to recognize changes
 source install/setup.bash # sync terminal to new package changes
 ```
+
+> src/nav2_wavefront_frontier_exploration/ is vendored from SeanReg/nav2_wavefront_frontier_exploration (commit 0747329), with modifications to use TF-based pose lookup instead of AMCL (see commit history for details).
