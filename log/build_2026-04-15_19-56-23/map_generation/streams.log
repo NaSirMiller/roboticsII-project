@@ -1,0 +1,40 @@
+[7.037s] Invoking command in '/root/codes/NST_proj_ws/map_generation': PYTHONPATH=/root/codes/NST_proj_ws/build/map_generation/prefix_override:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/map_generation build --build-base /root/codes/NST_proj_ws/build/map_generation/build install --record /root/codes/NST_proj_ws/build/map_generation/install.log --single-version-externally-managed
+[8.359s] running egg_info
+[8.361s] creating ../build/map_generation/map_generation.egg-info
+[8.362s] writing ../build/map_generation/map_generation.egg-info/PKG-INFO
+[8.363s] writing dependency_links to ../build/map_generation/map_generation.egg-info/dependency_links.txt
+[8.364s] writing entry points to ../build/map_generation/map_generation.egg-info/entry_points.txt
+[8.365s] writing requirements to ../build/map_generation/map_generation.egg-info/requires.txt
+[8.365s] writing top-level names to ../build/map_generation/map_generation.egg-info/top_level.txt
+[8.372s] writing manifest file '../build/map_generation/map_generation.egg-info/SOURCES.txt'
+[8.551s] reading manifest file '../build/map_generation/map_generation.egg-info/SOURCES.txt'
+[8.555s] writing manifest file '../build/map_generation/map_generation.egg-info/SOURCES.txt'
+[8.557s] running build
+[8.558s] running build_py
+[8.559s] creating /root/codes/NST_proj_ws/build/map_generation/build
+[8.559s] creating /root/codes/NST_proj_ws/build/map_generation/build/lib
+[8.560s] creating /root/codes/NST_proj_ws/build/map_generation/build/lib/map_generation
+[8.561s] copying map_generation/__init__.py -> /root/codes/NST_proj_ws/build/map_generation/build/lib/map_generation
+[8.561s] copying map_generation/map_generation_node.py -> /root/codes/NST_proj_ws/build/map_generation/build/lib/map_generation
+[8.562s] running install
+[8.565s] running install_lib
+[8.571s] creating /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation
+[8.572s] copying /root/codes/NST_proj_ws/build/map_generation/build/lib/map_generation/__init__.py -> /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation
+[8.573s] copying /root/codes/NST_proj_ws/build/map_generation/build/lib/map_generation/map_generation_node.py -> /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation
+[8.573s] byte-compiling /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation/__init__.py to __init__.cpython-38.pyc
+[8.579s] byte-compiling /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation/map_generation_node.py to map_generation_node.cpython-38.pyc
+[8.584s] running install_data
+[8.587s] creating /root/codes/NST_proj_ws/install/map_generation/share/ament_index
+[8.588s] creating /root/codes/NST_proj_ws/install/map_generation/share/ament_index/resource_index
+[8.589s] creating /root/codes/NST_proj_ws/install/map_generation/share/ament_index/resource_index/packages
+[8.590s] copying resource/map_generation -> /root/codes/NST_proj_ws/install/map_generation/share/ament_index/resource_index/packages
+[8.591s] copying package.xml -> /root/codes/NST_proj_ws/install/map_generation/share/map_generation
+[8.591s] creating /root/codes/NST_proj_ws/install/map_generation/share/map_generation/launch
+[8.592s] copying launch/explore_lite_launch.py -> /root/codes/NST_proj_ws/install/map_generation/share/map_generation/launch
+[8.593s] copying launch/slam_launch.py -> /root/codes/NST_proj_ws/install/map_generation/share/map_generation/launch
+[8.593s] copying launch/nav2_launch.py -> /root/codes/NST_proj_ws/install/map_generation/share/map_generation/launch
+[8.594s] running install_egg_info
+[8.602s] Copying ../build/map_generation/map_generation.egg-info to /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info
+[8.605s] running install_scripts
+[8.690s] Installing map_generation_node script to /root/codes/NST_proj_ws/install/map_generation/lib/map_generation
+[8.692s] writing list of installed files to '/root/codes/NST_proj_ws/build/map_generation/install.log'

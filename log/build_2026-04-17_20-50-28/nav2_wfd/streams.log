@@ -1,0 +1,37 @@
+[4.411s] Invoking command in '/root/codes/NST_proj_ws/src/nav2_wavefront_frontier_exploration': PYTHONPATH=/root/codes/NST_proj_ws/build/nav2_wfd/prefix_override:/root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nav2_wfd build --build-base /root/codes/NST_proj_ws/build/nav2_wfd/build install --record /root/codes/NST_proj_ws/build/nav2_wfd/install.log --install-scripts $base/lib/nav2_wfd --single-version-externally-managed
+[6.038s] running egg_info
+[6.040s] creating ../../build/nav2_wfd/nav2_wfd.egg-info
+[6.041s] writing ../../build/nav2_wfd/nav2_wfd.egg-info/PKG-INFO
+[6.041s] writing dependency_links to ../../build/nav2_wfd/nav2_wfd.egg-info/dependency_links.txt
+[6.042s] writing entry points to ../../build/nav2_wfd/nav2_wfd.egg-info/entry_points.txt
+[6.043s] writing requirements to ../../build/nav2_wfd/nav2_wfd.egg-info/requires.txt
+[6.043s] writing top-level names to ../../build/nav2_wfd/nav2_wfd.egg-info/top_level.txt
+[6.050s] writing manifest file '../../build/nav2_wfd/nav2_wfd.egg-info/SOURCES.txt'
+[6.244s] reading manifest file '../../build/nav2_wfd/nav2_wfd.egg-info/SOURCES.txt'
+[6.247s] writing manifest file '../../build/nav2_wfd/nav2_wfd.egg-info/SOURCES.txt'
+[6.248s] running build
+[6.248s] running build_py
+[6.249s] creating /root/codes/NST_proj_ws/build/nav2_wfd/build
+[6.250s] creating /root/codes/NST_proj_ws/build/nav2_wfd/build/lib
+[6.251s] creating /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd
+[6.252s] copying nav2_wfd/wavefront_frontier.py -> /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd
+[6.253s] copying nav2_wfd/__init__.py -> /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd
+[6.253s] running install
+[6.256s] running install_lib
+[6.262s] creating /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd
+[6.262s] copying /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd/wavefront_frontier.py -> /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd
+[6.263s] copying /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd/__init__.py -> /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd
+[6.266s] byte-compiling /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd/wavefront_frontier.py to wavefront_frontier.cpython-38.pyc
+[6.283s] byte-compiling /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd/__init__.py to __init__.cpython-38.pyc
+[6.284s] running install_data
+[6.290s] creating /root/codes/NST_proj_ws/install/nav2_wfd/share/ament_index
+[6.291s] creating /root/codes/NST_proj_ws/install/nav2_wfd/share/ament_index/resource_index
+[6.292s] creating /root/codes/NST_proj_ws/install/nav2_wfd/share/ament_index/resource_index/packages
+[6.293s] copying resource/nav2_wfd -> /root/codes/NST_proj_ws/install/nav2_wfd/share/ament_index/resource_index/packages
+[6.293s] copying package.xml -> /root/codes/NST_proj_ws/install/nav2_wfd/share/nav2_wfd
+[6.294s] running install_egg_info
+[6.298s] Copying ../../build/nav2_wfd/nav2_wfd.egg-info to /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd-0.0.0-py3.8.egg-info
+[6.304s] running install_scripts
+[6.396s] Installing explore script to /root/codes/NST_proj_ws/install/nav2_wfd/lib/nav2_wfd
+[6.399s] writing list of installed files to '/root/codes/NST_proj_ws/build/nav2_wfd/install.log'
+[6.514s] Invoked command in '/root/codes/NST_proj_ws/src/nav2_wavefront_frontier_exploration' returned '0': PYTHONPATH=/root/codes/NST_proj_ws/build/nav2_wfd/prefix_override:/root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/nav2_wfd build --build-base /root/codes/NST_proj_ws/build/nav2_wfd/build install --record /root/codes/NST_proj_ws/build/nav2_wfd/install.log --install-scripts $base/lib/nav2_wfd --single-version-externally-managed

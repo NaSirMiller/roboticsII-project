@@ -1,0 +1,21 @@
+[8.264s] Invoking command in '/root/codes/NST_proj_ws/src/path_generation': PYTHONPATH=/root/codes/NST_proj_ws/build/path_generation/prefix_override:/root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/path_generation build --build-base /root/codes/NST_proj_ws/build/path_generation/build install --record /root/codes/NST_proj_ws/build/path_generation/install.log --install-scripts $base/lib/path_generation --single-version-externally-managed
+[10.233s] running egg_info
+[10.236s] writing ../../build/path_generation/path_generation.egg-info/PKG-INFO
+[10.237s] writing dependency_links to ../../build/path_generation/path_generation.egg-info/dependency_links.txt
+[10.240s] writing entry points to ../../build/path_generation/path_generation.egg-info/entry_points.txt
+[10.240s] writing requirements to ../../build/path_generation/path_generation.egg-info/requires.txt
+[10.241s] writing top-level names to ../../build/path_generation/path_generation.egg-info/top_level.txt
+[10.461s] reading manifest file '../../build/path_generation/path_generation.egg-info/SOURCES.txt'
+[10.472s] writing manifest file '../../build/path_generation/path_generation.egg-info/SOURCES.txt'
+[10.472s] running build
+[10.473s] running build_py
+[10.476s] running install
+[10.480s] running install_lib
+[10.484s] running install_data
+[10.488s] running install_egg_info
+[10.500s] removing '/root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages/path_generation-0.0.1-py3.8.egg-info' (and everything under it)
+[10.501s] Copying ../../build/path_generation/path_generation.egg-info to /root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages/path_generation-0.0.1-py3.8.egg-info
+[10.506s] running install_scripts
+[10.610s] Installing path_generation_node script to /root/codes/NST_proj_ws/install/path_generation/lib/path_generation
+[10.612s] writing list of installed files to '/root/codes/NST_proj_ws/build/path_generation/install.log'
+[10.750s] Invoked command in '/root/codes/NST_proj_ws/src/path_generation' returned '0': PYTHONPATH=/root/codes/NST_proj_ws/build/path_generation/prefix_override:/root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/path_generation build --build-base /root/codes/NST_proj_ws/build/path_generation/build install --record /root/codes/NST_proj_ws/build/path_generation/install.log --install-scripts $base/lib/path_generation --single-version-externally-managed

@@ -1,0 +1,29 @@
+[3.648s] Invoking command in '/root/codes/NST_proj_ws/src/exit_detection': AMENT_PREFIX_PATH=/root/codes/NST_proj_ws/install/robotics_utils:${AMENT_PREFIX_PATH} PYTHONPATH=/root/codes/NST_proj_ws/build/exit_detection/prefix_override:/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/exit_detection build --build-base /root/codes/NST_proj_ws/build/exit_detection/build install --record /root/codes/NST_proj_ws/build/exit_detection/install.log --single-version-externally-managed
+[4.846s] running egg_info
+[4.849s] writing ../../build/exit_detection/exit_detection.egg-info/PKG-INFO
+[4.850s] writing dependency_links to ../../build/exit_detection/exit_detection.egg-info/dependency_links.txt
+[4.850s] writing entry points to ../../build/exit_detection/exit_detection.egg-info/entry_points.txt
+[4.851s] writing requirements to ../../build/exit_detection/exit_detection.egg-info/requires.txt
+[4.851s] writing top-level names to ../../build/exit_detection/exit_detection.egg-info/top_level.txt
+[5.017s] reading manifest file '../../build/exit_detection/exit_detection.egg-info/SOURCES.txt'
+[5.022s] writing manifest file '../../build/exit_detection/exit_detection.egg-info/SOURCES.txt'
+[5.022s] running build
+[5.023s] running build_py
+[5.024s] running install
+[5.029s] running install_lib
+[5.037s] running install_data
+[5.039s] copying launch/location_provider_launch.py -> /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/launch
+[5.040s] copying launch/safe_exit_detection_launch.py -> /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/launch
+[5.040s] copying launch/exit_detection_launch.py -> /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/launch
+[5.041s] copying launch/danger_exit_detection_launch.py -> /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/launch
+[5.041s] running install_egg_info
+[5.049s] removing '/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection-0.0.1-py3.8.egg-info' (and everything under it)
+[5.050s] Copying ../../build/exit_detection/exit_detection.egg-info to /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection-0.0.1-py3.8.egg-info
+[5.053s] running install_scripts
+[5.132s] Installing danger_exit_detection_node script to /root/codes/NST_proj_ws/install/exit_detection/bin
+[5.132s] Installing joy_safety_ctrl script to /root/codes/NST_proj_ws/install/exit_detection/bin
+[5.133s] Installing location_provider_node script to /root/codes/NST_proj_ws/install/exit_detection/bin
+[5.133s] Installing safe_exit_detection_node script to /root/codes/NST_proj_ws/install/exit_detection/bin
+[5.134s] Installing wheelodom_tf script to /root/codes/NST_proj_ws/install/exit_detection/bin
+[5.135s] writing list of installed files to '/root/codes/NST_proj_ws/build/exit_detection/install.log'
+[5.243s] Invoked command in '/root/codes/NST_proj_ws/src/exit_detection' returned '0': AMENT_PREFIX_PATH=/root/codes/NST_proj_ws/install/robotics_utils:${AMENT_PREFIX_PATH} PYTHONPATH=/root/codes/NST_proj_ws/build/exit_detection/prefix_override:/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/exit_detection build --build-base /root/codes/NST_proj_ws/build/exit_detection/build install --record /root/codes/NST_proj_ws/build/exit_detection/install.log --single-version-externally-managed

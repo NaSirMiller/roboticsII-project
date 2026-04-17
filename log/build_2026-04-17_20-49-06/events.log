@@ -1,0 +1,6 @@
+[0.000000] (-) TimerEvent: {}
+[0.000550] (-) JobUnselected: {'identifier': 'exit_detection'}
+[0.000787] (-) JobUnselected: {'identifier': 'map_generation'}
+[0.002010] (-) JobUnselected: {'identifier': 'path_generation'}
+[0.002119] (-) JobUnselected: {'identifier': 'robotics_utils'}
+[0.003007] (-) EventReactorShutdown: {}

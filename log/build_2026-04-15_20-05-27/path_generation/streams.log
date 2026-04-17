@@ -1,0 +1,33 @@
+[6.277s] Invoking command in '/root/codes/NST_proj_ws/src/path_generation': PYTHONPATH=/root/codes/NST_proj_ws/build/path_generation/prefix_override:/root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/path_generation build --build-base /root/codes/NST_proj_ws/build/path_generation/build install --record /root/codes/NST_proj_ws/build/path_generation/install.log --single-version-externally-managed
+[7.614s] running egg_info
+[7.614s] writing ../../build/path_generation/path_generation.egg-info/PKG-INFO
+[7.615s] writing dependency_links to ../../build/path_generation/path_generation.egg-info/dependency_links.txt
+[7.616s] writing entry points to ../../build/path_generation/path_generation.egg-info/entry_points.txt
+[7.617s] writing requirements to ../../build/path_generation/path_generation.egg-info/requires.txt
+[7.618s] writing top-level names to ../../build/path_generation/path_generation.egg-info/top_level.txt
+[7.785s] reading manifest file '../../build/path_generation/path_generation.egg-info/SOURCES.txt'
+[7.790s] writing manifest file '../../build/path_generation/path_generation.egg-info/SOURCES.txt'
+[7.791s] running build
+[7.792s] running build_py
+[7.794s] copying path_generation/__init__.py -> /root/codes/NST_proj_ws/build/path_generation/build/lib/path_generation
+[7.795s] copying path_generation/path_generation.py -> /root/codes/NST_proj_ws/build/path_generation/build/lib/path_generation
+[7.797s] running install
+[7.799s] running install_lib
+[7.803s] copying /root/codes/NST_proj_ws/build/path_generation/build/lib/path_generation/__init__.py -> /root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages/path_generation
+[7.804s] copying /root/codes/NST_proj_ws/build/path_generation/build/lib/path_generation/path_generation.py -> /root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages/path_generation
+[7.806s] byte-compiling /root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages/path_generation/__init__.py to __init__.cpython-38.pyc
+[7.811s] byte-compiling /root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages/path_generation/path_generation.py to path_generation.cpython-38.pyc
+[7.816s] running install_data
+[7.818s] copying resource/path_generation -> /root/codes/NST_proj_ws/install/path_generation/share/ament_index/resource_index/packages
+[7.819s] copying package.xml -> /root/codes/NST_proj_ws/install/path_generation/share/path_generation
+[7.820s] creating /root/codes/NST_proj_ws/install/path_generation/share/path_generation/launch
+[7.820s] copying launch/planning.launch.py -> /root/codes/NST_proj_ws/install/path_generation/share/path_generation/launch
+[7.821s] creating /root/codes/NST_proj_ws/install/path_generation/share/path_generation/config
+[7.821s] copying config/costmap.yaml -> /root/codes/NST_proj_ws/install/path_generation/share/path_generation/config
+[7.822s] copying config/path_planner.yaml -> /root/codes/NST_proj_ws/install/path_generation/share/path_generation/config
+[7.822s] running install_egg_info
+[7.826s] Copying ../../build/path_generation/path_generation.egg-info to /root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages/path_generation-0.0.1-py3.8.egg-info
+[7.829s] running install_scripts
+[7.920s] Installing path_generation_node script to /root/codes/NST_proj_ws/install/path_generation/bin
+[7.922s] writing list of installed files to '/root/codes/NST_proj_ws/build/path_generation/install.log'
+[8.228s] Invoked command in '/root/codes/NST_proj_ws/src/path_generation' returned '0': PYTHONPATH=/root/codes/NST_proj_ws/build/path_generation/prefix_override:/root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/path_generation build --build-base /root/codes/NST_proj_ws/build/path_generation/build install --record /root/codes/NST_proj_ws/build/path_generation/install.log --single-version-externally-managed

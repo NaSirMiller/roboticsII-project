@@ -1,0 +1,71 @@
+[0.095s] Invoking command in '/root/codes/NST_proj_ws/build/explore_lite': AMENT_PREFIX_PATH=/root/codes/NST_proj_ws/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/codes/NST_proj_ws/install/explore_lite_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy LD_LIBRARY_PATH=/root/codes/NST_proj_ws/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /root/codes/NST_proj_ws/src/m-explore-ros2/explore -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/codes/NST_proj_ws/install/explore_lite
+[0.385s] -- The C compiler identification is GNU 9.4.0
+[0.664s] -- The CXX compiler identification is GNU 9.4.0
+[0.701s] -- Check for working C compiler: /usr/bin/cc
+[1.052s] -- Check for working C compiler: /usr/bin/cc -- works
+[1.057s] -- Detecting C compiler ABI info
+[1.406s] -- Detecting C compiler ABI info - done
+[1.459s] -- Detecting C compile features
+[1.460s] -- Detecting C compile features - done
+[1.471s] -- Check for working CXX compiler: /usr/bin/c++
+[1.865s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[1.870s] -- Detecting CXX compiler ABI info
+[2.269s] -- Detecting CXX compiler ABI info - done
+[2.326s] -- Detecting CXX compile features
+[2.328s] -- Detecting CXX compile features - done
+[2.330s] -- BuilD for ROS2: foxy
+[2.375s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[2.644s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[2.645s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[3.950s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[4.581s] -- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)
+[5.333s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.483s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[6.253s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[6.508s] -- Found FastRTPS: /opt/ros/foxy/include  
+[7.253s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[7.953s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[7.986s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[7.997s] -- Looking for pthread.h
+[8.383s] -- Looking for pthread.h - found
+[8.385s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[8.770s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[8.774s] -- Looking for pthread_create in pthreads
+[9.094s] -- Looking for pthread_create in pthreads - not found
+[9.095s] -- Looking for pthread_create in pthread
+[9.458s] -- Looking for pthread_create in pthread - found
+[9.462s] -- Found Threads: TRUE  
+[10.849s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[11.612s] -- Found tf2_ros: 0.13.13 (/opt/ros/foxy/share/tf2_ros/cmake)
+[14.300s] -- Found tf2_geometry_msgs: 0.13.13 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)
+[14.455s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)
+[14.532s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[14.737s] -- Found nav2_msgs: 0.4.7 (/opt/ros/foxy/share/nav2_msgs/cmake)
+[16.456s] -- Found map_msgs: 2.0.2 (/opt/ros/foxy/share/map_msgs/cmake)
+[17.413s] -- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)
+[17.871s] -- Found nav2_costmap_2d: 0.4.7 (/opt/ros/foxy/share/nav2_costmap_2d/cmake)
+[20.966s] -- Found explore_lite_msgs: 1.0.0 (/root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake)
+[21.073s] -- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)
+[21.959s] -- Found ament_cmake_gtest: 0.9.11 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)
+[22.033s] -- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built
+[22.056s] -- Check if compiler accepts -pthread
+[22.450s] -- Check if compiler accepts -pthread - yes
+[22.499s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[22.501s] -- Configured cppcheck include dirs: /root/codes/NST_proj_ws/src/m-explore-ros2/explore/include;$<BUILD_INTERFACE:/root/codes/NST_proj_ws/src/m-explore-ros2/explore/include>
+[22.501s] -- Configured cppcheck exclude dirs and/or files: 
+[22.517s] -- Added test 'flake8' to check Python code syntax and style conventions
+[22.534s] -- Added test 'lint_cmake' to check CMake code style
+[22.549s] -- Added test 'pep257' to check Python code against some of the style conventions in PEP 257
+[22.571s] -- Added test 'uncrustify' to check C / C++ code style
+[22.571s] -- Configured uncrustify additional arguments: 
+[22.589s] -- Added test 'xmllint' to check XML markup files
+[22.634s] -- Configuring done
+[22.656s] CMake Error at CMakeLists.txt:80 (add_executable):
+[22.657s]   Target "explore" links to target "nav2_costmap_2d::filters" but the target
+[22.657s]   was not found.  Perhaps a find_package() call is missing for an IMPORTED
+[22.658s]   target, or an ALIAS target is missing?
+[22.658s] 
+[22.659s] 
+[22.743s] -- Generating done
+[22.752s] CMake Generate step failed.  Build files cannot be regenerated correctly.
+[22.808s] Invoked command in '/root/codes/NST_proj_ws/build/explore_lite' returned '1': AMENT_PREFIX_PATH=/root/codes/NST_proj_ws/install/explore_lite_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/root/codes/NST_proj_ws/install/explore_lite_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy LD_LIBRARY_PATH=/root/codes/NST_proj_ws/install/explore_lite_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/cmake /root/codes/NST_proj_ws/src/m-explore-ros2/explore -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/codes/NST_proj_ws/install/explore_lite

@@ -1,0 +1,49 @@
+running egg_info
+creating ../../build/exit_detection/exit_detection.egg-info
+writing ../../build/exit_detection/exit_detection.egg-info/PKG-INFO
+writing dependency_links to ../../build/exit_detection/exit_detection.egg-info/dependency_links.txt
+writing entry points to ../../build/exit_detection/exit_detection.egg-info/entry_points.txt
+writing requirements to ../../build/exit_detection/exit_detection.egg-info/requires.txt
+writing top-level names to ../../build/exit_detection/exit_detection.egg-info/top_level.txt
+writing manifest file '../../build/exit_detection/exit_detection.egg-info/SOURCES.txt'
+reading manifest file '../../build/exit_detection/exit_detection.egg-info/SOURCES.txt'
+writing manifest file '../../build/exit_detection/exit_detection.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /root/codes/NST_proj_ws/build/exit_detection/build
+creating /root/codes/NST_proj_ws/build/exit_detection/build/lib
+creating /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+copying exit_detection/__init__.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+copying exit_detection/danger_exit_detection.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+copying exit_detection/location_provider.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+copying exit_detection/safe_exit_detection.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+running install
+running install_lib
+creating /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection
+copying /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection/__init__.py -> /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection
+copying /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection/danger_exit_detection.py -> /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection
+copying /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection/location_provider.py -> /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection
+copying /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection/safe_exit_detection.py -> /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection
+byte-compiling /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection/__init__.py to __init__.cpython-38.pyc
+byte-compiling /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection/danger_exit_detection.py to danger_exit_detection.cpython-38.pyc
+byte-compiling /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection/location_provider.py to location_provider.cpython-38.pyc
+byte-compiling /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection/safe_exit_detection.py to safe_exit_detection.cpython-38.pyc
+running install_data
+creating /root/codes/NST_proj_ws/install/exit_detection/share/ament_index
+creating /root/codes/NST_proj_ws/install/exit_detection/share/ament_index/resource_index
+creating /root/codes/NST_proj_ws/install/exit_detection/share/ament_index/resource_index/packages
+copying resource/exit_detection -> /root/codes/NST_proj_ws/install/exit_detection/share/ament_index/resource_index/packages
+copying package.xml -> /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection
+creating /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/launch
+copying launch/location_provider.launch.py -> /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/launch
+copying launch/danger_exit_detection.launch.py -> /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/launch
+copying launch/exit_detection.launch.py -> /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/launch
+copying launch/safe_exit_detection.launch.py -> /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/launch
+creating /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/config
+running install_egg_info
+Copying ../../build/exit_detection/exit_detection.egg-info to /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection-0.0.1-py3.8.egg-info
+running install_scripts
+Installing danger_exit_detection_node script to /root/codes/NST_proj_ws/install/exit_detection/bin
+Installing location_provider_node script to /root/codes/NST_proj_ws/install/exit_detection/bin
+Installing safe_exit_detection_node script to /root/codes/NST_proj_ws/install/exit_detection/bin
+writing list of installed files to '/root/codes/NST_proj_ws/build/exit_detection/install.log'

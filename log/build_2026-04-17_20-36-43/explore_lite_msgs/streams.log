@@ -1,0 +1,181 @@
+[0.136s] Invoking command in '/root/codes/NST_proj_ws/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy /usr/bin/cmake /root/codes/NST_proj_ws/src/m-explore-ros2/explore_lite_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/codes/NST_proj_ws/install/explore_lite_msgs
+[1.249s] -- The C compiler identification is GNU 9.4.0
+[2.074s] -- The CXX compiler identification is GNU 9.4.0
+[2.127s] -- Check for working C compiler: /usr/bin/cc
+[2.503s] -- Check for working C compiler: /usr/bin/cc -- works
+[2.520s] -- Detecting C compiler ABI info
+[2.891s] -- Detecting C compiler ABI info - done
+[2.963s] -- Detecting C compile features
+[2.966s] -- Detecting C compile features - done
+[2.981s] -- Check for working CXX compiler: /usr/bin/c++
+[3.376s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[3.380s] -- Detecting CXX compiler ABI info
+[3.785s] -- Detecting CXX compiler ABI info - done
+[3.855s] -- Detecting CXX compile features
+[3.858s] -- Detecting CXX compile features - done
+[3.962s] -- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)
+[4.256s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[4.257s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[5.703s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[6.498s] -- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)
+[6.657s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[6.875s] -- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[8.182s] -- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[8.457s] -- Found FastRTPS: /opt/ros/foxy/include  
+[9.503s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[10.024s] -- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+[10.939s] -- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)
+[12.020s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[12.130s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[12.326s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") 
+[12.384s] -- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)
+[12.630s] -- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") 
+[12.631s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[12.632s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8
+[12.632s] -- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so
+[12.786s] -- Found PythonExtra: .so  
+[13.290s] -- Configuring done
+[13.440s] -- Generating done
+[13.454s] -- Build files have been written to: /root/codes/NST_proj_ws/build/explore_lite_msgs
+[13.479s] Invoked command in '/root/codes/NST_proj_ws/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy /usr/bin/cmake /root/codes/NST_proj_ws/src/m-explore-ros2/explore_lite_msgs -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/root/codes/NST_proj_ws/install/explore_lite_msgs
+[13.491s] Invoking command in '/root/codes/NST_proj_ws/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy /usr/bin/cmake --build /root/codes/NST_proj_ws/build/explore_lite_msgs -- -j4 -l4
+[13.734s] [35m[1mScanning dependencies of target explore_lite_msgs__cpp[0m
+[13.739s] [  3%] [34m[1mGenerating C code for ROS interfaces[0m
+[13.808s] [  6%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[15.633s] [  6%] Built target explore_lite_msgs__cpp
+[15.701s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_generator_c[0m
+[15.706s] [  9%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[15.739s] [ 12%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[15.747s] [ 16%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[15.892s] [ 19%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_generator_c.dir/rosidl_generator_c/explore_lite_msgs/msg/detail/explore_status__functions.c.o[0m
+[16.557s] [ 22%] [32m[1mLinking C shared library libexplore_lite_msgs__rosidl_generator_c.so[0m
+[16.818s] [ 22%] Built target explore_lite_msgs__rosidl_generator_c
+[16.913s] [ 25%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[18.100s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_cpp[0m
+[18.303s] [ 29%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/explore_lite_msgs/msg/explore_status__type_support.cpp.o[0m
+[18.341s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_fastrtps_cpp[0m
+[18.377s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_introspection_cpp[0m
+[18.479s] [ 32%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/explore_lite_msgs/msg/detail/explore_status__type_support.cpp.o[0m
+[18.638s] [ 35%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/explore_lite_msgs/msg/detail/dds_fastrtps/explore_status__type_support.cpp.o[0m
+[19.109s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_c[0m
+[19.312s] [ 38%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/explore_lite_msgs/msg/explore_status__type_support.cpp.o[0m
+[19.624s] [ 41%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_c.so[0m
+[20.060s] [ 41%] Built target explore_lite_msgs__rosidl_typesupport_c
+[20.273s] [ 45%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[20.825s] [ 48%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_cpp.so[0m
+[21.203s] [ 48%] Built target explore_lite_msgs__rosidl_typesupport_cpp
+[21.272s] [ 51%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_introspection_cpp.so[0m
+[21.779s] [ 51%] Built target explore_lite_msgs__rosidl_typesupport_introspection_cpp
+[22.094s] [ 54%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_fastrtps_cpp.so[0m
+[22.441s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_introspection_c[0m
+[22.496s] [ 54%] Built target explore_lite_msgs__rosidl_typesupport_fastrtps_cpp
+[22.531s] [ 58%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/explore_lite_msgs/msg/detail/explore_status__type_support.c.o[0m
+[22.560s] [ 61%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[22.724s] [ 64%] [32m[1mLinking C shared library libexplore_lite_msgs__rosidl_typesupport_introspection_c.so[0m
+[22.889s] [ 64%] Built target explore_lite_msgs__rosidl_typesupport_introspection_c
+[24.294s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_fastrtps_c[0m
+[24.399s] [ 67%] [32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/explore_lite_msgs/msg/detail/explore_status__type_support_c.cpp.o[0m
+[26.378s] [ 70%] [32m[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_fastrtps_c.so[0m
+[26.744s] [ 70%] Built target explore_lite_msgs__rosidl_typesupport_fastrtps_c
+[26.802s] [35m[1mScanning dependencies of target explore_lite_msgs[0m
+[26.863s] [ 70%] Built target explore_lite_msgs
+[26.923s] [35m[1mScanning dependencies of target explore_lite_msgs__py[0m
+[26.982s] [ 74%] [34m[1mGenerating Python code for ROS interfaces[0m
+[29.715s] [ 74%] Built target explore_lite_msgs__py
+[29.773s] [35m[1mScanning dependencies of target explore_lite_msgs__python[0m
+[30.015s] [ 77%] [32mBuilding C object CMakeFiles/explore_lite_msgs__python.dir/rosidl_generator_py/explore_lite_msgs/msg/_explore_status_s.c.o[0m
+[30.585s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/explore_lite_msgs/libexplore_lite_msgs__python.so[0m
+[30.798s] [ 80%] Built target explore_lite_msgs__python
+[30.873s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_fastrtps_c__pyext[0m
+[30.874s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_c__pyext[0m
+[30.984s] [ 83%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_c.c.o[0m
+[31.009s] [ 87%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[31.410s] [ 90%] [32m[1mLinking C shared library rosidl_generator_py/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so[0m
+[31.443s] [ 93%] [32m[1mLinking CXX shared library rosidl_generator_py/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so[0m
+[31.634s] [ 93%] Built target explore_lite_msgs__rosidl_typesupport_c__pyext
+[31.704s] [35m[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_introspection_c__pyext[0m
+[31.783s] [ 93%] Built target explore_lite_msgs__rosidl_typesupport_fastrtps_c__pyext
+[31.815s] [ 96%] [32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[32.240s] [100%] [32m[1mLinking C shared library rosidl_generator_py/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so[0m
+[32.434s] [100%] Built target explore_lite_msgs__rosidl_typesupport_introspection_c__pyext
+[32.498s] Invoked command in '/root/codes/NST_proj_ws/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy /usr/bin/cmake --build /root/codes/NST_proj_ws/build/explore_lite_msgs -- -j4 -l4
+[32.928s] Invoking command in '/root/codes/NST_proj_ws/build/explore_lite_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy /usr/bin/cmake --install /root/codes/NST_proj_ws/build/explore_lite_msgs
+[32.978s] -- Install configuration: ""
+[32.981s] -- Execute custom install script
+[32.982s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/ament_index/resource_index/rosidl_interfaces/explore_lite_msgs
+[33.034s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__functions.h
+[33.082s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__struct.h
+[33.131s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__type_support.h
+[33.180s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/explore_status.h
+[33.228s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/rosidl_generator_c__visibility_control.h
+[33.278s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/library_path.sh
+[33.329s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/library_path.dsv
+[33.379s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_fastrtps_c.h
+[33.426s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[33.481s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_fastrtps_c.so
+[33.534s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_fastrtps_cpp.hpp
+[33.581s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[33.633s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_fastrtps_cpp.so
+[33.690s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_introspection_c.h
+[33.744s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[33.796s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__builder.hpp
+[33.844s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__struct.hpp
+[33.894s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__traits.hpp
+[33.944s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/explore_status.hpp
+[33.996s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_introspection_cpp.hpp
+[34.048s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/pythonpath.sh
+[34.102s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/pythonpath.dsv
+[34.154s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/__init__.py
+[34.207s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/msg/__init__.py
+[34.258s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/msg/_explore_status.py
+[34.312s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so
+[34.362s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so
+[34.411s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so
+[34.465s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__python.so
+[34.516s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/msg/ExploreStatus.idl
+[34.566s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/msg/ExploreStatus.msg
+[34.616s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/ament_index/resource_index/package_run_dependencies/explore_lite_msgs
+[34.675s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/ament_index/resource_index/parent_prefix_path/explore_lite_msgs
+[34.724s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/ament_prefix_path.sh
+[34.773s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/ament_prefix_path.dsv
+[34.822s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/path.sh
+[34.873s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/path.dsv
+[34.921s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.bash
+[34.988s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.sh
+[35.038s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.zsh
+[35.087s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.dsv
+[35.136s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/package.dsv
+[35.185s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/ament_index/resource_index/packages/explore_lite_msgs
+[35.239s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/rosidl_cmake-extras.cmake
+[35.292s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_dependencies-extras.cmake
+[35.343s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_libraries-extras.cmake
+[35.398s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_targets-extras.cmake
+[35.449s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_include_directories-extras.cmake
+[35.498s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[35.546s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[35.609s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgsConfig.cmake
+[35.656s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgsConfig-version.cmake
+[35.705s] -- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/package.xml
+[35.754s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_generator_c.so
+[35.755s] -- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_generator_c.so" to ""
+[35.756s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_c.so
+[35.757s] -- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_c.so" to ""
+[35.758s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_c.so
+[35.761s] -- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_c.so" to ""
+[35.762s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_cpp.so
+[35.763s] -- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_cpp.so" to ""
+[35.771s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_cpp.so
+[35.773s] -- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_cpp.so" to ""
+[36.020s] Compiling '/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/__init__.py'...
+[36.051s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_generator_cExport.cmake
+[36.052s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_generator_cExport-noconfig.cmake
+[36.053s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cExport.cmake
+[36.054s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[36.055s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cExport.cmake
+[36.055s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cExport-noconfig.cmake
+[36.057s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_generator_cppExport.cmake
+[36.058s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cppExport.cmake
+[36.058s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[36.059s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cppExport.cmake
+[36.059s] -- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cppExport-noconfig.cmake
+[36.071s] Invoked command in '/root/codes/NST_proj_ws/build/explore_lite_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy /usr/bin/cmake --install /root/codes/NST_proj_ws/build/explore_lite_msgs

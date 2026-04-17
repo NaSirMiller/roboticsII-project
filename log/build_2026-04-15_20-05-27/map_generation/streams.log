@@ -1,0 +1,21 @@
+[6.382s] Invoking command in '/root/codes/NST_proj_ws/map_generation': PYTHONPATH=/root/codes/NST_proj_ws/build/map_generation/prefix_override:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/map_generation build --build-base /root/codes/NST_proj_ws/build/map_generation/build install --record /root/codes/NST_proj_ws/build/map_generation/install.log --single-version-externally-managed
+[7.670s] running egg_info
+[7.682s] writing ../build/map_generation/map_generation.egg-info/PKG-INFO
+[7.688s] writing dependency_links to ../build/map_generation/map_generation.egg-info/dependency_links.txt
+[7.691s] writing entry points to ../build/map_generation/map_generation.egg-info/entry_points.txt
+[7.692s] writing requirements to ../build/map_generation/map_generation.egg-info/requires.txt
+[7.692s] writing top-level names to ../build/map_generation/map_generation.egg-info/top_level.txt
+[7.870s] reading manifest file '../build/map_generation/map_generation.egg-info/SOURCES.txt'
+[7.873s] writing manifest file '../build/map_generation/map_generation.egg-info/SOURCES.txt'
+[7.874s] running build
+[7.874s] running build_py
+[7.875s] running install
+[7.879s] running install_lib
+[7.889s] running install_data
+[7.893s] running install_egg_info
+[7.898s] removing '/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info' (and everything under it)
+[7.899s] Copying ../build/map_generation/map_generation.egg-info to /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info
+[7.904s] running install_scripts
+[7.995s] Installing map_generation_node script to /root/codes/NST_proj_ws/install/map_generation/lib/map_generation
+[7.996s] writing list of installed files to '/root/codes/NST_proj_ws/build/map_generation/install.log'
+[8.388s] Invoked command in '/root/codes/NST_proj_ws/map_generation' returned '0': PYTHONPATH=/root/codes/NST_proj_ws/build/map_generation/prefix_override:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/map_generation build --build-base /root/codes/NST_proj_ws/build/map_generation/build install --record /root/codes/NST_proj_ws/build/map_generation/install.log --single-version-externally-managed

@@ -1,0 +1,35 @@
+running egg_info
+creating ../../build/nav2_wfd/nav2_wfd.egg-info
+writing ../../build/nav2_wfd/nav2_wfd.egg-info/PKG-INFO
+writing dependency_links to ../../build/nav2_wfd/nav2_wfd.egg-info/dependency_links.txt
+writing entry points to ../../build/nav2_wfd/nav2_wfd.egg-info/entry_points.txt
+writing requirements to ../../build/nav2_wfd/nav2_wfd.egg-info/requires.txt
+writing top-level names to ../../build/nav2_wfd/nav2_wfd.egg-info/top_level.txt
+writing manifest file '../../build/nav2_wfd/nav2_wfd.egg-info/SOURCES.txt'
+reading manifest file '../../build/nav2_wfd/nav2_wfd.egg-info/SOURCES.txt'
+writing manifest file '../../build/nav2_wfd/nav2_wfd.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /root/codes/NST_proj_ws/build/nav2_wfd/build
+creating /root/codes/NST_proj_ws/build/nav2_wfd/build/lib
+creating /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd
+copying nav2_wfd/wavefront_frontier.py -> /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd
+copying nav2_wfd/__init__.py -> /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd
+running install
+running install_lib
+creating /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd
+copying /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd/wavefront_frontier.py -> /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd
+copying /root/codes/NST_proj_ws/build/nav2_wfd/build/lib/nav2_wfd/__init__.py -> /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd
+byte-compiling /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd/wavefront_frontier.py to wavefront_frontier.cpython-38.pyc
+byte-compiling /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd/__init__.py to __init__.cpython-38.pyc
+running install_data
+creating /root/codes/NST_proj_ws/install/nav2_wfd/share/ament_index
+creating /root/codes/NST_proj_ws/install/nav2_wfd/share/ament_index/resource_index
+creating /root/codes/NST_proj_ws/install/nav2_wfd/share/ament_index/resource_index/packages
+copying resource/nav2_wfd -> /root/codes/NST_proj_ws/install/nav2_wfd/share/ament_index/resource_index/packages
+copying package.xml -> /root/codes/NST_proj_ws/install/nav2_wfd/share/nav2_wfd
+running install_egg_info
+Copying ../../build/nav2_wfd/nav2_wfd.egg-info to /root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages/nav2_wfd-0.0.0-py3.8.egg-info
+running install_scripts
+Installing explore script to /root/codes/NST_proj_ws/install/nav2_wfd/lib/nav2_wfd
+writing list of installed files to '/root/codes/NST_proj_ws/build/nav2_wfd/install.log'

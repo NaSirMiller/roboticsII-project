@@ -1,0 +1,12 @@
+[0.000000] (-) TimerEvent: {}
+[0.001952] (-) JobUnselected: {'identifier': 'exit_detection'}
+[0.003811] (-) JobUnselected: {'identifier': 'explore_lite_msgs'}
+[0.004171] (-) JobUnselected: {'identifier': 'map_generation'}
+[0.004344] (-) JobUnselected: {'identifier': 'multirobot_map_merge'}
+[0.004496] (-) JobUnselected: {'identifier': 'path_generation'}
+[0.004617] (-) JobUnselected: {'identifier': 'robotics_utils'}
+[0.004753] (explore_lite) JobQueued: {'identifier': 'explore_lite', 'dependencies': OrderedDict([('explore_lite_msgs', '/root/codes/NST_proj_ws/install/explore_lite_msgs')])}
+[0.006749] (explore_lite) JobStarted: {'identifier': 'explore_lite'}
+[0.098461] (-) TimerEvent: {}
+[0.162495] (explore_lite) JobEnded: {'identifier': 'explore_lite', 'rc': 1}
+[0.173656] (-) EventReactorShutdown: {}

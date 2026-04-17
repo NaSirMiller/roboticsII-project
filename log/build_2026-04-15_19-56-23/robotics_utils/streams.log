@@ -1,0 +1,35 @@
+[7.229s] Invoking command in '/root/codes/NST_proj_ws/robotics_utils': PYTHONPATH=/root/codes/NST_proj_ws/build/robotics_utils/prefix_override:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/robotics_utils build --build-base /root/codes/NST_proj_ws/build/robotics_utils/build install --record /root/codes/NST_proj_ws/build/robotics_utils/install.log --single-version-externally-managed
+[8.526s] running egg_info
+[8.530s] creating ../build/robotics_utils/robotics_utils.egg-info
+[8.531s] writing ../build/robotics_utils/robotics_utils.egg-info/PKG-INFO
+[8.532s] writing dependency_links to ../build/robotics_utils/robotics_utils.egg-info/dependency_links.txt
+[8.533s] writing entry points to ../build/robotics_utils/robotics_utils.egg-info/entry_points.txt
+[8.533s] writing requirements to ../build/robotics_utils/robotics_utils.egg-info/requires.txt
+[8.534s] writing top-level names to ../build/robotics_utils/robotics_utils.egg-info/top_level.txt
+[8.540s] writing manifest file '../build/robotics_utils/robotics_utils.egg-info/SOURCES.txt'
+[8.715s] reading manifest file '../build/robotics_utils/robotics_utils.egg-info/SOURCES.txt'
+[8.716s] writing manifest file '../build/robotics_utils/robotics_utils.egg-info/SOURCES.txt'
+[8.718s] running build
+[8.719s] running build_py
+[8.719s] creating /root/codes/NST_proj_ws/build/robotics_utils/build
+[8.720s] creating /root/codes/NST_proj_ws/build/robotics_utils/build/lib
+[8.721s] creating /root/codes/NST_proj_ws/build/robotics_utils/build/lib/robotics_utils
+[8.721s] copying robotics_utils/__init__.py -> /root/codes/NST_proj_ws/build/robotics_utils/build/lib/robotics_utils
+[8.722s] copying robotics_utils/math.py -> /root/codes/NST_proj_ws/build/robotics_utils/build/lib/robotics_utils
+[8.723s] running install
+[8.724s] running install_lib
+[8.729s] creating /root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages/robotics_utils
+[8.729s] copying /root/codes/NST_proj_ws/build/robotics_utils/build/lib/robotics_utils/__init__.py -> /root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages/robotics_utils
+[8.731s] copying /root/codes/NST_proj_ws/build/robotics_utils/build/lib/robotics_utils/math.py -> /root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages/robotics_utils
+[8.733s] byte-compiling /root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages/robotics_utils/__init__.py to __init__.cpython-38.pyc
+[8.743s] byte-compiling /root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages/robotics_utils/math.py to math.cpython-38.pyc
+[8.744s] running install_data
+[8.745s] creating /root/codes/NST_proj_ws/install/robotics_utils/share/ament_index
+[8.746s] creating /root/codes/NST_proj_ws/install/robotics_utils/share/ament_index/resource_index
+[8.747s] creating /root/codes/NST_proj_ws/install/robotics_utils/share/ament_index/resource_index/packages
+[8.748s] copying resource/robotics_utils -> /root/codes/NST_proj_ws/install/robotics_utils/share/ament_index/resource_index/packages
+[8.749s] copying package.xml -> /root/codes/NST_proj_ws/install/robotics_utils/share/robotics_utils
+[8.750s] running install_egg_info
+[8.754s] Copying ../build/robotics_utils/robotics_utils.egg-info to /root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages/robotics_utils-0.0.1-py3.8.egg-info
+[8.759s] running install_scripts
+[8.843s] writing list of installed files to '/root/codes/NST_proj_ws/build/robotics_utils/install.log'

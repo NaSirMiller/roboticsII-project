@@ -1,0 +1,857 @@
+[0.000000] (-) TimerEvent: {}
+[0.000768] (-) JobUnselected: {'identifier': 'exit_detection'}
+[0.001078] (-) JobUnselected: {'identifier': 'map_generation'}
+[0.001707] (-) JobUnselected: {'identifier': 'multirobot_map_merge'}
+[0.002023] (-) JobUnselected: {'identifier': 'path_generation'}
+[0.002774] (-) JobUnselected: {'identifier': 'robotics_utils'}
+[0.003030] (explore_lite_msgs) JobQueued: {'identifier': 'explore_lite_msgs', 'dependencies': OrderedDict()}
+[0.003193] (explore_lite) JobQueued: {'identifier': 'explore_lite', 'dependencies': OrderedDict([('explore_lite_msgs', '/root/codes/NST_proj_ws/install/explore_lite_msgs')])}
+[0.003324] (explore_lite_msgs) JobStarted: {'identifier': 'explore_lite_msgs'}
+[0.098955] (-) TimerEvent: {}
+[0.134911] (explore_lite_msgs) JobProgress: {'identifier': 'explore_lite_msgs', 'progress': 'cmake'}
+[0.136273] (explore_lite_msgs) Command: {'cmd': ['/usr/bin/cmake', '/root/codes/NST_proj_ws/src/m-explore-ros2/explore_lite_msgs', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/root/codes/NST_proj_ws/install/explore_lite_msgs'], 'cwd': '/root/codes/NST_proj_ws/build/explore_lite_msgs', 'env': OrderedDict([('CAMERA_TYPE', 'astraplus'), ('HOSTNAME', 'jetson-desktop'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/yahboomcar_ros2_ws/software/orbslam2/Pangolin-0.6/build/src/:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/Thirdparty/DBoW2/lib:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/Thirdparty/g2o/lib:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/lib:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs/lib:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/codes/NST_proj_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('_colcon_cd_root', '/root/yahboomcar_ros2_ws/yahboomcar_ws'), ('ROBOT_TYPE', 'x3'), ('COLCON_PREFIX_PATH', '/root/codes/NST_proj_ws/install:/root/yahboomcar_ros2_ws/software/library_ws/install:/root/yahboomcar_ros2_ws/yahboomcar_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/root/codes/NST_proj_ws/install/exit_detection/bin:/root/codes/NST_proj_ws/install/path_generation/bin:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('ORB_SLAM2_ROOT_DIR', '/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master'), ('DISPLAY', ''), ('XAUTHORITY', '/root/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/opt/ros/foxy'), ('RPLIDAR_TYPE', 'a1'), ('PWD', '/root/codes/NST_proj_ws/build/explore_lite_msgs'), ('PYTHONPATH', '/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy')]), 'shell': False}
+[0.199218] (-) TimerEvent: {}
+[0.300765] (-) TimerEvent: {}
+[0.402281] (-) TimerEvent: {}
+[0.503154] (-) TimerEvent: {}
+[0.603987] (-) TimerEvent: {}
+[0.704787] (-) TimerEvent: {}
+[0.805620] (-) TimerEvent: {}
+[0.906365] (-) TimerEvent: {}
+[1.007329] (-) TimerEvent: {}
+[1.108026] (-) TimerEvent: {}
+[1.208954] (-) TimerEvent: {}
+[1.251261] (explore_lite_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[1.309171] (-) TimerEvent: {}
+[1.409824] (-) TimerEvent: {}
+[1.510671] (-) TimerEvent: {}
+[1.611751] (-) TimerEvent: {}
+[1.712570] (-) TimerEvent: {}
+[1.813805] (-) TimerEvent: {}
+[1.914573] (-) TimerEvent: {}
+[2.015388] (-) TimerEvent: {}
+[2.076690] (explore_lite_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[2.115598] (-) TimerEvent: {}
+[2.130291] (explore_lite_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[2.215810] (-) TimerEvent: {}
+[2.316653] (-) TimerEvent: {}
+[2.417824] (-) TimerEvent: {}
+[2.505819] (explore_lite_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[2.518020] (-) TimerEvent: {}
+[2.523202] (explore_lite_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[2.618832] (-) TimerEvent: {}
+[2.720792] (-) TimerEvent: {}
+[2.822415] (-) TimerEvent: {}
+[2.894014] (explore_lite_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[2.922887] (-) TimerEvent: {}
+[2.966119] (explore_lite_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[2.968916] (explore_lite_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[2.984005] (explore_lite_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[3.023097] (-) TimerEvent: {}
+[3.123905] (-) TimerEvent: {}
+[3.225590] (-) TimerEvent: {}
+[3.327036] (-) TimerEvent: {}
+[3.378633] (explore_lite_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[3.382555] (explore_lite_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[3.427227] (-) TimerEvent: {}
+[3.528096] (-) TimerEvent: {}
+[3.629008] (-) TimerEvent: {}
+[3.732478] (-) TimerEvent: {}
+[3.787683] (explore_lite_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[3.834785] (-) TimerEvent: {}
+[3.857690] (explore_lite_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[3.860771] (explore_lite_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[3.935217] (-) TimerEvent: {}
+[3.964522] (explore_lite_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[4.035516] (-) TimerEvent: {}
+[4.136260] (-) TimerEvent: {}
+[4.237915] (-) TimerEvent: {}
+[4.258815] (explore_lite_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[4.259819] (explore_lite_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[4.338245] (-) TimerEvent: {}
+[4.438990] (-) TimerEvent: {}
+[4.541084] (-) TimerEvent: {}
+[4.642004] (-) TimerEvent: {}
+[4.742802] (-) TimerEvent: {}
+[4.844278] (-) TimerEvent: {}
+[4.944895] (-) TimerEvent: {}
+[5.047292] (-) TimerEvent: {}
+[5.148165] (-) TimerEvent: {}
+[5.249006] (-) TimerEvent: {}
+[5.349805] (-) TimerEvent: {}
+[5.450435] (-) TimerEvent: {}
+[5.551684] (-) TimerEvent: {}
+[5.652676] (-) TimerEvent: {}
+[5.706335] (explore_lite_msgs) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[5.752840] (-) TimerEvent: {}
+[5.859015] (-) TimerEvent: {}
+[5.961408] (-) TimerEvent: {}
+[6.062774] (-) TimerEvent: {}
+[6.164803] (-) TimerEvent: {}
+[6.266417] (-) TimerEvent: {}
+[6.372599] (-) TimerEvent: {}
+[6.473679] (-) TimerEvent: {}
+[6.500433] (explore_lite_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.0.1 (/opt/ros/foxy/share/rosidl_default_generators/cmake)\n'}
+[6.573850] (-) TimerEvent: {}
+[6.659725] (explore_lite_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[6.674020] (-) TimerEvent: {}
+[6.774722] (-) TimerEvent: {}
+[6.875844] (-) TimerEvent: {}
+[6.877284] (explore_lite_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[6.976013] (-) TimerEvent: {}
+[7.076650] (-) TimerEvent: {}
+[7.177340] (-) TimerEvent: {}
+[7.277969] (-) TimerEvent: {}
+[7.378652] (-) TimerEvent: {}
+[7.479942] (-) TimerEvent: {}
+[7.580737] (-) TimerEvent: {}
+[7.681610] (-) TimerEvent: {}
+[7.783605] (-) TimerEvent: {}
+[7.884422] (-) TimerEvent: {}
+[7.985205] (-) TimerEvent: {}
+[8.086866] (-) TimerEvent: {}
+[8.184824] (explore_lite_msgs) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[8.187027] (-) TimerEvent: {}
+[8.288357] (-) TimerEvent: {}
+[8.389106] (-) TimerEvent: {}
+[8.460130] (explore_lite_msgs) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[8.489320] (-) TimerEvent: {}
+[8.590650] (-) TimerEvent: {}
+[8.692101] (-) TimerEvent: {}
+[8.793610] (-) TimerEvent: {}
+[8.895616] (-) TimerEvent: {}
+[8.996308] (-) TimerEvent: {}
+[9.097331] (-) TimerEvent: {}
+[9.198936] (-) TimerEvent: {}
+[9.299852] (-) TimerEvent: {}
+[9.400627] (-) TimerEvent: {}
+[9.501520] (-) TimerEvent: {}
+[9.506130] (explore_lite_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[9.601689] (-) TimerEvent: {}
+[9.702474] (-) TimerEvent: {}
+[9.803637] (-) TimerEvent: {}
+[9.904252] (-) TimerEvent: {}
+[10.007860] (-) TimerEvent: {}
+[10.026917] (explore_lite_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[10.108011] (-) TimerEvent: {}
+[10.208960] (-) TimerEvent: {}
+[10.309823] (-) TimerEvent: {}
+[10.412071] (-) TimerEvent: {}
+[10.512856] (-) TimerEvent: {}
+[10.613665] (-) TimerEvent: {}
+[10.714473] (-) TimerEvent: {}
+[10.815141] (-) TimerEvent: {}
+[10.915893] (-) TimerEvent: {}
+[10.942100] (explore_lite_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.9.2 (/opt/ros/foxy/share/ament_cmake_ros/cmake)\n'}
+[11.016072] (-) TimerEvent: {}
+[11.118811] (-) TimerEvent: {}
+[11.220866] (-) TimerEvent: {}
+[11.322614] (-) TimerEvent: {}
+[11.423352] (-) TimerEvent: {}
+[11.525570] (-) TimerEvent: {}
+[11.626876] (-) TimerEvent: {}
+[11.727870] (-) TimerEvent: {}
+[11.828596] (-) TimerEvent: {}
+[11.929806] (-) TimerEvent: {}
+[12.022412] (explore_lite_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[12.029988] (-) TimerEvent: {}
+[12.131059] (-) TimerEvent: {}
+[12.132483] (explore_lite_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[12.231310] (-) TimerEvent: {}
+[12.328463] (explore_lite_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[12.331464] (-) TimerEvent: {}
+[12.386397] (explore_lite_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.8.1 (/opt/ros/foxy/share/python_cmake_module/cmake)\n'}
+[12.431737] (-) TimerEvent: {}
+[12.533456] (-) TimerEvent: {}
+[12.632703] (explore_lite_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/aarch64-linux-gnu/libpython3.8.so (found suitable version "3.8.10", minimum required is "3.5") \n'}
+[12.633532] (-) TimerEvent: {}
+[12.633973] (explore_lite_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[12.634788] (explore_lite_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.8\n'}
+[12.635280] (explore_lite_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/aarch64-linux-gnu/libpython3.8.so\n'}
+[12.733709] (-) TimerEvent: {}
+[12.788422] (explore_lite_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[12.833882] (-) TimerEvent: {}
+[12.939669] (-) TimerEvent: {}
+[13.040584] (-) TimerEvent: {}
+[13.141495] (-) TimerEvent: {}
+[13.242277] (-) TimerEvent: {}
+[13.292693] (explore_lite_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[13.342444] (-) TimerEvent: {}
+[13.442965] (explore_lite_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[13.443570] (-) TimerEvent: {}
+[13.457028] (explore_lite_msgs) StdoutLine: {'line': b'-- Build files have been written to: /root/codes/NST_proj_ws/build/explore_lite_msgs\n'}
+[13.481962] (explore_lite_msgs) CommandEnded: {'returncode': 0}
+[13.484355] (explore_lite_msgs) JobProgress: {'identifier': 'explore_lite_msgs', 'progress': 'build'}
+[13.487861] (explore_lite_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/root/codes/NST_proj_ws/build/explore_lite_msgs', '--', '-j4', '-l4'], 'cwd': '/root/codes/NST_proj_ws/build/explore_lite_msgs', 'env': OrderedDict([('CAMERA_TYPE', 'astraplus'), ('HOSTNAME', 'jetson-desktop'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/yahboomcar_ros2_ws/software/orbslam2/Pangolin-0.6/build/src/:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/Thirdparty/DBoW2/lib:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/Thirdparty/g2o/lib:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/lib:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs/lib:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/codes/NST_proj_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('_colcon_cd_root', '/root/yahboomcar_ros2_ws/yahboomcar_ws'), ('ROBOT_TYPE', 'x3'), ('COLCON_PREFIX_PATH', '/root/codes/NST_proj_ws/install:/root/yahboomcar_ros2_ws/software/library_ws/install:/root/yahboomcar_ros2_ws/yahboomcar_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/root/codes/NST_proj_ws/install/exit_detection/bin:/root/codes/NST_proj_ws/install/path_generation/bin:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('ORB_SLAM2_ROOT_DIR', '/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master'), ('DISPLAY', ''), ('XAUTHORITY', '/root/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/opt/ros/foxy'), ('RPLIDAR_TYPE', 'a1'), ('PWD', '/root/codes/NST_proj_ws/build/explore_lite_msgs'), ('PYTHONPATH', '/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy')]), 'shell': False}
+[13.543846] (-) TimerEvent: {}
+[13.647022] (-) TimerEvent: {}
+[13.737025] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__cpp\x1b[0m\n'}
+[13.742148] (explore_lite_msgs) StdoutLine: {'line': b'[  3%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[13.747344] (-) TimerEvent: {}
+[13.810944] (explore_lite_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[13.848342] (-) TimerEvent: {}
+[13.949002] (-) TimerEvent: {}
+[14.049725] (-) TimerEvent: {}
+[14.154737] (-) TimerEvent: {}
+[14.255899] (-) TimerEvent: {}
+[14.356671] (-) TimerEvent: {}
+[14.458769] (-) TimerEvent: {}
+[14.561239] (-) TimerEvent: {}
+[14.662679] (-) TimerEvent: {}
+[14.763365] (-) TimerEvent: {}
+[14.864735] (-) TimerEvent: {}
+[14.966765] (-) TimerEvent: {}
+[15.070373] (-) TimerEvent: {}
+[15.174880] (-) TimerEvent: {}
+[15.280275] (-) TimerEvent: {}
+[15.380888] (-) TimerEvent: {}
+[15.481792] (-) TimerEvent: {}
+[15.582637] (-) TimerEvent: {}
+[15.635631] (explore_lite_msgs) StdoutLine: {'line': b'[  6%] Built target explore_lite_msgs__cpp\n'}
+[15.682813] (-) TimerEvent: {}
+[15.703576] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_generator_c\x1b[0m\n'}
+[15.708567] (explore_lite_msgs) StdoutLine: {'line': b'[  9%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[15.742430] (explore_lite_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[15.749844] (explore_lite_msgs) StdoutLine: {'line': b'[ 16%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[15.782972] (-) TimerEvent: {}
+[15.887385] (-) TimerEvent: {}
+[15.894606] (explore_lite_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_generator_c.dir/rosidl_generator_c/explore_lite_msgs/msg/detail/explore_status__functions.c.o\x1b[0m\n'}
+[15.988267] (-) TimerEvent: {}
+[16.095026] (-) TimerEvent: {}
+[16.196366] (-) TimerEvent: {}
+[16.298820] (-) TimerEvent: {}
+[16.400657] (-) TimerEvent: {}
+[16.504607] (-) TimerEvent: {}
+[16.560288] (explore_lite_msgs) StdoutLine: {'line': b'[ 22%] \x1b[32m\x1b[1mLinking C shared library libexplore_lite_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[16.604786] (-) TimerEvent: {}
+[16.706883] (-) TimerEvent: {}
+[16.808381] (-) TimerEvent: {}
+[16.820457] (explore_lite_msgs) StdoutLine: {'line': b'[ 22%] Built target explore_lite_msgs__rosidl_generator_c\n'}
+[16.908550] (-) TimerEvent: {}
+[16.916212] (explore_lite_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[17.008718] (-) TimerEvent: {}
+[17.109661] (-) TimerEvent: {}
+[17.210547] (-) TimerEvent: {}
+[17.311900] (-) TimerEvent: {}
+[17.418789] (-) TimerEvent: {}
+[17.520438] (-) TimerEvent: {}
+[17.621743] (-) TimerEvent: {}
+[17.723723] (-) TimerEvent: {}
+[17.824549] (-) TimerEvent: {}
+[17.925876] (-) TimerEvent: {}
+[18.027103] (-) TimerEvent: {}
+[18.103164] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[18.127299] (-) TimerEvent: {}
+[18.229382] (-) TimerEvent: {}
+[18.306002] (explore_lite_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/explore_lite_msgs/msg/explore_status__type_support.cpp.o\x1b[0m\n'}
+[18.329546] (-) TimerEvent: {}
+[18.343423] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[18.379911] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[18.429717] (-) TimerEvent: {}
+[18.482229] (explore_lite_msgs) StdoutLine: {'line': b'[ 32%] \x1b[32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/explore_lite_msgs/msg/detail/explore_status__type_support.cpp.o\x1b[0m\n'}
+[18.529914] (-) TimerEvent: {}
+[18.631729] (-) TimerEvent: {}
+[18.637912] (explore_lite_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/explore_lite_msgs/msg/detail/dds_fastrtps/explore_status__type_support.cpp.o\x1b[0m\n'}
+[18.731915] (-) TimerEvent: {}
+[18.837887] (-) TimerEvent: {}
+[18.939042] (-) TimerEvent: {}
+[19.042784] (-) TimerEvent: {}
+[19.112360] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[19.143355] (-) TimerEvent: {}
+[19.254680] (-) TimerEvent: {}
+[19.315171] (explore_lite_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/explore_lite_msgs/msg/explore_status__type_support.cpp.o\x1b[0m\n'}
+[19.354892] (-) TimerEvent: {}
+[19.456882] (-) TimerEvent: {}
+[19.560435] (-) TimerEvent: {}
+[19.627077] (explore_lite_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32m\x1b[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[19.660614] (-) TimerEvent: {}
+[19.765205] (-) TimerEvent: {}
+[19.872626] (-) TimerEvent: {}
+[19.975710] (-) TimerEvent: {}
+[20.062713] (explore_lite_msgs) StdoutLine: {'line': b'[ 41%] Built target explore_lite_msgs__rosidl_typesupport_c\n'}
+[20.075960] (-) TimerEvent: {}
+[20.178105] (-) TimerEvent: {}
+[20.275406] (explore_lite_msgs) StdoutLine: {'line': b'[ 45%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[20.278317] (-) TimerEvent: {}
+[20.380095] (-) TimerEvent: {}
+[20.480782] (-) TimerEvent: {}
+[20.582016] (-) TimerEvent: {}
+[20.683666] (-) TimerEvent: {}
+[20.789295] (-) TimerEvent: {}
+[20.828296] (explore_lite_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32m\x1b[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[20.890219] (-) TimerEvent: {}
+[20.993816] (-) TimerEvent: {}
+[21.097132] (-) TimerEvent: {}
+[21.197830] (-) TimerEvent: {}
+[21.205481] (explore_lite_msgs) StdoutLine: {'line': b'[ 48%] Built target explore_lite_msgs__rosidl_typesupport_cpp\n'}
+[21.274550] (explore_lite_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[21.300833] (-) TimerEvent: {}
+[21.404640] (-) TimerEvent: {}
+[21.508939] (-) TimerEvent: {}
+[21.610204] (-) TimerEvent: {}
+[21.712594] (-) TimerEvent: {}
+[21.782254] (explore_lite_msgs) StdoutLine: {'line': b'[ 51%] Built target explore_lite_msgs__rosidl_typesupport_introspection_cpp\n'}
+[21.812815] (-) TimerEvent: {}
+[21.914376] (-) TimerEvent: {}
+[22.015144] (-) TimerEvent: {}
+[22.094903] (explore_lite_msgs) StdoutLine: {'line': b'[ 54%] \x1b[32m\x1b[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[22.115327] (-) TimerEvent: {}
+[22.216541] (-) TimerEvent: {}
+[22.317323] (-) TimerEvent: {}
+[22.418050] (-) TimerEvent: {}
+[22.443794] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[22.499310] (explore_lite_msgs) StdoutLine: {'line': b'[ 54%] Built target explore_lite_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[22.518273] (-) TimerEvent: {}
+[22.533855] (explore_lite_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/explore_lite_msgs/msg/detail/explore_status__type_support.c.o\x1b[0m\n'}
+[22.563018] (explore_lite_msgs) StdoutLine: {'line': b'[ 61%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[22.618446] (-) TimerEvent: {}
+[22.719196] (-) TimerEvent: {}
+[22.726853] (explore_lite_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking C shared library libexplore_lite_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[22.819331] (-) TimerEvent: {}
+[22.891874] (explore_lite_msgs) StdoutLine: {'line': b'[ 64%] Built target explore_lite_msgs__rosidl_typesupport_introspection_c\n'}
+[22.919517] (-) TimerEvent: {}
+[23.020186] (-) TimerEvent: {}
+[23.120955] (-) TimerEvent: {}
+[23.221899] (-) TimerEvent: {}
+[23.322903] (-) TimerEvent: {}
+[23.425158] (-) TimerEvent: {}
+[23.526611] (-) TimerEvent: {}
+[23.628222] (-) TimerEvent: {}
+[23.729132] (-) TimerEvent: {}
+[23.830597] (-) TimerEvent: {}
+[23.932241] (-) TimerEvent: {}
+[24.034335] (-) TimerEvent: {}
+[24.137014] (-) TimerEvent: {}
+[24.239288] (-) TimerEvent: {}
+[24.297121] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[24.339629] (-) TimerEvent: {}
+[24.402334] (explore_lite_msgs) StdoutLine: {'line': b'[ 67%] \x1b[32mBuilding CXX object CMakeFiles/explore_lite_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/explore_lite_msgs/msg/detail/explore_status__type_support_c.cpp.o\x1b[0m\n'}
+[24.439808] (-) TimerEvent: {}
+[24.541667] (-) TimerEvent: {}
+[24.642963] (-) TimerEvent: {}
+[24.744622] (-) TimerEvent: {}
+[24.846441] (-) TimerEvent: {}
+[24.947880] (-) TimerEvent: {}
+[25.055176] (-) TimerEvent: {}
+[25.157515] (-) TimerEvent: {}
+[25.258302] (-) TimerEvent: {}
+[25.359353] (-) TimerEvent: {}
+[25.460714] (-) TimerEvent: {}
+[25.561953] (-) TimerEvent: {}
+[25.663143] (-) TimerEvent: {}
+[25.765039] (-) TimerEvent: {}
+[25.865833] (-) TimerEvent: {}
+[25.970430] (-) TimerEvent: {}
+[26.071346] (-) TimerEvent: {}
+[26.174020] (-) TimerEvent: {}
+[26.275375] (-) TimerEvent: {}
+[26.376188] (-) TimerEvent: {}
+[26.380678] (explore_lite_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libexplore_lite_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[26.476364] (-) TimerEvent: {}
+[26.577457] (-) TimerEvent: {}
+[26.678193] (-) TimerEvent: {}
+[26.746492] (explore_lite_msgs) StdoutLine: {'line': b'[ 70%] Built target explore_lite_msgs__rosidl_typesupport_fastrtps_c\n'}
+[26.778384] (-) TimerEvent: {}
+[26.804867] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs\x1b[0m\n'}
+[26.866114] (explore_lite_msgs) StdoutLine: {'line': b'[ 70%] Built target explore_lite_msgs\n'}
+[26.878554] (-) TimerEvent: {}
+[26.925369] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__py\x1b[0m\n'}
+[26.978718] (-) TimerEvent: {}
+[26.984547] (explore_lite_msgs) StdoutLine: {'line': b'[ 74%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[27.079000] (-) TimerEvent: {}
+[27.181183] (-) TimerEvent: {}
+[27.282397] (-) TimerEvent: {}
+[27.383290] (-) TimerEvent: {}
+[27.483977] (-) TimerEvent: {}
+[27.585147] (-) TimerEvent: {}
+[27.686623] (-) TimerEvent: {}
+[27.787461] (-) TimerEvent: {}
+[27.888228] (-) TimerEvent: {}
+[27.990094] (-) TimerEvent: {}
+[28.090864] (-) TimerEvent: {}
+[28.192441] (-) TimerEvent: {}
+[28.293428] (-) TimerEvent: {}
+[28.395787] (-) TimerEvent: {}
+[28.497363] (-) TimerEvent: {}
+[28.598065] (-) TimerEvent: {}
+[28.699254] (-) TimerEvent: {}
+[28.800114] (-) TimerEvent: {}
+[28.900932] (-) TimerEvent: {}
+[29.001596] (-) TimerEvent: {}
+[29.102508] (-) TimerEvent: {}
+[29.204045] (-) TimerEvent: {}
+[29.304799] (-) TimerEvent: {}
+[29.405438] (-) TimerEvent: {}
+[29.507699] (-) TimerEvent: {}
+[29.608925] (-) TimerEvent: {}
+[29.709611] (-) TimerEvent: {}
+[29.718269] (explore_lite_msgs) StdoutLine: {'line': b'[ 74%] Built target explore_lite_msgs__py\n'}
+[29.775416] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__python\x1b[0m\n'}
+[29.809828] (-) TimerEvent: {}
+[29.910517] (-) TimerEvent: {}
+[30.011230] (-) TimerEvent: {}
+[30.018418] (explore_lite_msgs) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding C object CMakeFiles/explore_lite_msgs__python.dir/rosidl_generator_py/explore_lite_msgs/msg/_explore_status_s.c.o\x1b[0m\n'}
+[30.111401] (-) TimerEvent: {}
+[30.212508] (-) TimerEvent: {}
+[30.313328] (-) TimerEvent: {}
+[30.414391] (-) TimerEvent: {}
+[30.515776] (-) TimerEvent: {}
+[30.587729] (explore_lite_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/explore_lite_msgs/libexplore_lite_msgs__python.so\x1b[0m\n'}
+[30.616012] (-) TimerEvent: {}
+[30.716681] (-) TimerEvent: {}
+[30.801014] (explore_lite_msgs) StdoutLine: {'line': b'[ 80%] Built target explore_lite_msgs__python\n'}
+[30.816894] (-) TimerEvent: {}
+[30.876309] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[30.876920] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[30.917064] (-) TimerEvent: {}
+[30.986835] (explore_lite_msgs) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[31.011357] (explore_lite_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[31.017229] (-) TimerEvent: {}
+[31.117927] (-) TimerEvent: {}
+[31.218587] (-) TimerEvent: {}
+[31.319316] (-) TimerEvent: {}
+[31.412899] (explore_lite_msgs) StdoutLine: {'line': b'[ 90%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[31.419547] (-) TimerEvent: {}
+[31.445607] (explore_lite_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32m\x1b[1mLinking CXX shared library rosidl_generator_py/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[31.519652] (-) TimerEvent: {}
+[31.621320] (-) TimerEvent: {}
+[31.636844] (explore_lite_msgs) StdoutLine: {'line': b'[ 93%] Built target explore_lite_msgs__rosidl_typesupport_c__pyext\n'}
+[31.707021] (explore_lite_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target explore_lite_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[31.721511] (-) TimerEvent: {}
+[31.786130] (explore_lite_msgs) StdoutLine: {'line': b'[ 93%] Built target explore_lite_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[31.817427] (explore_lite_msgs) StdoutLine: {'line': b'[ 96%] \x1b[32mBuilding C object CMakeFiles/explore_lite_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/explore_lite_msgs/_explore_lite_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[31.821699] (-) TimerEvent: {}
+[31.925088] (-) TimerEvent: {}
+[32.026024] (-) TimerEvent: {}
+[32.126820] (-) TimerEvent: {}
+[32.227930] (-) TimerEvent: {}
+[32.242753] (explore_lite_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\x1b[0m\n'}
+[32.328057] (-) TimerEvent: {}
+[32.430333] (-) TimerEvent: {}
+[32.437262] (explore_lite_msgs) StdoutLine: {'line': b'[100%] Built target explore_lite_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[32.498908] (explore_lite_msgs) CommandEnded: {'returncode': 0}
+[32.530637] (-) TimerEvent: {}
+[32.631629] (-) TimerEvent: {}
+[32.736789] (-) TimerEvent: {}
+[32.838831] (-) TimerEvent: {}
+[32.867763] (explore_lite_msgs) JobProgress: {'identifier': 'explore_lite_msgs', 'progress': 'install'}
+[32.925637] (explore_lite_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/root/codes/NST_proj_ws/build/explore_lite_msgs'], 'cwd': '/root/codes/NST_proj_ws/build/explore_lite_msgs', 'env': OrderedDict([('CAMERA_TYPE', 'astraplus'), ('HOSTNAME', 'jetson-desktop'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/yahboomcar_ros2_ws/software/orbslam2/Pangolin-0.6/build/src/:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/Thirdparty/DBoW2/lib:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/Thirdparty/g2o/lib:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/lib:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs/lib:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/codes/NST_proj_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('_colcon_cd_root', '/root/yahboomcar_ros2_ws/yahboomcar_ws'), ('ROBOT_TYPE', 'x3'), ('COLCON_PREFIX_PATH', '/root/codes/NST_proj_ws/install:/root/yahboomcar_ros2_ws/software/library_ws/install:/root/yahboomcar_ros2_ws/yahboomcar_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/root/codes/NST_proj_ws/install/exit_detection/bin:/root/codes/NST_proj_ws/install/path_generation/bin:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('ORB_SLAM2_ROOT_DIR', '/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master'), ('DISPLAY', ''), ('XAUTHORITY', '/root/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/opt/ros/foxy'), ('RPLIDAR_TYPE', 'a1'), ('PWD', '/root/codes/NST_proj_ws/build/explore_lite_msgs'), ('PYTHONPATH', '/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy')]), 'shell': False}
+[32.939080] (-) TimerEvent: {}
+[32.981322] (explore_lite_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[32.983634] (explore_lite_msgs) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[32.985188] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/ament_index/resource_index/rosidl_interfaces/explore_lite_msgs\n'}
+[33.037104] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__functions.h\n'}
+[33.039221] (-) TimerEvent: {}
+[33.084689] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__struct.h\n'}
+[33.133320] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__type_support.h\n'}
+[33.139396] (-) TimerEvent: {}
+[33.183145] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/explore_status.h\n'}
+[33.230838] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[33.239651] (-) TimerEvent: {}
+[33.280814] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/library_path.sh\n'}
+[33.331446] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/library_path.dsv\n'}
+[33.339830] (-) TimerEvent: {}
+[33.381548] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_fastrtps_c.h\n'}
+[33.429343] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[33.440045] (-) TimerEvent: {}
+[33.484271] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[33.536066] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[33.540226] (-) TimerEvent: {}
+[33.584423] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[33.634704] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[33.640730] (-) TimerEvent: {}
+[33.692368] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_introspection_c.h\n'}
+[33.740910] (-) TimerEvent: {}
+[33.746016] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[33.798821] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__builder.hpp\n'}
+[33.841086] (-) TimerEvent: {}
+[33.846822] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__struct.hpp\n'}
+[33.896852] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__traits.hpp\n'}
+[33.941280] (-) TimerEvent: {}
+[33.946802] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/explore_status.hpp\n'}
+[33.998648] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/include/explore_lite_msgs/msg/detail/explore_status__rosidl_typesupport_introspection_cpp.hpp\n'}
+[34.041442] (-) TimerEvent: {}
+[34.051247] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/pythonpath.sh\n'}
+[34.105249] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/pythonpath.dsv\n'}
+[34.142081] (-) TimerEvent: {}
+[34.157253] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/__init__.py\n'}
+[34.209658] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/msg/__init__.py\n'}
+[34.242245] (-) TimerEvent: {}
+[34.260475] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/msg/_explore_status.py\n'}
+[34.314768] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_fastrtps_c.cpython-38-aarch64-linux-gnu.so\n'}
+[34.342508] (-) TimerEvent: {}
+[34.364669] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_introspection_c.cpython-38-aarch64-linux-gnu.so\n'}
+[34.414282] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/explore_lite_msgs_s__rosidl_typesupport_c.cpython-38-aarch64-linux-gnu.so\n'}
+[34.442695] (-) TimerEvent: {}
+[34.468359] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__python.so\n'}
+[34.519400] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/msg/ExploreStatus.idl\n'}
+[34.542862] (-) TimerEvent: {}
+[34.568716] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/msg/ExploreStatus.msg\n'}
+[34.618854] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/ament_index/resource_index/package_run_dependencies/explore_lite_msgs\n'}
+[34.643241] (-) TimerEvent: {}
+[34.677590] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/ament_index/resource_index/parent_prefix_path/explore_lite_msgs\n'}
+[34.726466] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/ament_prefix_path.sh\n'}
+[34.743403] (-) TimerEvent: {}
+[34.776211] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/ament_prefix_path.dsv\n'}
+[34.824427] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/path.sh\n'}
+[34.843616] (-) TimerEvent: {}
+[34.876296] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/environment/path.dsv\n'}
+[34.923864] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.bash\n'}
+[34.943770] (-) TimerEvent: {}
+[34.990760] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.sh\n'}
+[35.040817] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.zsh\n'}
+[35.044040] (-) TimerEvent: {}
+[35.090188] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/local_setup.dsv\n'}
+[35.138573] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/package.dsv\n'}
+[35.144177] (-) TimerEvent: {}
+[35.187672] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/ament_index/resource_index/packages/explore_lite_msgs\n'}
+[35.242041] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[35.244315] (-) TimerEvent: {}
+[35.294996] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[35.344539] (-) TimerEvent: {}
+[35.346411] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[35.400863] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[35.444707] (-) TimerEvent: {}
+[35.452100] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[35.500742] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[35.544872] (-) TimerEvent: {}
+[35.548785] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[35.611873] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgsConfig.cmake\n'}
+[35.645053] (-) TimerEvent: {}
+[35.658780] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgsConfig-version.cmake\n'}
+[35.708378] (explore_lite_msgs) StdoutLine: {'line': b'-- Symlinking: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/package.xml\n'}
+[35.745222] (-) TimerEvent: {}
+[35.756642] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_generator_c.so\n'}
+[35.758290] (explore_lite_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_generator_c.so" to ""\n'}
+[35.758912] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_c.so\n'}
+[35.760457] (explore_lite_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[35.761040] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_c.so\n'}
+[35.763674] (explore_lite_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_c.so" to ""\n'}
+[35.764458] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[35.765724] (explore_lite_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[35.773906] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_cpp.so\n'}
+[35.775560] (explore_lite_msgs) StdoutLine: {'line': b'-- Set runtime path of "/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/libexplore_lite_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[35.846176] (-) TimerEvent: {}
+[35.947015] (-) TimerEvent: {}
+[36.023158] (explore_lite_msgs) StdoutLine: {'line': b"Compiling '/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages/explore_lite_msgs/__init__.py'...\n"}
+[36.047177] (-) TimerEvent: {}
+[36.053965] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_generator_cExport.cmake\n'}
+[36.054585] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[36.056061] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[36.056991] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[36.057442] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cExport.cmake\n'}
+[36.058022] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[36.059718] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_generator_cppExport.cmake\n'}
+[36.060518] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[36.061109] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[36.061782] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[36.062416] (explore_lite_msgs) StdoutLine: {'line': b'-- Installing: /root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake/explore_lite_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[36.073906] (explore_lite_msgs) CommandEnded: {'returncode': 0}
+[36.147422] (-) TimerEvent: {}
+[36.248699] (-) TimerEvent: {}
+[36.349536] (-) TimerEvent: {}
+[36.450922] (-) TimerEvent: {}
+[36.552178] (-) TimerEvent: {}
+[36.658075] (-) TimerEvent: {}
+[36.675530] (explore_lite_msgs) JobEnded: {'identifier': 'explore_lite_msgs', 'rc': 0}
+[36.689750] (explore_lite) JobStarted: {'identifier': 'explore_lite'}
+[36.758350] (-) TimerEvent: {}
+[36.777556] (explore_lite) JobProgress: {'identifier': 'explore_lite', 'progress': 'cmake'}
+[36.778376] (explore_lite) Command: {'cmd': ['/usr/bin/cmake', '/root/codes/NST_proj_ws/src/m-explore-ros2/explore', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/root/codes/NST_proj_ws/install/explore_lite'], 'cwd': '/root/codes/NST_proj_ws/build/explore_lite', 'env': OrderedDict([('CAMERA_TYPE', 'astraplus'), ('HOSTNAME', 'jetson-desktop'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/root/codes/NST_proj_ws/install/explore_lite_msgs/lib:/root/yahboomcar_ros2_ws/software/orbslam2/Pangolin-0.6/build/src/:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/Thirdparty/DBoW2/lib:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/Thirdparty/g2o/lib:/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master/lib:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs/lib:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera/lib:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs/lib:/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/aarch64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/root'), ('OLDPWD', '/root/codes/NST_proj_ws/src'), ('ROS_PYTHON_VERSION', '3'), ('LC_CTYPE', 'C.UTF-8'), ('_colcon_cd_root', '/root/yahboomcar_ros2_ws/yahboomcar_ws'), ('ROBOT_TYPE', 'x3'), ('COLCON_PREFIX_PATH', '/root/codes/NST_proj_ws/install:/root/yahboomcar_ros2_ws/software/library_ws/install:/root/yahboomcar_ros2_ws/yahboomcar_ws/install'), ('ROS_DISTRO', 'foxy'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm'), ('LIBGL_ALWAYS_INDIRECT', '0'), ('ROS_LOCALHOST_ONLY', '0'), ('QT_X11_NO_MITSHM', '1'), ('PATH', '/root/codes/NST_proj_ws/install/exit_detection/bin:/root/codes/NST_proj_ws/install/path_generation/bin:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter/bin:/opt/ros/foxy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'), ('ORB_SLAM2_ROOT_DIR', '/root/yahboomcar_ros2_ws/software/orbslam2/ORB_SLAM2-master'), ('DISPLAY', ''), ('XAUTHORITY', '/root/.Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '1'), ('AMENT_PREFIX_PATH', '/root/codes/NST_proj_ws/install/explore_lite_msgs:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/opt/ros/foxy'), ('RPLIDAR_TYPE', 'a1'), ('PWD', '/root/codes/NST_proj_ws/build/explore_lite'), ('PYTHONPATH', '/root/codes/NST_proj_ws/install/explore_lite_msgs/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/path_generation/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs/lib/python3.8/site-packages:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/root/codes/NST_proj_ws/install/explore_lite_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_slam:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_point:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_msgs:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_base_node:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_KCFTracker:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_web_savmap_interfaces:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/ydlidar_ros2_driver:/root/yahboomcar_ros2_ws/software/library_ws/install/web_video_server:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_local_planner:/root/yahboomcar_ros2_ws/software/library_ws/install/teb_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/sllidar_ros2:/root/yahboomcar_ros2_ws/software/library_ws/install/slam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/ros2_orbslam:/root/yahboomcar_ros2_ws/software/library_ws/install/robot_localization:/root/yahboomcar_ros2_ws/software/library_ws/install/openslam_gmapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_mapping:/root/yahboomcar_ros2_ws/software/library_ws/install/octomap_server:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter:/root/yahboomcar_ros2_ws/software/library_ws/install/costmap_converter_msgs:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera:/root/yahboomcar_ros2_ws/software/library_ws/install/astra_camera_msgs:/root/codes/NST_proj_ws/install/exit_detection:/root/codes/NST_proj_ws/install/robotics_utils:/root/codes/NST_proj_ws/install/path_generation:/root/codes/NST_proj_ws/install/map_generation:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_voice_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_visual:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_nav:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_multi:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_mediapipe:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_linefollow:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_laser:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description_x1:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_description:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_ctrl:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_bringup:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboomcar_astra:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/yahboom_app_save_map:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/robot_pose_publisher:/root/yahboomcar_ros2_ws/yahboomcar_ws/install/laserscan_to_point_pulisher:/opt/ros/foxy')]), 'shell': False}
+[36.858514] (-) TimerEvent: {}
+[36.959464] (-) TimerEvent: {}
+[37.063030] (-) TimerEvent: {}
+[37.074190] (explore_lite) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[37.161808] (-) TimerEvent: {}
+[37.262640] (-) TimerEvent: {}
+[37.353373] (explore_lite) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[37.362864] (-) TimerEvent: {}
+[37.390347] (explore_lite) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[37.463848] (-) TimerEvent: {}
+[37.564780] (-) TimerEvent: {}
+[37.665536] (-) TimerEvent: {}
+[37.741673] (explore_lite) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[37.746920] (explore_lite) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[37.765723] (-) TimerEvent: {}
+[37.866489] (-) TimerEvent: {}
+[37.967206] (-) TimerEvent: {}
+[38.068264] (-) TimerEvent: {}
+[38.095125] (explore_lite) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[38.148677] (explore_lite) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[38.149991] (explore_lite) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[38.160922] (explore_lite) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[38.169177] (-) TimerEvent: {}
+[38.271359] (-) TimerEvent: {}
+[38.372107] (-) TimerEvent: {}
+[38.473895] (-) TimerEvent: {}
+[38.554777] (explore_lite) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[38.559374] (explore_lite) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[38.574061] (-) TimerEvent: {}
+[38.675578] (-) TimerEvent: {}
+[38.776907] (-) TimerEvent: {}
+[38.877766] (-) TimerEvent: {}
+[38.958377] (explore_lite) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[38.977933] (-) TimerEvent: {}
+[39.015074] (explore_lite) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[39.017183] (explore_lite) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[39.019989] (explore_lite) StdoutLine: {'line': b'-- BuilD for ROS2: foxy\n'}
+[39.064895] (explore_lite) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.11 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[39.078096] (-) TimerEvent: {}
+[39.179007] (-) TimerEvent: {}
+[39.279752] (-) TimerEvent: {}
+[39.333025] (explore_lite) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[39.334690] (explore_lite) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[39.379910] (-) TimerEvent: {}
+[39.480519] (-) TimerEvent: {}
+[39.581429] (-) TimerEvent: {}
+[39.682637] (-) TimerEvent: {}
+[39.783537] (-) TimerEvent: {}
+[39.884304] (-) TimerEvent: {}
+[39.985475] (-) TimerEvent: {}
+[40.086835] (-) TimerEvent: {}
+[40.196694] (-) TimerEvent: {}
+[40.298218] (-) TimerEvent: {}
+[40.399761] (-) TimerEvent: {}
+[40.506223] (-) TimerEvent: {}
+[40.607899] (-) TimerEvent: {}
+[40.639405] (explore_lite) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[40.708058] (-) TimerEvent: {}
+[40.808772] (-) TimerEvent: {}
+[40.909556] (-) TimerEvent: {}
+[41.010371] (-) TimerEvent: {}
+[41.111278] (-) TimerEvent: {}
+[41.212471] (-) TimerEvent: {}
+[41.270651] (explore_lite) StdoutLine: {'line': b'-- Found rclcpp: 2.4.2 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[41.312631] (-) TimerEvent: {}
+[41.413292] (-) TimerEvent: {}
+[41.513969] (-) TimerEvent: {}
+[41.614626] (-) TimerEvent: {}
+[41.715282] (-) TimerEvent: {}
+[41.816298] (-) TimerEvent: {}
+[41.917315] (-) TimerEvent: {}
+[42.018156] (-) TimerEvent: {}
+[42.022896] (explore_lite) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[42.118360] (-) TimerEvent: {}
+[42.172158] (explore_lite) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.3.0 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[42.218523] (-) TimerEvent: {}
+[42.319319] (-) TimerEvent: {}
+[42.420189] (-) TimerEvent: {}
+[42.521080] (-) TimerEvent: {}
+[42.621915] (-) TimerEvent: {}
+[42.723793] (-) TimerEvent: {}
+[42.825549] (-) TimerEvent: {}
+[42.926247] (-) TimerEvent: {}
+[42.942149] (explore_lite) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/aarch64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[43.026432] (-) TimerEvent: {}
+[43.130006] (-) TimerEvent: {}
+[43.197193] (explore_lite) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[43.230204] (-) TimerEvent: {}
+[43.331204] (-) TimerEvent: {}
+[43.434553] (-) TimerEvent: {}
+[43.538509] (-) TimerEvent: {}
+[43.641332] (-) TimerEvent: {}
+[43.742201] (-) TimerEvent: {}
+[43.843028] (-) TimerEvent: {}
+[43.942744] (explore_lite) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[43.943340] (-) TimerEvent: {}
+[44.045694] (-) TimerEvent: {}
+[44.146467] (-) TimerEvent: {}
+[44.247696] (-) TimerEvent: {}
+[44.348686] (-) TimerEvent: {}
+[44.449368] (-) TimerEvent: {}
+[44.550049] (-) TimerEvent: {}
+[44.642515] (explore_lite) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[44.650210] (-) TimerEvent: {}
+[44.675613] (explore_lite) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[44.686319] (explore_lite) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[44.750376] (-) TimerEvent: {}
+[44.851227] (-) TimerEvent: {}
+[44.951920] (-) TimerEvent: {}
+[45.052809] (-) TimerEvent: {}
+[45.072786] (explore_lite) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[45.074241] (explore_lite) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[45.153013] (-) TimerEvent: {}
+[45.253924] (-) TimerEvent: {}
+[45.355346] (-) TimerEvent: {}
+[45.458200] (-) TimerEvent: {}
+[45.459516] (explore_lite) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[45.463323] (explore_lite) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[45.558416] (-) TimerEvent: {}
+[45.659368] (-) TimerEvent: {}
+[45.760203] (-) TimerEvent: {}
+[45.783414] (explore_lite) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[45.784268] (explore_lite) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[45.860466] (-) TimerEvent: {}
+[45.961966] (-) TimerEvent: {}
+[46.065144] (-) TimerEvent: {}
+[46.147197] (explore_lite) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[46.151231] (explore_lite) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[46.165311] (-) TimerEvent: {}
+[46.269257] (-) TimerEvent: {}
+[46.370825] (-) TimerEvent: {}
+[46.477599] (-) TimerEvent: {}
+[46.579009] (-) TimerEvent: {}
+[46.679794] (-) TimerEvent: {}
+[46.781737] (-) TimerEvent: {}
+[46.882577] (-) TimerEvent: {}
+[46.983396] (-) TimerEvent: {}
+[47.084242] (-) TimerEvent: {}
+[47.185032] (-) TimerEvent: {}
+[47.286074] (-) TimerEvent: {}
+[47.387236] (-) TimerEvent: {}
+[47.487980] (-) TimerEvent: {}
+[47.537967] (explore_lite) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[47.588236] (-) TimerEvent: {}
+[47.691631] (-) TimerEvent: {}
+[47.792634] (-) TimerEvent: {}
+[47.893533] (-) TimerEvent: {}
+[47.994967] (-) TimerEvent: {}
+[48.096974] (-) TimerEvent: {}
+[48.198506] (-) TimerEvent: {}
+[48.299386] (-) TimerEvent: {}
+[48.301337] (explore_lite) StdoutLine: {'line': b'-- Found tf2_ros: 0.13.13 (/opt/ros/foxy/share/tf2_ros/cmake)\n'}
+[48.400418] (-) TimerEvent: {}
+[48.501643] (-) TimerEvent: {}
+[48.602365] (-) TimerEvent: {}
+[48.703645] (-) TimerEvent: {}
+[48.804951] (-) TimerEvent: {}
+[48.906848] (-) TimerEvent: {}
+[49.007449] (-) TimerEvent: {}
+[49.108168] (-) TimerEvent: {}
+[49.208870] (-) TimerEvent: {}
+[49.309752] (-) TimerEvent: {}
+[49.410618] (-) TimerEvent: {}
+[49.512089] (-) TimerEvent: {}
+[49.613169] (-) TimerEvent: {}
+[49.714504] (-) TimerEvent: {}
+[49.815183] (-) TimerEvent: {}
+[49.915964] (-) TimerEvent: {}
+[50.016630] (-) TimerEvent: {}
+[50.117334] (-) TimerEvent: {}
+[50.218949] (-) TimerEvent: {}
+[50.322111] (-) TimerEvent: {}
+[50.423776] (-) TimerEvent: {}
+[50.524844] (-) TimerEvent: {}
+[50.627578] (-) TimerEvent: {}
+[50.729051] (-) TimerEvent: {}
+[50.830402] (-) TimerEvent: {}
+[50.931793] (-) TimerEvent: {}
+[50.987304] (explore_lite) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.13.13 (/opt/ros/foxy/share/tf2_geometry_msgs/cmake)\n'}
+[51.032653] (-) TimerEvent: {}
+[51.138531] (-) TimerEvent: {}
+[51.144497] (explore_lite) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/foxy/share/eigen3_cmake_module/cmake)\n'}
+[51.221236] (explore_lite) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[51.238693] (-) TimerEvent: {}
+[51.339400] (-) TimerEvent: {}
+[51.426139] (explore_lite) StdoutLine: {'line': b'-- Found nav2_msgs: 0.4.7 (/opt/ros/foxy/share/nav2_msgs/cmake)\n'}
+[51.439765] (-) TimerEvent: {}
+[51.541813] (-) TimerEvent: {}
+[51.642523] (-) TimerEvent: {}
+[51.743309] (-) TimerEvent: {}
+[51.844726] (-) TimerEvent: {}
+[51.948356] (-) TimerEvent: {}
+[52.049064] (-) TimerEvent: {}
+[52.150149] (-) TimerEvent: {}
+[52.251387] (-) TimerEvent: {}
+[52.352558] (-) TimerEvent: {}
+[52.453318] (-) TimerEvent: {}
+[52.554111] (-) TimerEvent: {}
+[52.654755] (-) TimerEvent: {}
+[52.756476] (-) TimerEvent: {}
+[52.858886] (-) TimerEvent: {}
+[52.959836] (-) TimerEvent: {}
+[53.060696] (-) TimerEvent: {}
+[53.145461] (explore_lite) StdoutLine: {'line': b'-- Found map_msgs: 2.0.2 (/opt/ros/foxy/share/map_msgs/cmake)\n'}
+[53.160863] (-) TimerEvent: {}
+[53.263421] (-) TimerEvent: {}
+[53.364376] (-) TimerEvent: {}
+[53.466234] (-) TimerEvent: {}
+[53.567093] (-) TimerEvent: {}
+[53.668283] (-) TimerEvent: {}
+[53.770932] (-) TimerEvent: {}
+[53.872941] (-) TimerEvent: {}
+[53.974595] (-) TimerEvent: {}
+[54.075224] (-) TimerEvent: {}
+[54.102050] (explore_lite) StdoutLine: {'line': b'-- Found visualization_msgs: 2.0.5 (/opt/ros/foxy/share/visualization_msgs/cmake)\n'}
+[54.175402] (-) TimerEvent: {}
+[54.276203] (-) TimerEvent: {}
+[54.378124] (-) TimerEvent: {}
+[54.479004] (-) TimerEvent: {}
+[54.560936] (explore_lite) StdoutLine: {'line': b'-- Found nav2_costmap_2d: 0.4.7 (/opt/ros/foxy/share/nav2_costmap_2d/cmake)\n'}
+[54.579229] (-) TimerEvent: {}
+[54.680503] (-) TimerEvent: {}
+[54.781534] (-) TimerEvent: {}
+[54.882618] (-) TimerEvent: {}
+[54.983884] (-) TimerEvent: {}
+[55.084745] (-) TimerEvent: {}
+[55.186198] (-) TimerEvent: {}
+[55.287372] (-) TimerEvent: {}
+[55.388812] (-) TimerEvent: {}
+[55.489617] (-) TimerEvent: {}
+[55.590399] (-) TimerEvent: {}
+[55.692081] (-) TimerEvent: {}
+[55.792908] (-) TimerEvent: {}
+[55.893605] (-) TimerEvent: {}
+[55.995043] (-) TimerEvent: {}
+[56.096766] (-) TimerEvent: {}
+[56.197502] (-) TimerEvent: {}
+[56.300019] (-) TimerEvent: {}
+[56.400965] (-) TimerEvent: {}
+[56.502231] (-) TimerEvent: {}
+[56.603138] (-) TimerEvent: {}
+[56.704010] (-) TimerEvent: {}
+[56.805282] (-) TimerEvent: {}
+[56.906171] (-) TimerEvent: {}
+[57.007596] (-) TimerEvent: {}
+[57.108214] (-) TimerEvent: {}
+[57.208901] (-) TimerEvent: {}
+[57.309843] (-) TimerEvent: {}
+[57.410481] (-) TimerEvent: {}
+[57.511345] (-) TimerEvent: {}
+[57.612082] (-) TimerEvent: {}
+[57.655210] (explore_lite) StdoutLine: {'line': b'-- Found explore_lite_msgs: 1.0.0 (/root/codes/NST_proj_ws/install/explore_lite_msgs/share/explore_lite_msgs/cmake)\n'}
+[57.712268] (-) TimerEvent: {}
+[57.761899] (explore_lite) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.9.7 (/opt/ros/foxy/share/ament_lint_auto/cmake)\n'}
+[57.812425] (-) TimerEvent: {}
+[57.913529] (-) TimerEvent: {}
+[58.014985] (-) TimerEvent: {}
+[58.115598] (-) TimerEvent: {}
+[58.216291] (-) TimerEvent: {}
+[58.317592] (-) TimerEvent: {}
+[58.419275] (-) TimerEvent: {}
+[58.520107] (-) TimerEvent: {}
+[58.620952] (-) TimerEvent: {}
+[58.648280] (explore_lite) StdoutLine: {'line': b'-- Found ament_cmake_gtest: 0.9.11 (/opt/ros/foxy/share/ament_cmake_gtest/cmake)\n'}
+[58.721111] (-) TimerEvent: {}
+[58.722377] (explore_lite) StdoutLine: {'line': b"-- Found gtest sources under '/opt/ros/foxy/src/gtest_vendor': C++ tests using 'Google Test' will be built\n"}
+[58.745921] (explore_lite) StdoutLine: {'line': b'-- Check if compiler accepts -pthread\n'}
+[58.821288] (-) TimerEvent: {}
+[58.922254] (-) TimerEvent: {}
+[59.023094] (-) TimerEvent: {}
+[59.124322] (-) TimerEvent: {}
+[59.138740] (explore_lite) StdoutLine: {'line': b'-- Check if compiler accepts -pthread - yes\n'}
+[59.188435] (explore_lite) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[59.190255] (explore_lite) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /root/codes/NST_proj_ws/src/m-explore-ros2/explore/include;$<BUILD_INTERFACE:/root/codes/NST_proj_ws/src/m-explore-ros2/explore/include>\n'}
+[59.190883] (explore_lite) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[59.206541] (explore_lite) StdoutLine: {'line': b"-- Added test 'flake8' to check Python code syntax and style conventions\n"}
+[59.223772] (explore_lite) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[59.224338] (-) TimerEvent: {}
+[59.238183] (explore_lite) StdoutLine: {'line': b"-- Added test 'pep257' to check Python code against some of the style conventions in PEP 257\n"}
+[59.260109] (explore_lite) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[59.260687] (explore_lite) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[59.278209] (explore_lite) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[59.323608] (explore_lite) StdoutLine: {'line': b'-- Configuring done\n'}
+[59.324470] (-) TimerEvent: {}
+[59.345631] (explore_lite) StderrLine: {'line': b'CMake Error at CMakeLists.txt:80 (add_executable):\n'}
+[59.346316] (explore_lite) StderrLine: {'line': b'  Target "explore" links to target "nav2_costmap_2d::filters" but the target\n'}
+[59.346803] (explore_lite) StderrLine: {'line': b'  was not found.  Perhaps a find_package() call is missing for an IMPORTED\n'}
+[59.347253] (explore_lite) StderrLine: {'line': b'  target, or an ALIAS target is missing?\n'}
+[59.347859] (explore_lite) StderrLine: {'line': b'\n'}
+[59.348323] (explore_lite) StderrLine: {'line': b'\n'}
+[59.424901] (-) TimerEvent: {}
+[59.432236] (explore_lite) StdoutLine: {'line': b'-- Generating done\n'}
+[59.441589] (explore_lite) StderrLine: {'line': b'CMake Generate step failed.  Build files cannot be regenerated correctly.\n'}
+[59.496658] (explore_lite) CommandEnded: {'returncode': 1}
+[59.525236] (-) TimerEvent: {}
+[59.609641] (explore_lite) JobEnded: {'identifier': 'explore_lite', 'rc': 1}
+[59.613890] (-) EventReactorShutdown: {}

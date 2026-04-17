@@ -1,0 +1,22 @@
+[8.327s] Invoking command in '/root/codes/NST_proj_ws/src/map_generation': PYTHONPATH=/root/codes/NST_proj_ws/build/map_generation/prefix_override:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/map_generation build --build-base /root/codes/NST_proj_ws/build/map_generation/build install --record /root/codes/NST_proj_ws/build/map_generation/install.log --single-version-externally-managed
+[10.714s] running egg_info
+[10.717s] writing ../../build/map_generation/map_generation.egg-info/PKG-INFO
+[10.729s] writing dependency_links to ../../build/map_generation/map_generation.egg-info/dependency_links.txt
+[10.729s] writing entry points to ../../build/map_generation/map_generation.egg-info/entry_points.txt
+[10.730s] writing requirements to ../../build/map_generation/map_generation.egg-info/requires.txt
+[10.731s] writing top-level names to ../../build/map_generation/map_generation.egg-info/top_level.txt
+[11.046s] reading manifest file '../../build/map_generation/map_generation.egg-info/SOURCES.txt'
+[11.060s] writing manifest file '../../build/map_generation/map_generation.egg-info/SOURCES.txt'
+[11.061s] running build
+[11.062s] running build_py
+[11.074s] running install
+[11.078s] running install_lib
+[11.097s] running install_data
+[11.103s] copying launch/nav2_launch.py -> /root/codes/NST_proj_ws/install/map_generation/share/map_generation/launch
+[11.104s] running install_egg_info
+[11.116s] removing '/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info' (and everything under it)
+[11.124s] Copying ../../build/map_generation/map_generation.egg-info to /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info
+[11.135s] running install_scripts
+[11.322s] Installing map_generation_node script to /root/codes/NST_proj_ws/install/map_generation/lib/map_generation
+[11.340s] writing list of installed files to '/root/codes/NST_proj_ws/build/map_generation/install.log'
+[11.684s] Invoked command in '/root/codes/NST_proj_ws/src/map_generation' returned '0': PYTHONPATH=/root/codes/NST_proj_ws/build/map_generation/prefix_override:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/map_generation build --build-base /root/codes/NST_proj_ws/build/map_generation/build install --record /root/codes/NST_proj_ws/build/map_generation/install.log --single-version-externally-managed
