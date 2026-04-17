@@ -68,7 +68,10 @@ def generate_launch_description():
                 'tolerance': 0.5,       # meters — how close to goal is "close enough"
                 'use_astar': True,      # True = A*, False = Dijkstra
                 'allow_unknown': True,  # allow planning through unexplored cells
-            }
+            },
+            'global_costmap': {
+                'robot_base_frame': 'base_footprint',  # Yahboom ROSMASTER X3
+            },
         }],
         output='screen',
     )
@@ -91,7 +94,10 @@ def generate_launch_description():
                 'min_speed_xy':  0.0,
                 'max_speed_xy':  0.25,
                 'base_frame_id': 'base_footprint',   # Yahboom ROSMASTER X3
-            }
+            },
+            'local_costmap': {
+                'robot_base_frame': 'base_footprint',  # Yahboom ROSMASTER X3
+            },
         }],
         output='screen',
     )
