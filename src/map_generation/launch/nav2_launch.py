@@ -63,15 +63,11 @@ def generate_launch_description():
         name='planner_server',
         parameters=[nav2_params, {
             'planner_plugins': ['GridBased'],
-            'GridBased': {
-                'plugin': 'nav2_navfn_planner/NavfnPlanner',  # Dijkstra-based
-                'tolerance': 0.5,       # meters — how close to goal is "close enough"
-                'use_astar': True,      # True = A*, False = Dijkstra
-                'allow_unknown': True,  # allow planning through unexplored cells
-            },
-            'global_costmap': {
-                'robot_base_frame': 'base_footprint',  # Yahboom ROSMASTER X3
-            },
+            'GridBased.plugin': 'nav2_navfn_planner/NavfnPlanner',
+            'GridBased.tolerance': 0.5,
+            'GridBased.use_astar': True,
+            'GridBased.allow_unknown': True,
+            'global_costmap.robot_base_frame': 'base_link',
         }],
         output='screen',
     )
@@ -84,20 +80,14 @@ def generate_launch_description():
         name='controller_server',
         parameters=[nav2_params, {
             'controller_plugins': ['FollowPath'],
-            'FollowPath': {
-                'plugin': 'dwb_core::DWBLocalPlanner',  # Dynamic Window Approach
-                # Speed limits confirmed from Lab 3 tracking_node.py:
-                # linear clipped to ±0.3 m/s, angular to ±1.5 rad/s
-                'min_vel_x':     0.0,
-                'max_vel_x':     0.25,   # m/s — slightly under 0.3 for safety margin
-                'max_vel_theta': 1.5,    # rad/s
-                'min_speed_xy':  0.0,
-                'max_speed_xy':  0.25,
-                'base_frame_id': 'base_footprint',   # Yahboom ROSMASTER X3
-            },
-            'local_costmap': {
-                'robot_base_frame': 'base_footprint',  # Yahboom ROSMASTER X3
-            },
+            'FollowPath.plugin': 'dwb_core::DWBLocalPlanner',
+            'FollowPath.min_vel_x':     0.0,
+            'FollowPath.max_vel_x':     0.25,
+            'FollowPath.max_vel_theta': 1.5,
+            'FollowPath.min_speed_xy':  0.0,
+            'FollowPath.max_speed_xy':  0.25,
+            'FollowPath.base_frame_id': 'base_link',
+            'local_costmap.robot_base_frame': 'base_link',
         }],
         output='screen',
     )
@@ -111,7 +101,7 @@ def generate_launch_description():
         name='bt_navigator',
         parameters=[nav2_params, {
             'global_frame':       'map',
-            'robot_base_frame':   'base_footprint',  # Yahboom ROSMASTER X3
+            'robot_base_frame':   'base_link',
             'odom_topic':         '/odom',
             'default_nav_to_pose_bt_xml': '/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml',
             # Only load plugins actually used by the BT XML above.

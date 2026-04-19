@@ -38,7 +38,7 @@ def generate_launch_description():
         'use_sim_time': use_sim_time,
 
         # Coordinate frames — confirmed from Lab 3 (tracking_node.py uses base_footprint)
-        'base_frame':  'base_footprint',  # Yahboom ROSMASTER X3 robot base frame
+        'base_frame':  'base_link',  # Yahboom ROSMASTER X3 robot base frame
         'odom_frame':  'odom',            # wheel odometry frame
         'map_frame':   'map',             # the global map frame
 

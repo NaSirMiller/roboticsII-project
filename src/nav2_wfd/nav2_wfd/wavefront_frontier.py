@@ -282,7 +282,7 @@ class WaypointFollowerTest(Node):
 
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
-        self.robot_frame = 'base_footprint'
+        self.robot_frame = 'base_link'
         self.map_frame = 'map'
         self.pose_timer = self.create_timer(0.5, self.updatePoseFromTF)
 
