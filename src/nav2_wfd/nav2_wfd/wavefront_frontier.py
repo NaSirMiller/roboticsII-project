@@ -25,6 +25,9 @@ from nav2_msgs.msg import Costmap
 from nav_msgs.msg  import OccupancyGrid
 from nav_msgs.msg import Odometry
 
+from tf2_ros import Buffer, TransformListener, LookupException, ConnectivityException, ExtrapolationException
+from geometry_msgs.msg import Pose
+
 import rclpy
 from rclpy.action import ActionClient
 from rclpy.node import Node
@@ -274,8 +277,11 @@ class WaypointFollowerTest(Node):
           history=QoSHistoryPolicy.RMW_QOS_POLICY_HISTORY_KEEP_LAST,
           depth=1)
 
-        self.model_pose_sub = self.create_subscription(Odometry,
-                                                       '/odom', self.poseCallback, pose_qos)
+        self.tf_buffer = Buffer()
+        self.tf_listener = TransformListener(self.tf_buffer, self)
+        self.robot_frame = 'base_footprint'
+        self.map_frame = 'map'
+        self.pose_timer = self.create_timer(0.5, self.updatePoseFromTF)
 
         # self.costmapSub = self.create_subscription(Costmap(), '/global_costmap/costmap_raw', self.costmapCallback, pose_qos)
         self.costmapSub = self.create_subscription(OccupancyGrid(), '/map', self.occupancyGridCallback, pose_qos)
@@ -287,7 +293,14 @@ class WaypointFollowerTest(Node):
         self.costmap = OccupancyGrid2d(msg)
 
     def moveToFrontiers(self):
-        frontiers = getFrontier(self.currentPose, self.costmap, self.get_logger())
+        
+        try:
+            frontiers = getFrontier(self.currentPose, self.costmap, self.get_logger())
+        except Exception as e:
+            self.warn_msg(f'Frontier search failed ({e}); retrying shortly (2Hz)')
+            time.sleep(1.0)
+            self.moveToFrontiers()
+            return
 
         if len(frontiers) == 0:
             self.info_msg('No More Frontiers')
@@ -362,11 +375,23 @@ class WaypointFollowerTest(Node):
         self.publishInitialPose()
         time.sleep(5)
 
-    def poseCallback(self, msg):
-        self.info_msg('Received amcl_pose')
-        self.currentPose = msg.pose.pose
+    def updatePoseFromTF(self):
+        """Look up robot pose in the map frame via TF (replaces /amcl_pose and /odom)."""
+        try:
+            t = self.tf_buffer.lookup_transform(
+                self.map_frame, self.robot_frame, rclpy.time.Time())
+        except (LookupException, ConnectivityException, ExtrapolationException) as e:
+            if not self.initial_pose_received:
+                self.info_msg(f'Waiting for TF {self.map_frame}->{self.robot_frame}...')
+            return
+
+        pose = Pose()
+        pose.position.x = t.transform.translation.x
+        pose.position.y = t.transform.translation.y
+        pose.position.z = t.transform.translation.z
+        pose.orientation = t.transform.rotation
+        self.currentPose = pose
         self.initial_pose_received = True
-        
 
     def setWaypoints(self, waypoints):
         self.waypoints = []
@@ -487,60 +512,21 @@ def main(argv=sys.argv[1:]):
     # wait a few seconds to make sure entire stacks are up
     #time.sleep(10)
 
-    wps = [[-0.52, -0.54], [0.58, -0.55], [0.58, 0.52]]
-    starting_pose = [-2.0, -0.5]
 
-    test = WaypointFollowerTest()
-    #test.dumpCostmap()
-    test.setWaypoints(wps)
+    follower = WaypointFollowerTest()
 
-    retry_count = 0
-    retries = 2
-    while not test.initial_pose_received and retry_count <= retries:
-        retry_count += 1
-        test.info_msg('Setting initial pose')
-        test.setInitialPose(starting_pose)
-        test.info_msg('Waiting for amcl_pose to be received')
-        rclpy.spin_once(test, timeout_sec=1.0)  # wait for poseCallback
+    follower.info_msg('Waiting for TF to provide robot pose...')
+    while not follower.initial_pose_received:
+        rclpy.spin_once(follower, timeout_sec=1.0)
+    follower.info_msg('Initial pose acquired from TF')
 
-    while test.costmap == None:
-        test.info_msg('Getting initial map')
-        rclpy.spin_once(test, timeout_sec=1.0)
+    while follower.costmap == None:
+        follower.info_msg('Getting initial map')
+        rclpy.spin_once(follower, timeout_sec=1.0)
 
-    test.moveToFrontiers()
+    follower.moveToFrontiers()
 
-    rclpy.spin(test)
-    # result = test.run(True)
-    # assert result
-
-    # # preempt with new point
-    # test.setWaypoints([starting_pose])
-    # result = test.run(False)
-    # time.sleep(2)
-    # test.setWaypoints([wps[1]])
-    # result = test.run(False)
-
-    # # cancel
-    # time.sleep(2)
-    # test.cancel_goal()
-
-    # # a failure case
-    # time.sleep(2)
-    # test.setWaypoints([[100.0, 100.0]])
-    # result = test.run(True)
-    # assert not result
-    # result = not result
-
-    # test.shutdown()
-    # test.info_msg('Done Shutting Down.')
-
-    # if not result:
-    #     test.info_msg('Exiting failed')
-    #     exit(1)
-    # else:
-    #     test.info_msg('Exiting passed')
-    #     exit(0)
-
+    rclpy.spin(follower)
 
 if __name__ == '__main__':
     main()
