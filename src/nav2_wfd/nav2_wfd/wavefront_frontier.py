@@ -15,6 +15,7 @@
 
 import sys
 import time
+import logging
 
 from action_msgs.msg import GoalStatus
 from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped
@@ -295,7 +296,6 @@ class WaypointFollowerTest(Node):
         self.costmap = OccupancyGrid2d(msg)
 
     def moveToFrontiers(self):
-        
         try:
             frontiers = getFrontier(self.currentPose, self.costmap, self.get_logger())
         except Exception as e:
@@ -370,6 +370,7 @@ class WaypointFollowerTest(Node):
         self.get_logger().info(f'costmap resolution {costmap.specs.resolution}')
 
     def setInitialPose(self, pose):
+        self.get_logger().info(f"setInitialPose: pose = {pose}")
         self.init_pose = PoseWithCovarianceStamped()
         self.init_pose.pose.pose.position.x = pose[0]
         self.init_pose.pose.pose.position.y = pose[1]
@@ -387,7 +388,9 @@ class WaypointFollowerTest(Node):
             if not self.initial_pose_received:
                 self.info_msg(f'Waiting for TF {self.map_frame}->{self.robot_frame}...')
             return
-
+        
+        self.get_logger().info("updatePoseFromTF: Able to update pose")
+        
         pose = Pose()
         pose.position.x = t.transform.translation.x
         pose.position.y = t.transform.translation.y
@@ -395,6 +398,8 @@ class WaypointFollowerTest(Node):
         pose.orientation = t.transform.rotation
         self.currentPose = pose
         self.initial_pose_received = True
+        
+        self.get_logger().info("updatePoseFromTF: Inital pose set and updated")
 
     def setWaypoints(self, waypoints):
         self.waypoints = []
@@ -405,6 +410,7 @@ class WaypointFollowerTest(Node):
             msg.pose.position.y = wp[1]
             msg.pose.orientation.w = 1.0
             self.waypoints.append(msg)
+        self.get_logger().info(f"There are {len(waypoints)} waypoints: {waypoints}")
 
     def run(self, block):
         if not self.waypoints:
@@ -448,7 +454,7 @@ class WaypointFollowerTest(Node):
             return False
         if len(result.missed_waypoints) > 0:
             self.info_msg('Goal failed to process all waypoints,'
-                          ' missed {0} wps.'.format(len(result.missed_waypoints)))
+                        ' missed {0} wps.'.format(len(result.missed_waypoints)))
             return False
 
         self.info_msg('Goal succeeded!')
@@ -515,7 +521,6 @@ def main(argv=sys.argv[1:]):
     # wait a few seconds to make sure entire stacks are up
     #time.sleep(10)
 
-
     follower = WaypointFollowerTest()
 
     follower.info_msg('Waiting for TF to provide robot pose...')
@@ -527,6 +532,8 @@ def main(argv=sys.argv[1:]):
         follower.info_msg('Getting initial map')
         rclpy.spin_once(follower, timeout_sec=1.0)
 
+    logging.info("================= Ready to run `moveToFrontiers` ==================")
+    
     follower.moveToFrontiers()
 
     rclpy.spin(follower)
