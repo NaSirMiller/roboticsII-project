@@ -24,6 +24,7 @@ from nav2_msgs.srv import GetCostmap
 from nav2_msgs.msg import Costmap
 from nav_msgs.msg  import OccupancyGrid
 from nav_msgs.msg import Odometry
+from std_msgs.msg import Bool
 
 from tf2_ros import Buffer, TransformListener, LookupException, ConnectivityException, ExtrapolationException
 from geometry_msgs.msg import Pose
@@ -262,6 +263,7 @@ class WaypointFollowerTest(Node):
         self.currentPose = None
         self.lastWaypoint = None
         self.action_client = ActionClient(self, FollowWaypoints, 'FollowWaypoints')
+        self._done_pub = self.create_publisher(Bool, '/explore/done', 1)
         self.initial_pose_pub = self.create_publisher(PoseWithCovarianceStamped,
                                                       'initialpose', 10)
 
@@ -304,6 +306,7 @@ class WaypointFollowerTest(Node):
 
         if len(frontiers) == 0:
             self.info_msg('No More Frontiers')
+            self._done_pub.publish(Bool(data=True))
             return
 
         location = None

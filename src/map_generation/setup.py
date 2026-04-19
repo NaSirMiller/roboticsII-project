@@ -19,7 +19,7 @@ setup(
     zip_safe=True,
     maintainer='Tong Wang',
     maintainer_email='wangt17@rpi.edu',
-    description='Autonomous map generation using SLAM, Nav2, and explore_lite',
+    description='Autonomous map generation using SLAM, Nav2, and nav2_wfd',
     license='MIT',
     entry_points={
         'console_scripts': [

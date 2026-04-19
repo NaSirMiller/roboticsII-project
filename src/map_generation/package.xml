@@ -3,7 +3,7 @@
 <package format="3">
   <name>map_generation</name>
   <version>0.1.0</version>
-  <description>Autonomous map generation using SLAM, Nav2, and explore_lite</description>
+  <description>Autonomous map generation using SLAM, Nav2, and nav2_wfd</description>
   <maintainer email="wangt17@rpi.edu">Tong Wang</maintainer>
   <license>MIT</license>
 
@@ -21,7 +21,7 @@
   <exec_depend>nav2_controller</exec_depend>
   <exec_depend>nav2_lifecycle_manager</exec_depend>
   <exec_depend>nav2_planner</exec_depend>
-  <exec_depend>explore_lite</exec_depend>
+  <exec_depend>nav2_wfd</exec_depend>
 
   <export>
     <build_type>ament_python</build_type>
