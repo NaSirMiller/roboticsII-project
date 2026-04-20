@@ -518,23 +518,20 @@ class WaypointFollowerTest(Node):
 def main(argv=sys.argv[1:]):
     rclpy.init()
 
-    # wait a few seconds to make sure entire stacks are up
-    #time.sleep(10)
-
     follower = WaypointFollowerTest()
 
-    follower.info_msg('Waiting for TF to provide robot pose...')
-    while not follower.initial_pose_received:
-        rclpy.spin_once(follower, timeout_sec=1.0)
-    follower.info_msg('Initial pose acquired from TF')
+    def exploration_loop():
+        if not follower.initial_pose_received:
+            follower.info_msg('Waiting for TF to provide robot pose...')
+            return
+        if follower.costmap is None:
+            follower.info_msg('Getting initial map')
+            return
+        logging.info("================= Ready to run `moveToFrontiers` ==================")
+        follower.exploration_timer.cancel()
+        follower.moveToFrontiers()
 
-    while follower.costmap == None:
-        follower.info_msg('Getting initial map')
-        rclpy.spin_once(follower, timeout_sec=1.0)
-
-    logging.info("================= Ready to run `moveToFrontiers` ==================")
-    
-    follower.moveToFrontiers()
+    follower.exploration_timer = follower.create_timer(1.0, exploration_loop)
 
     rclpy.spin(follower)
 
