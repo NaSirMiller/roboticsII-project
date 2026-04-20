@@ -123,7 +123,36 @@ def generate_launch_description():
         output='screen',
     )
 
-    # ── 6. Lifecycle manager ───────────────────────────────────────────────
+    # ── 6. Recoveries server ───────────────────────────────────────────────
+    # Serves the Spin / BackUp / Wait actions used by the BT recovery branch.
+    # Without this, bt_navigator blocks at "Waiting for 'spin' action server".
+    recoveries_server = Node(
+        package='nav2_recoveries',
+        executable='recoveries_server',
+        name='recoveries_server',
+        parameters=[nav2_params, {
+            'recovery_plugins': ['spin', 'backup', 'wait'],
+            'spin.plugin':   'nav2_recoveries/Spin',
+            'backup.plugin': 'nav2_recoveries/BackUp',
+            'wait.plugin':   'nav2_recoveries/Wait',
+            'global_frame':     'odom',
+            'robot_base_frame': 'base_link',
+        }],
+        output='screen',
+    )
+
+    # ── 7. Waypoint follower ───────────────────────────────────────────────
+    # Serves the FollowWaypoints action that the wavefront explorer calls.
+    # It takes each waypoint and dispatches a NavigateToPose to bt_navigator.
+    waypoint_follower = Node(
+        package='nav2_waypoint_follower',
+        executable='waypoint_follower',
+        name='waypoint_follower',
+        parameters=[nav2_params],
+        output='screen',
+    )
+
+    # ── 8. Lifecycle manager ───────────────────────────────────────────────
     # Nav2 nodes use a "lifecycle" pattern — they must be explicitly
     # activated before they start working. This manager does that automatically.
     lifecycle_manager = Node(
@@ -135,7 +164,9 @@ def generate_launch_description():
             'node_names': [
                 'planner_server',
                 'controller_server',
+                'recoveries_server',
                 'bt_navigator',
+                'waypoint_follower',
             ]
         }],
         output='screen',
@@ -145,6 +176,8 @@ def generate_launch_description():
         use_sim_time_arg,
         planner_server,
         controller_server,
+        recoveries_server,
         bt_navigator,
+        waypoint_follower,
         lifecycle_manager,
     ])
