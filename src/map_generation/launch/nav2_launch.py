@@ -113,6 +113,7 @@ def generate_launch_description():
                 'nav2_clear_costmap_service_bt_node',         # ClearEntireCostmap
                 'nav2_goal_updated_condition_bt_node',        # GoalUpdated
                 'nav2_spin_action_bt_node',                   # Spin
+                'nav2_back_up_action_bt_node',                # BackUp
                 'nav2_wait_action_bt_node',                   # Wait
                 'nav2_rate_controller_bt_node',               # RateController
                 'nav2_recovery_node_bt_node',                 # RecoveryNode
