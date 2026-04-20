@@ -103,7 +103,7 @@ def generate_launch_description():
             'global_frame':       'map',
             'robot_base_frame':   'base_link',
             'odom_topic':         '/odom',
-            'default_nav_to_pose_bt_xml': '/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml',
+            'default_bt_xml_filename': '/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml',
             # Only load plugins actually used by the BT XML above.
             # The default list includes nav2_change_goal_node_bt_node which
             # is not installed on this system and causes a fatal startup crash.
