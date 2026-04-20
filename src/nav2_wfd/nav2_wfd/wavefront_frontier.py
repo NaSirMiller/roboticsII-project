@@ -19,7 +19,7 @@ import logging
 
 from action_msgs.msg import GoalStatus
 from geometry_msgs.msg import PoseStamped, PoseWithCovarianceStamped
-from nav2_msgs.action import FollowWaypoints
+from nav2_msgs.action import NavigateToPose
 from nav2_msgs.srv import ManageLifecycleNodes
 from nav2_msgs.srv import GetCostmap
 from nav2_msgs.msg import Costmap
@@ -263,7 +263,7 @@ class WaypointFollowerTest(Node):
         self.readyToMove = True
         self.currentPose = None
         self.lastWaypoint = None
-        self.action_client = ActionClient(self, FollowWaypoints, 'FollowWaypoints')
+        self.action_client = ActionClient(self, NavigateToPose, 'navigate_to_pose')
         self._done_pub = self.create_publisher(Bool, '/explore/done', 1)
         self.initial_pose_pub = self.create_publisher(PoseWithCovarianceStamped,
                                                       'initialpose', 10)
@@ -319,8 +319,8 @@ class WaypointFollowerTest(Node):
         self.info_msg(f'World points {location}')
         self.setWaypoints(location)
 
-        action_request = FollowWaypoints.Goal()
-        action_request.poses = self.waypoints
+        action_request = NavigateToPose.Goal()
+        action_request.pose = self.waypoints[0]
 
         self.info_msg('Sending goal request...')
         send_goal_future = self.action_client.send_goal_async(action_request)
@@ -420,8 +420,8 @@ class WaypointFollowerTest(Node):
         while not self.action_client.wait_for_server(timeout_sec=1.0):
             self.info_msg("'FollowWaypoints' action server not available, waiting...")
 
-        action_request = FollowWaypoints.Goal()
-        action_request.poses = self.waypoints
+        action_request = NavigateToPose.Goal()
+        action_request.pose = self.waypoints[0]
 
         self.info_msg('Sending goal request...')
         send_goal_future = self.action_client.send_goal_async(action_request)
