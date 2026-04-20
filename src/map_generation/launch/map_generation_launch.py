@@ -53,8 +53,16 @@ def generate_launch_description():
         parameters=[{'use_sim_time': use_sim_time}],
     )
 
+    base_footprint_to_base_link = Node(
+        package='tf2_ros',
+        executable='static_transform_publisher',
+        name='base_footprint_to_base_link',
+        arguments=['0', '0', '0', '0', '0', '0', 'base_footprint', 'base_link'],
+    )
+
     return LaunchDescription([
         use_sim_time_arg,
+        base_footprint_to_base_link,
         slam,
         nav2,
         nav2_wfd,

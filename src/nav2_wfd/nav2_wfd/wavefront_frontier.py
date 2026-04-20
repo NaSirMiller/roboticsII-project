@@ -389,7 +389,7 @@ class WaypointFollowerTest(Node):
                 self.info_msg(f'Waiting for TF {self.map_frame}->{self.robot_frame}...')
             return
         
-        self.get_logger().info("updatePoseFromTF: Able to update pose")
+        # self.get_logger().info("updatePoseFromTF: Able to update pose")
         
         pose = Pose()
         pose.position.x = t.transform.translation.x
@@ -399,7 +399,7 @@ class WaypointFollowerTest(Node):
         self.currentPose = pose
         self.initial_pose_received = True
         
-        self.get_logger().info("updatePoseFromTF: Inital pose set and updated")
+        # self.get_logger().info("updatePoseFromTF: Inital pose set and updated")
 
     def setWaypoints(self, waypoints):
         self.waypoints = []
