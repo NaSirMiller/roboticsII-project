@@ -299,9 +299,8 @@ class WaypointFollowerTest(Node):
         try:
             frontiers = getFrontier(self.currentPose, self.costmap, self.get_logger())
         except Exception as e:
-            self.warn_msg(f'Frontier search failed ({e}); retrying shortly (2Hz)')
-            time.sleep(1.0)
-            self.moveToFrontiers()
+            self.warn_msg(f'Frontier search failed ({e}); retrying in 1s')
+            self.create_timer(1.0, lambda: self.moveToFrontiers())
             return
 
         if len(frontiers) == 0:
@@ -313,11 +312,10 @@ class WaypointFollowerTest(Node):
         largestDist = 0
         for f in frontiers:
             dist = math.sqrt(((f[0] - self.currentPose.position.x)**2) + ((f[1] - self.currentPose.position.y)**2))
-            if  dist > largestDist:
+            if dist > largestDist:
                 largestDist = dist
-                location = [f] 
+                location = [f]
 
-        #worldFrontiers = [self.costmap.mapToWorld(f[0], f[1]) for f in frontiers]
         self.info_msg(f'World points {location}')
         self.setWaypoints(location)
 
@@ -326,30 +324,32 @@ class WaypointFollowerTest(Node):
 
         self.info_msg('Sending goal request...')
         send_goal_future = self.action_client.send_goal_async(action_request)
+        send_goal_future.add_done_callback(self._goal_response_callback)
+
+    def _goal_response_callback(self, future):
         try:
-            rclpy.spin_until_future_complete(self, send_goal_future)
-            self.goal_handle = send_goal_future.result()
+            self.goal_handle = future.result()
         except Exception as e:
-            self.error_msg('Service call failed %r' % (e,))
+            self.error_msg('Send goal failed: %r' % (e,))
+            self.moveToFrontiers()
+            return
 
         if not self.goal_handle.accepted:
             self.error_msg('Goal rejected')
+            self.moveToFrontiers()
             return
 
         self.info_msg('Goal accepted')
-
         get_result_future = self.goal_handle.get_result_async()
+        get_result_future.add_done_callback(self._get_result_callback)
 
-        self.info_msg("Waiting for 'FollowWaypoints' action to complete")
+    def _get_result_callback(self, future):
         try:
-            rclpy.spin_until_future_complete(self, get_result_future)
-            status = get_result_future.result().status
-            result = get_result_future.result().result
+            status = future.result().status
         except Exception as e:
-            self.error_msg('Service call failed %r' % (e,))
-
-        #self.currentPose = self.waypoints[len(self.waypoints) - 1].pose
-
+            self.error_msg('Get result failed: %r' % (e,))
+        else:
+            self.info_msg(f'Goal finished with status: {status}')
         self.moveToFrontiers()
 
     def costmapCallback(self, msg):
