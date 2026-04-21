@@ -316,6 +316,17 @@ class WaypointFollowerTest(Node):
                 largestDist = dist
                 location = [f]
 
+        # Pull goal back from frontier centroid toward robot so it lands in free space
+        dx = location[0][0] - self.currentPose.position.x
+        dy = location[0][1] - self.currentPose.position.y
+        dist = math.sqrt(dx**2 + dy**2)
+        if dist > 0:
+            step = min(0.5, dist - 0.1)
+            location = [(
+                location[0][0] - (dx / dist) * step,
+                location[0][1] - (dy / dist) * step
+            )]
+
         self.info_msg(f'World points {location}')
         self.setWaypoints(location)
 
@@ -525,7 +536,7 @@ def main(argv=sys.argv[1:]):
             follower.info_msg('Waiting for TF to provide robot pose...')
             return
         if follower.costmap is None:
-            follower.info_msg('Getting initial map')
+            follower.info_msg('Costmap is not set (None)')
             return
         logging.info("================= Ready to run `moveToFrontiers` ==================")
         follower.exploration_timer.cancel()
