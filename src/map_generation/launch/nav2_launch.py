@@ -67,7 +67,7 @@ def generate_launch_description():
             'GridBased.tolerance': 0.5,
             'GridBased.use_astar': True,
             'GridBased.allow_unknown': True,
-            'global_costmap.robot_base_frame': 'base_link',
+            'global_costmap.robot_base_frame': 'base_footprint',
         }],
         output='screen',
     )
@@ -86,8 +86,8 @@ def generate_launch_description():
             'FollowPath.max_vel_theta': 1.5,
             'FollowPath.min_speed_xy':  0.0,
             'FollowPath.max_speed_xy':  0.25,
-            'FollowPath.base_frame_id': 'base_link',
-            'local_costmap.robot_base_frame': 'base_link',
+            'FollowPath.base_frame_id': 'base_footprint',
+            'local_costmap.robot_base_frame': 'base_footprint',
         }],
         output='screen',
     )
@@ -101,7 +101,7 @@ def generate_launch_description():
         name='bt_navigator',
         parameters=[nav2_params, {
             'global_frame':       'map',
-            'robot_base_frame':   'base_link',
+            'robot_base_frame':   'base_footprint',
             'odom_topic':         '/odom',
             'default_bt_xml_filename': '/opt/ros/foxy/share/nav2_bt_navigator/behavior_trees/navigate_w_replanning_and_recovery.xml',
             # Only load plugins actually used by the BT XML above.
@@ -138,7 +138,7 @@ def generate_launch_description():
             'backup.plugin': 'nav2_recoveries/BackUp',
             'wait.plugin': 'nav2_recoveries/Wait',
             'global_frame': 'odom',
-            'robot_base_frame': 'base_link',
+            'robot_base_frame': 'base_footprint',
         }],
         output='screen',
     )
@@ -168,7 +168,6 @@ def generate_launch_description():
                 'controller_server',
                 'recoveries_server',
                 'bt_navigator',
-                'waypoint_follower',
             ]
         }],
         output='screen',
