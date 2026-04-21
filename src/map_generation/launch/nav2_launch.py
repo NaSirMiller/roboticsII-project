@@ -180,6 +180,6 @@ def generate_launch_description():
         controller_server,
         recoveries_server,
         bt_navigator,
-        waypoint_follower,
+        # waypoint_follower,
         lifecycle_manager,
     ])
