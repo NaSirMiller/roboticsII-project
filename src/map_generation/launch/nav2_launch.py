@@ -132,10 +132,12 @@ def generate_launch_description():
         name='recoveries_server',
         parameters=[nav2_params, {
             'recovery_plugins': ['spin', 'backup', 'wait'],
-            'spin.plugin':   'nav2_recoveries/Spin',
+            'costmap_topic': '/local_costmap/costmap_raw',
+            'footprint_topic': '/local_costmap/published_footprint',
+            'spin.plugin': 'nav2_recoveries/Spin',
             'backup.plugin': 'nav2_recoveries/BackUp',
-            'wait.plugin':   'nav2_recoveries/Wait',
-            'global_frame':     'odom',
+            'wait.plugin': 'nav2_recoveries/Wait',
+            'global_frame': 'odom',
             'robot_base_frame': 'base_link',
         }],
         output='screen',
@@ -144,13 +146,13 @@ def generate_launch_description():
     # ── 7. Waypoint follower ───────────────────────────────────────────────
     # Serves the FollowWaypoints action that the wavefront explorer calls.
     # It takes each waypoint and dispatches a NavigateToPose to bt_navigator.
-    waypoint_follower = Node(
-        package='nav2_waypoint_follower',
-        executable='waypoint_follower',
-        name='waypoint_follower',
-        parameters=[nav2_params],
-        output='screen',
-    )
+    # waypoint_follower = Node(
+    #     package='nav2_waypoint_follower',
+    #     executable='waypoint_follower',
+    #     name='waypoint_follower',
+    #     parameters=[nav2_params],
+    #     output='screen',
+    # )
 
     # ── 8. Lifecycle manager ───────────────────────────────────────────────
     # Nav2 nodes use a "lifecycle" pattern — they must be explicitly
