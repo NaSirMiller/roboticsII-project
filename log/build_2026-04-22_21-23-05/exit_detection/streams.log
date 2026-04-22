@@ -1,0 +1,32 @@
+[4.896s] Invoking command in '/root/codes/NST_proj_ws/src/exit_detection': AMENT_PREFIX_PATH=/root/codes/NST_proj_ws/install/robotics_utils:${AMENT_PREFIX_PATH} PYTHONPATH=/root/codes/NST_proj_ws/build/exit_detection/prefix_override:/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/exit_detection build --build-base /root/codes/NST_proj_ws/build/exit_detection/build install --record /root/codes/NST_proj_ws/build/exit_detection/install.log --install-scripts $base/lib/exit_detection --single-version-externally-managed
+[6.144s] running egg_info
+[6.147s] writing ../../build/exit_detection/exit_detection.egg-info/PKG-INFO
+[6.148s] writing dependency_links to ../../build/exit_detection/exit_detection.egg-info/dependency_links.txt
+[6.149s] writing entry points to ../../build/exit_detection/exit_detection.egg-info/entry_points.txt
+[6.149s] writing requirements to ../../build/exit_detection/exit_detection.egg-info/requires.txt
+[6.150s] writing top-level names to ../../build/exit_detection/exit_detection.egg-info/top_level.txt
+[6.323s] reading manifest file '../../build/exit_detection/exit_detection.egg-info/SOURCES.txt'
+[6.328s] writing manifest file '../../build/exit_detection/exit_detection.egg-info/SOURCES.txt'
+[6.328s] running build
+[6.329s] running build_py
+[6.329s] copying exit_detection/__init__.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+[6.330s] copying exit_detection/danger_exit_detection.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+[6.330s] copying exit_detection/location_provider.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+[6.331s] copying exit_detection/wheelodom_tf.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+[6.331s] copying exit_detection/joy_safety_ctrl.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+[6.332s] copying exit_detection/safe_exit_detection.py -> /root/codes/NST_proj_ws/build/exit_detection/build/lib/exit_detection
+[6.333s] running install
+[6.338s] running install_lib
+[6.346s] running install_data
+[6.349s] creating /root/codes/NST_proj_ws/install/exit_detection/share/exit_detection/config
+[6.349s] running install_egg_info
+[6.358s] removing '/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection-0.0.1-py3.8.egg-info' (and everything under it)
+[6.359s] Copying ../../build/exit_detection/exit_detection.egg-info to /root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages/exit_detection-0.0.1-py3.8.egg-info
+[6.366s] running install_scripts
+[6.445s] Installing danger_exit_detection_node script to /root/codes/NST_proj_ws/install/exit_detection/lib/exit_detection
+[6.446s] Installing joy_safety_ctrl script to /root/codes/NST_proj_ws/install/exit_detection/lib/exit_detection
+[6.446s] Installing location_provider_node script to /root/codes/NST_proj_ws/install/exit_detection/lib/exit_detection
+[6.447s] Installing safe_exit_detection_node script to /root/codes/NST_proj_ws/install/exit_detection/lib/exit_detection
+[6.447s] Installing wheelodom_tf script to /root/codes/NST_proj_ws/install/exit_detection/lib/exit_detection
+[6.448s] writing list of installed files to '/root/codes/NST_proj_ws/build/exit_detection/install.log'
+[6.570s] Invoked command in '/root/codes/NST_proj_ws/src/exit_detection' returned '0': AMENT_PREFIX_PATH=/root/codes/NST_proj_ws/install/robotics_utils:${AMENT_PREFIX_PATH} PYTHONPATH=/root/codes/NST_proj_ws/build/exit_detection/prefix_override:/root/codes/NST_proj_ws/install/exit_detection/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/exit_detection build --build-base /root/codes/NST_proj_ws/build/exit_detection/build install --record /root/codes/NST_proj_ws/build/exit_detection/install.log --install-scripts $base/lib/exit_detection --single-version-externally-managed

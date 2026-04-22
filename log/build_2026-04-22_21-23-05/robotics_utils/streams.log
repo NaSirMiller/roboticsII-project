@@ -1,0 +1,22 @@
+[8.571s] Invoking command in '/root/codes/NST_proj_ws/src/robotics_utils': PYTHONPATH=/root/codes/NST_proj_ws/build/robotics_utils/prefix_override:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robotics_utils build --build-base /root/codes/NST_proj_ws/build/robotics_utils/build install --record /root/codes/NST_proj_ws/build/robotics_utils/install.log --install-scripts $base/lib/robitics_utils --single-version-externally-managed
+[9.938s] running egg_info
+[9.941s] writing ../../build/robotics_utils/robotics_utils.egg-info/PKG-INFO
+[9.942s] writing dependency_links to ../../build/robotics_utils/robotics_utils.egg-info/dependency_links.txt
+[9.944s] writing entry points to ../../build/robotics_utils/robotics_utils.egg-info/entry_points.txt
+[9.945s] writing requirements to ../../build/robotics_utils/robotics_utils.egg-info/requires.txt
+[9.947s] writing top-level names to ../../build/robotics_utils/robotics_utils.egg-info/top_level.txt
+[10.153s] reading manifest file '../../build/robotics_utils/robotics_utils.egg-info/SOURCES.txt'
+[10.159s] writing manifest file '../../build/robotics_utils/robotics_utils.egg-info/SOURCES.txt'
+[10.161s] running build
+[10.161s] running build_py
+[10.163s] copying robotics_utils/__init__.py -> /root/codes/NST_proj_ws/build/robotics_utils/build/lib/robotics_utils
+[10.165s] copying robotics_utils/math.py -> /root/codes/NST_proj_ws/build/robotics_utils/build/lib/robotics_utils
+[10.167s] running install
+[10.174s] running install_lib
+[10.183s] running install_data
+[10.187s] running install_egg_info
+[10.197s] removing '/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages/robotics_utils-0.0.1-py3.8.egg-info' (and everything under it)
+[10.199s] Copying ../../build/robotics_utils/robotics_utils.egg-info to /root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages/robotics_utils-0.0.1-py3.8.egg-info
+[10.204s] running install_scripts
+[10.297s] writing list of installed files to '/root/codes/NST_proj_ws/build/robotics_utils/install.log'
+[10.638s] Invoked command in '/root/codes/NST_proj_ws/src/robotics_utils' returned '0': PYTHONPATH=/root/codes/NST_proj_ws/build/robotics_utils/prefix_override:/root/codes/NST_proj_ws/install/robotics_utils/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/robotics_utils build --build-base /root/codes/NST_proj_ws/build/robotics_utils/build install --record /root/codes/NST_proj_ws/build/robotics_utils/install.log --install-scripts $base/lib/robitics_utils --single-version-externally-managed

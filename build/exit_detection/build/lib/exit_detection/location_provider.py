@@ -54,7 +54,7 @@ class LocationProviderNode(Node):
     def get_home_pose(self):
         try:
             world_frame = self.get_parameter('world_frame_id').get_parameter_value().string_value
-            transform = self.tf_buffer.lookup_transform(world_frame, 'base_footprint', rclpy.time.Time(), rclpy.duration.Duration(seconds=0.5))
+            transform = self.tf_buffer.lookup_transform(world_frame, 'base_link', rclpy.time.Time(), rclpy.duration.Duration(seconds=0.5))
             self.home_pose = np.array([transform.transform.translation.x, transform.transform.translation.y, transform.transform.translation.z])
             self.get_logger().info(f'Home pose set to: {self.home_pose}')
             return True    
@@ -65,7 +65,7 @@ class LocationProviderNode(Node):
     def get_current_poses(self):
         map_id = self.get_parameter('world_frame_id').get_parameter_value().string_value
         try:
-            transform = self.tf_buffer.lookup_transform(map_id, 'base_footprint', rclpy.time.Time())
+            transform = self.tf_buffer.lookup_transform(map_id, 'base_link', rclpy.time.Time())
             robot_world_x = transform.transform.translation.x
             robot_world_y = transform.transform.translation.y
             robot_world_z = transform.transform.translation.z

@@ -1,7 +1,7 @@
 Metadata-Version: 1.2
 Name: map-generation
 Version: 0.1.0
-Summary: Autonomous map generation using SLAM, Nav2, and explore_lite
+Summary: Autonomous map generation using SLAM, Nav2, and nav2_wfd
 Home-page: UNKNOWN
 Maintainer: Tong Wang
 Maintainer-email: wangt17@rpi.edu

@@ -9,6 +9,7 @@ setup.py
 ../../build/nav2_wfd/nav2_wfd.egg-info/requires.txt
 ../../build/nav2_wfd/nav2_wfd.egg-info/top_level.txt
 ../../build/nav2_wfd/nav2_wfd.egg-info/zip-safe
+launch/wavefront_frontier.launch.py
 nav2_wfd/__init__.py
 nav2_wfd/wavefront_frontier.py
 resource/nav2_wfd

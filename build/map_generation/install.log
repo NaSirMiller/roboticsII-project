@@ -4,10 +4,11 @@
 /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation/__pycache__/map_generation_node.cpython-38.pyc
 /root/codes/NST_proj_ws/install/map_generation/share/ament_index/resource_index/packages/map_generation
 /root/codes/NST_proj_ws/install/map_generation/share/map_generation/package.xml
-/root/codes/NST_proj_ws/install/map_generation/share/map_generation/launch/explore_lite_launch.py
 /root/codes/NST_proj_ws/install/map_generation/share/map_generation/launch/slam_launch.py
 /root/codes/NST_proj_ws/install/map_generation/share/map_generation/launch/map_generation_launch.py
 /root/codes/NST_proj_ws/install/map_generation/share/map_generation/launch/nav2_launch.py
+/root/codes/NST_proj_ws/install/map_generation/share/map_generation/config/x3_config.yaml
+/root/codes/NST_proj_ws/install/map_generation/share/map_generation/config/dwa_nav_params.yaml
 /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info/PKG-INFO
 /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info/top_level.txt
 /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info/zip-safe

@@ -1,0 +1,3 @@
+[console_scripts]
+explore = nav2_wfd_tf.wavefront_frontier:main
+

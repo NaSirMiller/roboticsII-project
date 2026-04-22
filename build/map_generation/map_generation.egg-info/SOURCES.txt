@@ -8,7 +8,8 @@ setup.py
 ../../build/map_generation/map_generation.egg-info/requires.txt
 ../../build/map_generation/map_generation.egg-info/top_level.txt
 ../../build/map_generation/map_generation.egg-info/zip-safe
-launch/explore_lite_launch.py
+config/dwa_nav_params.yaml
+config/x3_config.yaml
 launch/map_generation_launch.py
 launch/nav2_launch.py
 launch/slam_launch.py

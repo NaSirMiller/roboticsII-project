@@ -1,0 +1,26 @@
+[5.174s] Invoking command in '/root/codes/NST_proj_ws/src/map_generation': AMENT_PREFIX_PATH=/root/codes/NST_proj_ws/install/nav2_wfd:${AMENT_PREFIX_PATH} PYTHONPATH=/root/codes/NST_proj_ws/build/map_generation/prefix_override:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/map_generation build --build-base /root/codes/NST_proj_ws/build/map_generation/build install --record /root/codes/NST_proj_ws/build/map_generation/install.log --single-version-externally-managed
+[6.414s] running egg_info
+[6.418s] writing ../../build/map_generation/map_generation.egg-info/PKG-INFO
+[6.418s] writing dependency_links to ../../build/map_generation/map_generation.egg-info/dependency_links.txt
+[6.419s] writing entry points to ../../build/map_generation/map_generation.egg-info/entry_points.txt
+[6.420s] writing requirements to ../../build/map_generation/map_generation.egg-info/requires.txt
+[6.420s] writing top-level names to ../../build/map_generation/map_generation.egg-info/top_level.txt
+[6.592s] reading manifest file '../../build/map_generation/map_generation.egg-info/SOURCES.txt'
+[6.596s] writing manifest file '../../build/map_generation/map_generation.egg-info/SOURCES.txt'
+[6.597s] running build
+[6.597s] running build_py
+[6.598s] copying map_generation/__init__.py -> /root/codes/NST_proj_ws/build/map_generation/build/lib/map_generation
+[6.599s] copying map_generation/map_generation_node.py -> /root/codes/NST_proj_ws/build/map_generation/build/lib/map_generation
+[6.599s] running install
+[6.603s] running install_lib
+[6.610s] running install_data
+[6.614s] creating /root/codes/NST_proj_ws/install/map_generation/share/map_generation/config
+[6.616s] copying config/x3_config.yaml -> /root/codes/NST_proj_ws/install/map_generation/share/map_generation/config
+[6.616s] copying config/dwa_nav_params.yaml -> /root/codes/NST_proj_ws/install/map_generation/share/map_generation/config
+[6.617s] running install_egg_info
+[6.624s] removing '/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info' (and everything under it)
+[6.625s] Copying ../../build/map_generation/map_generation.egg-info to /root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages/map_generation-0.1.0-py3.8.egg-info
+[6.629s] running install_scripts
+[6.712s] Installing map_generation_node script to /root/codes/NST_proj_ws/install/map_generation/lib/map_generation
+[6.714s] writing list of installed files to '/root/codes/NST_proj_ws/build/map_generation/install.log'
+[6.910s] Invoked command in '/root/codes/NST_proj_ws/src/map_generation' returned '0': AMENT_PREFIX_PATH=/root/codes/NST_proj_ws/install/nav2_wfd:${AMENT_PREFIX_PATH} PYTHONPATH=/root/codes/NST_proj_ws/build/map_generation/prefix_override:/root/codes/NST_proj_ws/install/map_generation/lib/python3.8/site-packages:/root/codes/NST_proj_ws/install/nav2_wfd/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/map_generation build --build-base /root/codes/NST_proj_ws/build/map_generation/build install --record /root/codes/NST_proj_ws/build/map_generation/install.log --single-version-externally-managed

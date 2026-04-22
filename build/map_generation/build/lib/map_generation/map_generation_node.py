@@ -5,13 +5,13 @@ map_generation_node.py
 Orchestrates autonomous building exploration:
 
   slam_toolbox  →  builds occupancy grid on /map
-  explore_lite  →  picks frontier goals, sends to Nav2
-  Nav2          →  drives robot to each goal
+  nav2_wfd      →  picks frontier waypoints, sends to Nav2
+  Nav2          →  drives robot to each waypoint
 
 Flow
 ----
   1. Record home pose from TF at startup
-  2. Let explore_lite + Nav2 run until no frontiers remain
+  2. Let nav2_wfd + Nav2 run until no frontiers remain
   3. Navigate back to home pose via Nav2 action
   4. Publish status="done" so Na'Sir's PathGeneration can start
 
@@ -30,8 +30,8 @@ PUBLISHES:
       PathGeneration should use this after status == "done".
 
 SUBSCRIBES:
-  /explore/frontiers         visualization_msgs/MarkerArray
-      Published by explore_lite. Empty array = no more frontiers.
+  /explore/done              std_msgs/Bool
+      Published by nav2_wfd when no frontiers remain.
 """
 
 import rclpy
@@ -40,8 +40,7 @@ from rclpy.action import ActionClient
 from rclpy.duration import Duration
 
 from geometry_msgs.msg import PoseStamped
-from std_msgs.msg import String
-from visualization_msgs.msg import MarkerArray
+from std_msgs.msg import String, Bool
 from nav2_msgs.action import NavigateToPose
 
 import tf2_ros
@@ -49,17 +48,12 @@ import tf2_ros
 
 class MapGenerationNode(Node):
 
-    # Frontiers must stay empty this many seconds before we call exploration done.
-    # Gives explore_lite time to find new frontiers after each navigation leg.
-    FRONTIER_EMPTY_TIMEOUT = 5.0  # seconds
-
     def __init__(self):
         super().__init__('map_generation')
 
         # ── Internal state ─────────────────────────────────────────────────
         self.home_pose: PoseStamped | None = None
         self.exploration_done = False
-        self._last_nonempty_frontier_time = None   # last time we saw active frontiers
 
         # ── TF (to read robot position) ────────────────────────────────────
         self.tf_buffer = tf2_ros.Buffer()
@@ -76,10 +70,10 @@ class MapGenerationNode(Node):
 
         # ── Subscribers ────────────────────────────────────────────────────
         self.create_subscription(
-            MarkerArray,
-            '/explore/frontiers',
-            self._frontier_callback,
-            10
+            Bool,
+            '/explore/done',
+            self._explore_done_callback,
+            1
         )
 
         # ── Timers ─────────────────────────────────────────────────────────
@@ -87,22 +81,20 @@ class MapGenerationNode(Node):
         # (TF tree may not be ready immediately at t=0)
         self.create_timer(2.0, self._record_home_pose_once)
 
-        # Poll exploration status every second
-        self.create_timer(1.0, self._check_exploration_done)
-
         self._publish_status('exploring')
-        self.get_logger().info('MapGenerationNode started – waiting for explore_lite.')
+        self.get_logger().info('MapGenerationNode started – waiting for nav2_wfd.')
 
     # ──────────────────────────── callbacks ───────────────────────────────
 
-    def _frontier_callback(self, msg: MarkerArray):
+    def _explore_done_callback(self, msg: Bool):
         """
-        Called every time explore_lite publishes its frontier list.
-        We track the last time the list was non-empty to detect
-        when exploration is truly finished.
+        Called when nav2_wfd publishes /explore/done.
+        Signals that all frontiers have been explored.
         """
-        if msg.markers:
-            self._last_nonempty_frontier_time = self.get_clock().now()
+        if msg.data and not self.exploration_done:
+            self.get_logger().info('nav2_wfd reported no more frontiers → exploration complete.')
+            self.exploration_done = True
+            self._return_home()
 
     def _record_home_pose_once(self):
         """
@@ -135,31 +127,6 @@ class MapGenerationNode(Node):
             )
         except Exception as e:
             self.get_logger().warn(f'Waiting for TF (map→base_footprint): {e}')
-
-    # ──────────────────────────── exploration monitor ─────────────────────
-
-    def _check_exploration_done(self):
-        """
-        Called every second.  Declares exploration complete when
-        the frontier list has been empty for FRONTIER_EMPTY_TIMEOUT seconds.
-        """
-        if self.exploration_done:
-            return
-
-        # Haven't received any frontier message yet → explore_lite not running
-        if self._last_nonempty_frontier_time is None:
-            return
-
-        elapsed = (
-            self.get_clock().now() - self._last_nonempty_frontier_time
-        ).nanoseconds / 1e9
-
-        if elapsed >= self.FRONTIER_EMPTY_TIMEOUT:
-            self.get_logger().info(
-                f'No frontiers for {elapsed:.1f}s → exploration complete.'
-            )
-            self.exploration_done = True
-            self._return_home()
 
     # ──────────────────────────── return home ─────────────────────────────
 
