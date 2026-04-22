@@ -2,7 +2,7 @@ from setuptools import setup
 import os
 from glob import glob
 
-package_name = 'nav2_wfd'
+package_name = 'nav2_wfd_tf'
 
 setup(
     name=package_name,
