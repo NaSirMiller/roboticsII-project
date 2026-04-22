@@ -28,6 +28,7 @@ class SafeExitDetectionNode(Node):
         self.sub_depth = Subscriber(self, PointCloud2, '/camera/depth/points')
         self.ts = ApproximateTimeSynchronizer([self.sub_rgb, self.sub_depth], 10, 0.1)
         self.ts.registerCallback(self.camera_callback)
+        self.detected_exits = []
 
     def camera_callback(self, rgb_msg, points_msg):
         self.get_logger().info('Received RGB and Depth Messages') # Can comment out once know is working
@@ -64,6 +65,9 @@ class SafeExitDetectionNode(Node):
             detected_safe_exit_pose.pose.position.y = cp_robot[1]
             detected_safe_exit_pose.pose.position.z = cp_robot[2]
             detected_safe_exit_pose.pose.orientation.w = 1.0
+            min_dist = 0.5 
+            if not any(np.linalg.norm(cp_robot - p) < min_dist for p in self.detected_exits):
+                self.detected_exits.append(cp_robot)
         except TransformException as e:
             self.get_logger().error('Transform Error: {}'.format(e))
             return
