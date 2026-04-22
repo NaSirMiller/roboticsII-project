@@ -22,6 +22,7 @@ setup(
             'location_provider_node = exit_detection.location_provider:main',
             'joy_safety_ctrl = exit_detection.joy_safety_ctrl:main',
             'wheelodom_tf = exit_detection.wheelodom_tf:main',
+            'navigate_to_saved_pose_node = exit_detection.navigate_to_saved_pose_node:main',
         ],
     },
 )
