@@ -21,7 +21,6 @@ bt_navigator:
       - nav2_distance_controller_bt_node
       - nav2_speed_controller_bt_node
       - nav2_truncate_path_action_bt_node
-      - nav2_navigate_through_poses_action_bt_node
 
 planner_server:
   ros__parameters:
