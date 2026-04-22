@@ -1,5 +1,4 @@
 import struct
-
 import cv2
 import numpy as np
 import rclpy
@@ -9,12 +8,13 @@ from message_filters import ApproximateTimeSynchronizer, Subscriber
 from rclpy.node import Node
 from sensor_msgs.msg import Image, PointCloud2
 from tf2_ros import Buffer, TransformException, TransformListener
-
 from robotics_utils.math import q2R
 
 class DangerExitDetectionNode(Node):
     def __init__(self):
         super().__init__('danger_exit_detection_node')
+        self.goal_sent = False
+        self.last_goal_time = self.get_clock().now()
         self.get_logger().info('Danger Exit Detection Node Started')
         self.declare_parameter('color_low', [145, 110, 25]) # Yellow
         self.declare_parameter('color_high', [235, 215, 130])
@@ -23,7 +23,7 @@ class DangerExitDetectionNode(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.pub_danger_exit = self.create_publisher(Image, '/detected_unsafe_exit', 10)
-        self.pub_danger_exit_pose = self.create_publisher(PoseStamped, '/detected_danger_exit_pose', 10)
+        self.pub_danger_exit_pose = self.create_publisher(PoseStamped, 'move_base_simple/goal', 10)
         self.sub_rgb = Subscriber(self, Image, '/camera/color/image_raw')
         self.sub_depth = Subscriber(self, PointCloud2, '/camera/depth/points')
         self.ts = ApproximateTimeSynchronizer([self.sub_rgb, self.sub_depth], 10, 0.1)
@@ -63,10 +63,19 @@ class DangerExitDetectionNode(Node):
             detected_danger_exit_pose.pose.position.x = cp_robot[0]
             detected_danger_exit_pose.pose.position.y = cp_robot[1]
             detected_danger_exit_pose.pose.position.z = cp_robot[2]
+            detected_danger_exit_pose.pose.orientation.w = 1.0
         except TransformException as e:
             self.get_logger().error('Transform Error: {}'.format(e))
             return
-        self.pub_detected_danger_exit_pose.publish(detected_danger_exit_pose)
+
+        now = self.get_clock().now()
+        elapsed = (now - self.last_goal_time).nanoseconds / 1e9
+        if not self.goal_sent or elapsed > 5.0:  # Only send every 5 seconds
+            self.pub_danger_exit_pose.publish(detected_danger_exit_pose)
+            self.last_goal_time = now
+            self.goal_sent = True
+            self.get_logger().info('Sent exit pose as nav goal')
+        
         detect_img_msg = self.br.cv2_to_imgmsg(rgb_image, encoding='bgr8')
         detect_img_msg.header = rgb_msg.header
         self.get_logger().info('image message published') # NOTE: Can comment out once know is working
