@@ -66,7 +66,7 @@ class SafeExitDetectionNode(Node):
         except TransformException as e:
             self.get_logger().error('Transform Error: {}'.format(e))
             return
-        self.pub_detected_safe_exit_pose.publish(detected_safe_exit_pose)
+        self.pub_detected_safe_exit.publish(detected_safe_exit_pose) 
         detect_img_msg = self.br.cv2_to_imgmsg(rgb_image, encoding='bgr8')
         detect_img_msg.header = rgb_msg.header
         self.get_logger().info('image message published') # NOTE: Can comment out once know is working
