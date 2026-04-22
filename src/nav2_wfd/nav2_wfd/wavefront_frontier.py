@@ -24,6 +24,7 @@ from nav2_msgs.srv import GetCostmap
 from nav2_msgs.msg import Costmap
 from nav_msgs.msg  import OccupancyGrid
 from nav_msgs.msg import Odometry
+from std_msgs.msg import Bool
 
 import rclpy
 from rclpy.action import ActionClient
@@ -281,6 +282,8 @@ class WaypointFollowerTest(Node):
         self.costmapSub = self.create_subscription(OccupancyGrid(), '/map', self.occupancyGridCallback, pose_qos)
         self.costmap = None
 
+        self.done_pub = self.create_publisher(Bool, '/explore/done', 1)
+
         self.get_logger().info('Running Waypoint Test')
 
     def occupancyGridCallback(self, msg):
@@ -291,6 +294,9 @@ class WaypointFollowerTest(Node):
 
         if len(frontiers) == 0:
             self.info_msg('No More Frontiers')
+            done_msg = Bool()
+            done_msg.data = True
+            self.done_pub.publish(done_msg)
             return
 
         location = None
