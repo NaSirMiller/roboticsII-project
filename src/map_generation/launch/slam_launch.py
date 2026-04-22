@@ -57,6 +57,10 @@ def generate_launch_description():
 
         # Loop closure: detects when the robot revisits a place and corrects drift
         'do_loop_closing': True,
+
+        # Give TF more time to be available at startup (default 0.2 is too short)
+        'transform_timeout': 1.0,
+        'tf_buffer_duration': 30.0,
     }
 
     slam_node = Node(
