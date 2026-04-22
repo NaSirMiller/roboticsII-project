@@ -28,6 +28,12 @@ ros2 launch exit_detection exit_detection.launch.py # launch all three nodes
 ros2 run map_generation map_generation_node
 ```
 
+## Frontier Exploration
+
+```shell
+ros2 launch nav2_wfd wavefront_frontier.launch.py
+```
+
 ## Robotics Utils
 
 Shared utility that the other packages depend on. Must be built before packages that depend on it.
