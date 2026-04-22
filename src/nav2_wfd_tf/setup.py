@@ -23,7 +23,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-        	'explore = nav2_wfd.wavefront_frontier:main',
+        	'explore = nav2_wfd_tf.wavefront_frontier:main',
         ],
     },
 )

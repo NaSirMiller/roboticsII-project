@@ -16,7 +16,7 @@ def generate_launch_description():
     return LaunchDescription([
         use_sim_time_arg,
         Node(
-            package='nav2_wfd',
+            package='nav2_wfd_tf',
             executable='explore',
             name='wavefront_frontier_explorer',
             output='screen',
