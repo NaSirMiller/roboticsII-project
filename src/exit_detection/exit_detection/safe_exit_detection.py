@@ -1,3 +1,4 @@
+import os
 import struct
 import cv2
 import numpy as np
@@ -25,7 +26,7 @@ class SafeExitDetectionNode(Node):
         self.goal_sent = False
         self.last_goal_time = self.get_clock().now()
         self.pose_saved = False
-        self.save_path = '/root/yahboomcar_ros2_ws/yahboomcar_ws/src/exit_detection/saved_exit_pose.yaml'
+        self.save_path = os.path.expanduser('~/saved_exit_pose.yaml')
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.pub_safe_exit = self.create_publisher(Image, '/detected_safe_exit', 10)
         self.pub_detected_safe_exit = self.create_publisher(PoseStamped, 'move_base_simple/goal', 10)

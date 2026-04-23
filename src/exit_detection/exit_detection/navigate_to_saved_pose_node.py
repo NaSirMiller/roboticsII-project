@@ -1,3 +1,4 @@
+import os
 import rclpy
 import yaml
 from rclpy.node import Node
@@ -6,7 +7,7 @@ from geometry_msgs.msg import PoseStamped
 class NavigateToSavedPoseNode(Node):
     def __init__(self):
         super().__init__('navigate_to_saved_pose_node')
-        self.save_path = '/root/yahboomcar_ros2_ws/yahboomcar_ws/src/exit_detection/saved_exit_pose.yaml'
+        self.save_path = os.path.expanduser('~/saved_exit_pose.yaml')
         self.publisher = self.create_publisher(PoseStamped, 'move_base_simple/goal', 10)
         self.get_logger().info('Navigate To Saved Pose Node Started')
         self.get_logger().info('Waiting 3 seconds for Nav2 to be ready...')
