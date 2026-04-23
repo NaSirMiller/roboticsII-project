@@ -23,8 +23,9 @@ class SafeExitDetectionNode(Node):
         self.declare_parameter('object_size_min', 1000)
         self.br = CvBridge()
         self.tf_buffer = Buffer()
-        self.goal_sent = False
-        self.last_goal_time = self.get_clock().now()
+        # self.goal_sent = False          # replaced by timer-based publish
+        # self.last_goal_time = self.get_clock().now()
+        self.detected_pose = None
         self.pose_saved = False
         self.save_path = os.path.expanduser('~/saved_exit_pose.yaml')
         self.tf_listener = TransformListener(self.tf_buffer, self)
@@ -34,6 +35,7 @@ class SafeExitDetectionNode(Node):
         self.sub_depth = Subscriber(self, PointCloud2, '/camera/depth/points')
         self.ts = ApproximateTimeSynchronizer([self.sub_rgb, self.sub_depth], 10, 0.1)
         self.ts.registerCallback(self.camera_callback)
+        self.create_timer(1.0, self.publish_goal)
 
     def camera_callback(self, rgb_msg, points_msg):
         self.get_logger().info('Received RGB and Depth Messages')
@@ -74,13 +76,14 @@ class SafeExitDetectionNode(Node):
             self.get_logger().error('Transform Error: {}'.format(e))
             return
 
-        now = self.get_clock().now()
-        elapsed = (now - self.last_goal_time).nanoseconds / 1e9
-        if not self.goal_sent or elapsed > 5.0:
-            self.pub_detected_safe_exit.publish(detected_safe_exit_pose)
-            self.last_goal_time = now
-            self.goal_sent = True
-            self.get_logger().info('Sent exit pose as nav goal')
+        # now = self.get_clock().now()
+        # elapsed = (now - self.last_goal_time).nanoseconds / 1e9
+        # if not self.goal_sent or elapsed > 5.0:  # Only send every 5 seconds
+        #     self.pub_detected_safe_exit.publish(detected_safe_exit_pose)
+        #     self.last_goal_time = now
+        #     self.goal_sent = True
+        #     self.get_logger().info('Sent exit pose as nav goal')
+        self.detected_pose = detected_safe_exit_pose
 
         if not self.pose_saved:
             pose_data = {
@@ -101,6 +104,17 @@ class SafeExitDetectionNode(Node):
         detect_img_msg.header = rgb_msg.header
         self.get_logger().info('image message published')
         self.pub_safe_exit.publish(detect_img_msg)
+
+    def publish_goal(self):
+        if self.detected_pose is None:
+            return
+        self.detected_pose.header.stamp = self.get_clock().now().to_msg()
+        self.pub_detected_safe_exit.publish(self.detected_pose)
+        self.get_logger().info(
+            f'Publishing exit goal: x={self.detected_pose.pose.position.x:.3f}, '
+            f'y={self.detected_pose.pose.position.y:.3f}, '
+            f'z={self.detected_pose.pose.position.z:.3f}'
+        )
 
 def main(args=None):
     rclpy.init(args=args)
