@@ -30,8 +30,7 @@ class SafeExitDetectionNode(Node):
         self.save_path = os.path.expanduser('~/saved_exit_pose.yaml')
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.pub_safe_exit = self.create_publisher(Image, '/detected_safe_exit', 10)
-        # self.pub_detected_safe_exit = self.create_publisher(PoseStamped, 'move_base_simple/goal', 10)
-        self.pub_detected_safe_exit = self.create_publisher(PoseStamped, 'map', 10)
+        self.pub_detected_safe_exit = self.create_publisher(PoseStamped, 'move_base_simple/goal', 10)
         self.sub_rgb = Subscriber(self, Image, '/camera/color/image_raw')
         self.sub_depth = Subscriber(self, PointCloud2, '/camera/depth/points')
         self.ts = ApproximateTimeSynchronizer([self.sub_rgb, self.sub_depth], 10, 0.1)
@@ -62,14 +61,16 @@ class SafeExitDetectionNode(Node):
         center_points = np.array([X, Y, Z])
         if np.any(np.isnan(center_points)):
             return
-        if center_points[2] > 0.25: # 0.25 meters
-            return
+        # if center_points[2] > 0.25: # 0.25 meters
+        #    return
         try:
-            transform = self.tf_buffer.lookup_transform('map', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
+            transform = self.tf_buffer.lookup_transform('base_footprint', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
+            # transform = self.tf_buffer.lookup_transform('map', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
             t_R = q2R(np.array([transform.transform.rotation.w, transform.transform.rotation.x, transform.transform.rotation.y, transform.transform.rotation.z]))
             cp_robot = t_R @ center_points + np.array([transform.transform.translation.x, transform.transform.translation.y, transform.transform.translation.z])
             detected_safe_exit_pose = PoseStamped()
-            detected_safe_exit_pose.header.frame_id = 'map'
+            # detected_safe_exit_pose.header.frame_id = 'map'
+            detected_safe_exit_pose.header.frame_id = 'base_footprint'
             detected_safe_exit_pose.header.stamp = rgb_msg.header.stamp
             detected_safe_exit_pose.pose.position.x = cp_robot[0]
             detected_safe_exit_pose.pose.position.y = cp_robot[1]
@@ -84,25 +85,23 @@ class SafeExitDetectionNode(Node):
         # if not self.goal_sent or elapsed > 5.0:  # Only send every 5 seconds
         #     self.pub_detected_safe_exit.publish(detected_safe_exit_pose)
         #     self.last_goal_time = now
-        #     self.goal_sent = True
-        self.get_logger().info('Sent safe exit pose as nav goal')
+        #     self.goal_sent = True    
+        # if not self.pose_saved:
+        #     pose_data = {
+        #         'x': detected_safe_exit_pose.pose.position.x,
+        #         'y': detected_safe_exit_pose.pose.position.y,
+        #         'z': detected_safe_exit_pose.pose.position.z,
+        #         'qx': detected_safe_exit_pose.pose.orientation.x,
+        #         'qy': detected_safe_exit_pose.pose.orientation.y,
+        #         'qz': detected_safe_exit_pose.pose.orientation.z,
+        #         'qw': detected_safe_exit_pose.pose.orientation.w,
+        #     }
+        #     with open(self.save_path, 'w') as f:
+        #         yaml.dump(pose_data, f)
+        #     self.pose_saved = True
+        #     self.get_logger().info(f'Safe exit pose saved to {self.save_path}')
+        
         self.detected_pose = detected_safe_exit_pose
-
-        if not self.pose_saved:
-            pose_data = {
-                'x': detected_safe_exit_pose.pose.position.x,
-                'y': detected_safe_exit_pose.pose.position.y,
-                'z': detected_safe_exit_pose.pose.position.z,
-                'qx': detected_safe_exit_pose.pose.orientation.x,
-                'qy': detected_safe_exit_pose.pose.orientation.y,
-                'qz': detected_safe_exit_pose.pose.orientation.z,
-                'qw': detected_safe_exit_pose.pose.orientation.w,
-            }
-            with open(self.save_path, 'w') as f:
-                yaml.dump(pose_data, f)
-            self.pose_saved = True
-            self.get_logger().info(f'Safe exit pose saved to {self.save_path}')
-
         detect_img_msg = self.br.cv2_to_imgmsg(rgb_image, encoding='bgr8')
         detect_img_msg.header = rgb_msg.header
         self.get_logger().info('image message published')
