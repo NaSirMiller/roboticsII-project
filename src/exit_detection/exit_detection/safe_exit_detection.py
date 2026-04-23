@@ -85,7 +85,7 @@ class SafeExitDetectionNode(Node):
         #     self.pub_detected_safe_exit.publish(detected_safe_exit_pose)
         #     self.last_goal_time = now
         #     self.goal_sent = True
-        #     self.get_logger().info('Sent exit pose as nav goal')
+        self.get_logger().info('Sent safe exit pose as nav goal')
         self.detected_pose = detected_safe_exit_pose
 
         if not self.pose_saved:
