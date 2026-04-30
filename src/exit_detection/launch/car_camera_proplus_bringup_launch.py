@@ -18,12 +18,12 @@ def generate_launch_description():
         [os.path.join(cam_package_path, 'launch'),
          '/astro_pro_plus.launch.xml'])
     )
-    yahboomcar_brinup_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource(
-        [os.path.join(yahboomcar_package_path, 'launch'),
-         '/yahboomcar_bringup_X3_launch.py'])
-    )
+    # yahboomcar_brinup_launch = IncludeLaunchDescription(PythonLaunchDescriptionSource(
+    #     [os.path.join(yahboomcar_package_path, 'launch'),
+    #      '/yahboomcar_bringup_X3_launch.py'])
+    # )
     
     return LaunchDescription([
         astra_camera_launch,
-        yahboomcar_brinup_launch
+        # yahboomcar_brinup_launch
     ])
