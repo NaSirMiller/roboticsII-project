@@ -65,11 +65,13 @@ class SafeExitDetectionNode(Node):
         #    return
         try:
             # transform = self.tf_buffer.lookup_transform('base_footprint', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
-            transform = self.tf_buffer.lookup_transform('map', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
+            # transform = self.tf_buffer.lookup_transform('map', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
+            transform = self.tf_buffer.lookup_transform('odom', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
             t_R = q2R(np.array([transform.transform.rotation.w, transform.transform.rotation.x, transform.transform.rotation.y, transform.transform.rotation.z]))
             cp_robot = t_R @ center_points + np.array([transform.transform.translation.x, transform.transform.translation.y, transform.transform.translation.z])
             detected_safe_exit_pose = PoseStamped()
-            detected_safe_exit_pose.header.frame_id = 'map'
+            detected_safe_exit_pose.header.frame_id = 'odom'
+            # detected_safe_exit_pose.header.frame_id = 'map'
             # detected_safe_exit_pose.header.frame_id = 'base_footprint'
             detected_safe_exit_pose.header.stamp = rgb_msg.header.stamp
             detected_safe_exit_pose.pose.position.x = cp_robot[0]
