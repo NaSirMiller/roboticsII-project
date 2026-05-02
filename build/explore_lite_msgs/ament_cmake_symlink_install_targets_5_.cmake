@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/root/codes/NST_proj_ws/build/explore_lite_msgs/rosidl_generator_py/explore_lite_msgs/libexplore_lite_msgs__python.so" "TARGETS" "explore_lite_msgs__python" "ARCHIVE_DESTINATION" "lib" "LIBRARY_DESTINATION" "lib" "RUNTIME_DESTINATION" "bin")

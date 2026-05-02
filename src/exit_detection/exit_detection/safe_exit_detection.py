@@ -61,8 +61,6 @@ class SafeExitDetectionNode(Node):
         center_points = np.array([X, Y, Z])
         if np.any(np.isnan(center_points)) or np.any(np.isinf(center_points)) or Z == 0.0:
             return
-        # if center_points[2] > 0.25: # 0.25 meters
-        #    return
         try:
             # transform = self.tf_buffer.lookup_transform('base_footprint', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
             # transform = self.tf_buffer.lookup_transform('map', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))

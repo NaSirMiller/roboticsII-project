@@ -1,3 +1,0 @@
-[console_scripts]
-map_generation_node = map_generation.map_generation_node:main
-

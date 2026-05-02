@@ -1,1 +1,0 @@
-/root/codes/NST_proj_ws/build/explore_lite_msgs/rosidl_generator_cpp/explore_lite_msgs/msg/detail/explore_status__builder.hpp
