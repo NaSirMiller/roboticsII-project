@@ -26,6 +26,7 @@ class SafeExitDetectionNode(Node):
         self.br = CvBridge()
         self.tf_buffer = Buffer() 
         self.detected_pose = None
+        self.goal_published = False
         self.save_path = os.path.expanduser('~/saved_exit_pose.yaml')
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.pub_safe_exit = self.create_publisher(Image, '/detected_safe_exit', 10)
@@ -37,6 +38,8 @@ class SafeExitDetectionNode(Node):
         self.create_timer(1.0, self.publish_goal)
 
     def camera_callback(self, rgb_msg, points_msg):
+        if self.goal_published:
+            return
         param_color_low = np.array(self.get_parameter('color_low').value)
         param_color_high = np.array(self.get_parameter('color_high').value)
         param_object_size_min = self.get_parameter('object_size_min').value
@@ -85,10 +88,11 @@ class SafeExitDetectionNode(Node):
         self.pub_safe_exit.publish(detect_img_msg)
 
     def publish_goal(self):
-        if self.detected_pose is None:
+        if self.detected_pose is None or self.goal_published:
             return
         self.detected_pose.header.stamp = self.get_clock().now().to_msg()
         self.pub_detected_safe_exit.publish(self.detected_pose)
+        self.goal_published = True
         self.get_logger().info(
             f'Publishing exit goal: x={self.detected_pose.pose.position.x:.3f}, '
             f'y={self.detected_pose.pose.position.y:.3f}, '
