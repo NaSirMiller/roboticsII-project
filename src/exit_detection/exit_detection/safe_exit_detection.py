@@ -22,11 +22,8 @@ class SafeExitDetectionNode(Node):
         # self.declare_parameter('color_high', [215, 205, 185])
         self.declare_parameter('object_size_min', 1500)
         self.br = CvBridge()
-        self.tf_buffer = Buffer()
-        # self.goal_sent = False          # replaced by timer-based publish
-        # self.last_goal_time = self.get_clock().now()
+        self.tf_buffer = Buffer() 
         self.detected_pose = None
-        self.pose_saved = False
         self.save_path = os.path.expanduser('~/saved_exit_pose.yaml')
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.pub_safe_exit = self.create_publisher(Image, '/detected_safe_exit', 10)
@@ -38,7 +35,6 @@ class SafeExitDetectionNode(Node):
         self.create_timer(1.0, self.publish_goal)
 
     def camera_callback(self, rgb_msg, points_msg):
-        # self.get_logger().info('Received RGB and Depth Messages')
         param_color_low = np.array(self.get_parameter('color_low').value)
         param_color_high = np.array(self.get_parameter('color_high').value)
         param_object_size_min = self.get_parameter('object_size_min').value
@@ -79,28 +75,6 @@ class SafeExitDetectionNode(Node):
         except TransformException as e:
             self.get_logger().error('Transform Error: {}'.format(e))
             return
-
-        # now = self.get_clock().now()
-        # elapsed = (now - self.last_goal_time).nanoseconds / 1e9
-        # if not self.goal_sent or elapsed > 5.0:  # Only send every 5 seconds
-        #     self.pub_detected_safe_exit.publish(detected_safe_exit_pose)
-        #     self.last_goal_time = now
-        #     self.goal_sent = True    
-        # if not self.pose_saved:
-        #     pose_data = {
-        #         'x': detected_safe_exit_pose.pose.position.x,
-        #         'y': detected_safe_exit_pose.pose.position.y,
-        #         'z': detected_safe_exit_pose.pose.position.z,
-        #         'qx': detected_safe_exit_pose.pose.orientation.x,
-        #         'qy': detected_safe_exit_pose.pose.orientation.y,
-        #         'qz': detected_safe_exit_pose.pose.orientation.z,
-        #         'qw': detected_safe_exit_pose.pose.orientation.w,
-        #     }
-        #     with open(self.save_path, 'w') as f:
-        #         yaml.dump(pose_data, f)
-        #     self.pose_saved = True
-        #     self.get_logger().info(f'Safe exit pose saved to {self.save_path}')
-        
         self.detected_pose = detected_safe_exit_pose
         detect_img_msg = self.br.cv2_to_imgmsg(rgb_image, encoding='bgr8')
         detect_img_msg.header = rgb_msg.header
