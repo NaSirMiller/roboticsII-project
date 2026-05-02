@@ -55,7 +55,7 @@ class SafeExitDetectionNode(Node):
         pointid = (center_y * points_msg.row_step) + (center_x * points_msg.point_step)
         (X, Y, Z) = struct.unpack_from('fff', points_msg.data, offset=pointid)
         center_points = np.array([X, Y, Z])
-        if np.any(np.isnan(center_points)) or np.any(np.isinf(center_points)) or Z == 0.0:
+        if np.any(np.isnan(center_points)) or np.any(np.isinf(center_points)) or Z > 0.25 or X > 1 or Y > 1:
             return
         try:
             # transform = self.tf_buffer.lookup_transform('base_footprint', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
