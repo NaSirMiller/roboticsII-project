@@ -18,8 +18,6 @@ class SafeExitDetectionNode(Node):
         self.get_logger().info('Safe Exit Detection Node Started')
         self.declare_parameter('color_low', [0, 0, 170]) # Blue
         self.declare_parameter('color_high', [75, 115, 255])
-        # self.declare_parameter('color_low', [60, 55, 50]) # Silver
-        # self.declare_parameter('color_high', [215, 205, 185])
         self.declare_parameter('object_size_min', 1500)
         self.br = CvBridge()
         self.tf_buffer = Buffer() 
