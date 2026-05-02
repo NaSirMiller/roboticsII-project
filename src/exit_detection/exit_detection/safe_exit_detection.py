@@ -16,8 +16,8 @@ class SafeExitDetectionNode(Node):
     def __init__(self):
         super().__init__('safe_exit_detection_node')
         self.get_logger().info('Safe Exit Detection Node Started')
-        self.declare_parameter('color_low', [346, 33, 76]) # pink, hsv
-        self.declare_parameter('color_high', [354, 20, 100])
+        self.declare_parameter('color_low', [170, 20, 76]) # pink, hsv
+        self.declare_parameter('color_high', [177, 33, 100])
         # self.declare_parameter('color_low', [195, 130, 145]) # pink 
         # self.declare_parameter('color_high', [255, 205, 210])
         # self.declare_parameter('color_low', [0, 0, 170]) # Blue
