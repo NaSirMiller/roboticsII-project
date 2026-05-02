@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, DurabilityPolicy
 from geometry_msgs.msg import PoseStamped
 import numpy as np
 from tf2_ros import Buffer, TransformListener, TransformException
@@ -12,7 +13,8 @@ class TranslateToMapNode(Node):
         self.tf_buffer = Buffer()
         self.tf_listener = TransformListener(self.tf_buffer, self)
         self.sub = self.create_subscription(PoseStamped, 'goal_pose_odom', self.pose_callback, 10)
-        self.pub = self.create_publisher(PoseStamped, 'goal_pose', 10)
+        latched_qos = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)
+        self.pub = self.create_publisher(PoseStamped, 'goal_pose', latched_qos)
 
     def pose_callback(self, pose_msg):
         try:
@@ -36,7 +38,7 @@ class TranslateToMapNode(Node):
             pose_in_map.pose.orientation.w = 1.0
             self.pub.publish(pose_in_map)
             self.get_logger().info(f'Stopping TranslateToMap node')
-            self.destroy_subscription(self.sub)  # stop receiving further messages
+            # self.destroy_subscription(self.sub)  # stop receiving further messages
 
         except TransformException as e:
             self.get_logger().error(f'Transform Error: {e}')
