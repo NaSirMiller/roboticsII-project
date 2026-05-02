@@ -18,7 +18,7 @@ class SafeExitDetectionNode(Node):
         self.get_logger().info('Safe Exit Detection Node Started')
         self.declare_parameter('color_low', [170, 51, 194]) # pink, hsv
         self.declare_parameter('color_high', [177, 84, 255])
-        # self.declare_parameter('color_low', [195, 130, 145]) # pink 
+        # self.declare_parameter('color_low', [195, 130, 145]) # pink rgb 
         # self.declare_parameter('color_high', [255, 205, 210])
         # self.declare_parameter('color_low', [0, 0, 170]) # Blue
         # self.declare_parameter('color_high', [75, 115, 255])
