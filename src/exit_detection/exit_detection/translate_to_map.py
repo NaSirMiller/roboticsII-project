@@ -1,8 +1,9 @@
 import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import PoseStamped
+import numpy as np
 from tf2_ros import Buffer, TransformListener, TransformException
-import tf2_geometry_msgs
+from robotics_utils.math import q2R
 
 
 class TranslateToMapNode(Node):
@@ -21,7 +22,18 @@ class TranslateToMapNode(Node):
                 rclpy.time.Time(),
                 rclpy.duration.Duration(seconds=0.2)
             )
-            pose_in_map = tf2_geometry_msgs.do_transform_pose(pose_msg, transform)
+            t = transform.transform.translation
+            r = transform.transform.rotation
+            R = q2R(np.array([r.w, r.x, r.y, r.z]))
+            p = np.array([pose_msg.pose.position.x, pose_msg.pose.position.y, pose_msg.pose.position.z])
+            p_map = R @ p + np.array([t.x, t.y, t.z])
+            pose_in_map = PoseStamped()
+            pose_in_map.header.frame_id = 'map'
+            pose_in_map.header.stamp = pose_msg.header.stamp
+            pose_in_map.pose.position.x = p_map[0]
+            pose_in_map.pose.position.y = p_map[1]
+            pose_in_map.pose.position.z = p_map[2]
+            pose_in_map.pose.orientation.w = 1.0
             self.pub.publish(pose_in_map)
             self.get_logger().info(f'Stopping TranslateToMap node')
             self.destroy_subscription(self.sub)  # stop receiving further messages
