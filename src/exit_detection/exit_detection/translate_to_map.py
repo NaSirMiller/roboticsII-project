@@ -23,6 +23,9 @@ class TranslateToMapNode(Node):
             )
             pose_in_map = tf2_geometry_msgs.do_transform_pose(pose_msg, transform)
             self.pub.publish(pose_in_map)
+            self.get_logger().infp(f'Stopping TranslateToMap node')
+            self.destroy_subscription(self.sub)  # stop receiving further messages
+
         except TransformException as e:
             self.get_logger().error(f'Transform Error: {e}')
 
