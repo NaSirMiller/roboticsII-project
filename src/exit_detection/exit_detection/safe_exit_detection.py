@@ -8,6 +8,7 @@ from cv_bridge import CvBridge
 from geometry_msgs.msg import PoseStamped
 from message_filters import ApproximateTimeSynchronizer, Subscriber
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, DurabilityPolicy
 from sensor_msgs.msg import Image, PointCloud2
 from tf2_ros import Buffer, TransformException, TransformListener
 from robotics_utils.math import q2R
@@ -29,8 +30,9 @@ class SafeExitDetectionNode(Node):
         self.goal_published = False
         self.save_path = os.path.expanduser('~/saved_exit_pose.yaml')
         self.tf_listener = TransformListener(self.tf_buffer, self)
+        latched_qos = QoSProfile(depth=1, durability=DurabilityPolicy.TRANSIENT_LOCAL)
         self.pub_safe_exit = self.create_publisher(Image, '/detected_safe_exit', 10)
-        self.pub_detected_safe_exit = self.create_publisher(PoseStamped, 'goal_pose_odom', 10)
+        self.pub_detected_safe_exit = self.create_publisher(PoseStamped, '/goal_pose', latched_qos)
         self.sub_rgb = Subscriber(self, Image, '/camera/color/image_raw')
         self.sub_depth = Subscriber(self, PointCloud2, '/camera/depth/points')
         self.ts = ApproximateTimeSynchronizer([self.sub_rgb, self.sub_depth], 10, 0.1)
@@ -64,15 +66,11 @@ class SafeExitDetectionNode(Node):
         # or Z > 0.4 or Y > 0.25:
             return
         try:
-            # transform = self.tf_buffer.lookup_transform('base_footprint', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
-            # transform = self.tf_buffer.lookup_transform('map', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
-            transform = self.tf_buffer.lookup_transform('odom', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
+            transform = self.tf_buffer.lookup_transform('map', rgb_msg.header.frame_id, rclpy.time.Time(), rclpy.duration.Duration(seconds=0.2))
             t_R = q2R(np.array([transform.transform.rotation.w, transform.transform.rotation.x, transform.transform.rotation.y, transform.transform.rotation.z]))
             cp_robot = t_R @ center_points + np.array([transform.transform.translation.x, transform.transform.translation.y, transform.transform.translation.z])
             detected_safe_exit_pose = PoseStamped()
-            detected_safe_exit_pose.header.frame_id = 'odom'
-            # detected_safe_exit_pose.header.frame_id = 'map'
-            # detected_safe_exit_pose.header.frame_id = 'base_footprint'
+            detected_safe_exit_pose.header.frame_id = 'map'
             detected_safe_exit_pose.header.stamp = rgb_msg.header.stamp
             detected_safe_exit_pose.pose.position.x = cp_robot[0]
             detected_safe_exit_pose.pose.position.y = cp_robot[1]
@@ -90,11 +88,10 @@ class SafeExitDetectionNode(Node):
     def publish_goal(self):
         if self.detected_pose is None or self.goal_published:
             return
-        self.detected_pose.header.stamp = self.get_clock().now().to_msg()
         self.pub_detected_safe_exit.publish(self.detected_pose)
         self.goal_published = True
         self.get_logger().info(
-            f'Publishing exit goal: x={self.detected_pose.pose.position.x:.3f}, '
+            f'Publishing goal_pose: x={self.detected_pose.pose.position.x:.3f}, '
             f'y={self.detected_pose.pose.position.y:.3f}, '
             f'z={self.detected_pose.pose.position.z:.3f}'
         )
